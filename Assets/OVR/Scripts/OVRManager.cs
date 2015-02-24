@@ -378,7 +378,11 @@ public class OVRManager : MonoBehaviour
 #endif
 
 		if (display == null)
-			display = new OVRDisplay();
+		{
+			display = new OVRDisplay ();
+			//HmdCaps.NoMirrorToWindow = 0;
+			//display.mirrorMode = true;
+		}
 		if (tracker == null)
 			tracker = new OVRTracker();
 
