@@ -1,11 +1,67 @@
 fileFormatVersion: 2
-guid: 6b8f97a43d6d88a4993a6f49e7c9414a
+guid: dfdf2c2bf4cf24044a90aecf03610e11
 ModelImporter:
   serializedVersion: 16
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Cube
+    100004: Cube_001
+    100006: Wall
+    100008: WindowStruct
+    100010: Glass
+    100012: Plank1
+    100014: Plank2
+    100016: Plank3
+    100018: Plank4
+    100020: Plank5
+    400000: //RootNode
+    400002: Cube
+    400004: Cube_001
+    400006: Wall
+    400008: WindowStruct
+    400010: Glass
+    400012: Plank1
+    400014: Plank2
+    400016: Plank3
+    400018: Plank4
+    400020: Plank5
+    2300000: //RootNode
+    2300002: Cube
+    2300004: Cube_001
+    2300006: Wall
+    2300008: WindowStruct
+    2300010: Glass
+    2300012: Plank1
+    2300014: Plank2
+    2300016: Plank3
+    2300018: Plank4
+    2300020: Plank5
+    3300000: //RootNode
+    3300002: Cube
+    3300004: Cube_001
+    3300006: Wall
+    3300008: WindowStruct
+    3300010: Glass
+    3300012: Plank1
+    3300014: Plank2
+    3300016: Plank3
+    3300018: Plank4
+    3300020: Plank5
+    4300000: Cube
+    4300002: Cube_001
+    4300004: Wall
+    4300006: WindowStruct
+    4300008: Glass
+    4300010: Plank2
+    4300012: Plank1
+    4300014: Plank3
+    4300016: Plank4
+    4300018: Plank5
+    7400000: Default Take
+    9500000: //RootNode
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 1
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4

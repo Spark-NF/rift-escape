@@ -1,4 +1,11 @@
 fileFormatVersion: 2
-guid: 68c65c7a0ddebdb4990635ccde454ebd
+guid: 7e181fd161a9d4c41a7d09c87806d01d
+labels:
+- Architecture
+- Floor
+- Pattern
+- Plank
+- Tile
+- Wood
 NativeFormatImporter:
   userData: 
