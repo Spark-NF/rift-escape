@@ -1,14 +1,49 @@
 fileFormatVersion: 2
-guid: f7c78b7889fc7dc4a9c0ca07d3495c13
+guid: 13dbe6eb359eea748a869a3d73b2eae0
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Book
-    7400000: Default Take
+    100000: Camera
+    100002: Glass
+    100004: Lamp
+    100006: Plank1
+    100008: Plank3
+    100010: Plank4
+    100012: Plank5
+    100014: Wall
+    100016: //RootNode
+    100018: WindowStruct
+    400000: Camera
+    400002: Glass
+    400004: Lamp
+    400006: Plank1
+    400008: Plank3
+    400010: Plank4
+    400012: Plank5
+    400014: Wall
+    400016: //RootNode
+    400018: WindowStruct
+    2300000: Glass
+    2300002: Plank1
+    2300004: Plank3
+    2300006: Plank4
+    2300008: Plank5
+    2300010: Wall
+    2300012: WindowStruct
+    3300000: Glass
+    3300002: Plank1
+    3300004: Plank3
+    3300006: Plank4
+    3300008: Plank5
+    3300010: Wall
+    3300012: WindowStruct
+    4300000: Glass
+    4300002: Wall
+    4300004: WindowStruct
+    4300006: Plank1
+    4300008: Plank3
+    4300010: Plank4
+    4300012: Plank5
     9500000: //RootNode
   materials:
     importMaterials: 1

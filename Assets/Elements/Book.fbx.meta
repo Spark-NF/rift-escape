@@ -1,14 +1,19 @@
 fileFormatVersion: 2
-guid: b72f60c998f33ec43899470a06d62ff9
+guid: 63934dd8ecb767140baf610ed1bbc984
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Book
+    100004: Camera
+    100006: Lamp
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Table
-    7400000: Default Take
+    400002: Book
+    400004: Camera
+    400006: Lamp
+    2300000: Book
+    3300000: Book
+    4300000: Book
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -29,7 +34,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 1.5
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
