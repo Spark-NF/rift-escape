@@ -132,7 +132,7 @@ ModelImporter:
     13700004: female_nails_left
     13700006: female_nails_right
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:

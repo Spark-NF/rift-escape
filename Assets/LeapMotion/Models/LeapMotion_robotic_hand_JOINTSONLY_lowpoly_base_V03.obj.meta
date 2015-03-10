@@ -272,7 +272,7 @@ ModelImporter:
     4300104: pPipe9
     9500000: //RootNode
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
