@@ -83,7 +83,7 @@ public class OVRVisionGuide : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.T))
 			OVRManager.instance.timeWarp = !OVRManager.instance.timeWarp;
 		
-		if (Input.GetKeyDown(KeyCode.F))
+		if (Input.GetKeyDown(KeyCode.G))
 			OVRManager.instance.freezeTimeWarp = !OVRManager.instance.freezeTimeWarp;
 	}
 

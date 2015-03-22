@@ -28,6 +28,25 @@ using System.Collections.Generic;
 [RequireComponent(typeof(CharacterController))]
 public class OVRPlayerController : MonoBehaviour
 {
+	#region Movement dubois_d
+	public bool ovrMovement = true;                              // Enable move player by moving head on X and Z axis
+	public bool ovrJump = false;                                  // Enable player jumps by moving head on Y axis upwards
+	public Vector3 ovrControlSensitivity = new Vector3(10f, 0.05f, 2f);  // Multiplier of positiona tracking move/jump actions
+	public Vector3 ovrControlMinimum = new Vector3(0.05f, 0.05f, 0.05f);      // Min distance of head from centre to move/jump
+	public enum OvrXAxisAction { Strafe = 0, Rotate = 1 }
+	public OvrXAxisAction ovrXAxisAction = OvrXAxisAction.Rotate; // Whether x axis positional tracking performs strafing or rotation
+
+	// OVR positional tracking, currently works via tilting head
+	private Vector3? initPosTrackDir = null;
+	private Vector3 curPosTrackDir;
+	private Vector3 diffPosTrackDir;
+
+	// Variables for bending
+	private float InitialHeight;
+	public float crouchHeight = 0.8f;
+	private bool crounched = false;
+	#endregion
+
 	/// <summary>
 	/// The rate acceleration during movement.
 	/// </summary>
@@ -56,7 +75,7 @@ public class OVRPlayerController : MonoBehaviour
 	/// <summary>
 	/// The rate of rotation when using the keyboard.
 	/// </summary>
-	public float RotationRatchet = 45.0f;
+	public float RotationRatchet = 2.0f;
 
 	/// <summary>
 	/// The player's current rotation about the Y axis.
@@ -114,6 +133,15 @@ public class OVRPlayerController : MonoBehaviour
 			CameraController = CameraControllers[0];
 
 		YRotation = transform.rotation.eulerAngles.y;
+		// dubois_d : init for default camera position
+		/*if (CameraController != null)
+			initPosTrackDir = CameraController.transform.localPosition; //.centerEyeAnchor.localPosition;
+		else
+			initPosTrackDir = Vector3.zero;
+		*/
+		if (Controller != null)
+			InitialHeight = Controller.height;
+		// end dubois_d
 
 #if UNITY_ANDROID && !UNITY_EDITOR
 		OVRManager.display.RecenteredPose += ResetOrientation;
@@ -122,27 +150,23 @@ public class OVRPlayerController : MonoBehaviour
 
 	protected virtual void Update()
 	{
-		if (useProfileHeight)
-		{
-			if (InitialPose == null)
-			{
-				InitialPose = new OVRPose() {
+		if (useProfileHeight) {
+						if (InitialPose == null) {
+								InitialPose = new OVRPose () {
 					position = CameraController.transform.localPosition,
 					orientation = CameraController.transform.localRotation
 				};
-			}
+						}
 
-			var p = CameraController.transform.localPosition;
-			p.y = OVRManager.profile.eyeHeight - 0.5f * Controller.height;
-			p.z = OVRManager.profile.eyeDepth;
-			CameraController.transform.localPosition = p;
-		}
-		else if (InitialPose != null)
-		{
-			CameraController.transform.localPosition = InitialPose.Value.position;
-			CameraController.transform.localRotation = InitialPose.Value.orientation;
-			InitialPose = null;
-		}
+						var p = CameraController.transform.localPosition;
+						p.y = OVRManager.profile.eyeHeight /*dubois_d adding a scale for crounching*/ * Controller.height / InitialHeight - 0.5f * Controller.height;
+						p.z = OVRManager.profile.eyeDepth;
+						CameraController.transform.localPosition = p;
+				} else if (InitialPose != null) {
+						CameraController.transform.localPosition = InitialPose.Value.position;
+						CameraController.transform.localRotation = InitialPose.Value.orientation;
+						InitialPose = null;
+				}
 
 		UpdateMovement();
 
@@ -189,10 +213,90 @@ public class OVRPlayerController : MonoBehaviour
 		if (HaltUpdateMovement)
 			return;
 
+		MoveScale = 1.0f;
 		bool moveForward = Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow);
 		bool moveLeft = Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow);
 		bool moveRight = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow);
 		bool moveBack = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
+		bool jump = Input.GetKey(KeyCode.Space);
+
+		// dubois_d  Get the input vector from OVR positional tracking and add bending / standing up
+
+		bool moveUp = Input.GetKey(KeyCode.R);
+		bool moveDown = Input.GetKey(KeyCode.F);
+		bool Reinit_movepos = Input.GetKey (KeyCode.RightControl) || Input.GetKey (KeyCode.LeftControl);
+
+		if (initPosTrackDir == null) {
+			initPosTrackDir = CameraController.centerEyeAnchor.transform.localPosition;
+		}
+		if (Reinit_movepos) {
+			OVRManager.display.RecenterPose();
+			initPosTrackDir = CameraController.centerEyeAnchor.transform.localPosition;
+				}
+
+		if (ovrMovement || ovrJump) {
+			curPosTrackDir = CameraController.centerEyeAnchor.transform.localPosition;
+			diffPosTrackDir = curPosTrackDir - initPosTrackDir.GetValueOrDefault();
+		}
+		// mounting the movement vetor (movement have to be greater that sensitivity)
+		Vector3 directionVector = Vector3.zero;
+		if (ovrMovement) {
+			/*if (diffPosTrackDir.x <= -ovrControlMinimum.x)
+				moveBack = true;
+			if (diffPosTrackDir.x >= ovrControlMinimum.x)
+				moveForward = true;
+			if (diffPosTrackDir.y <= -ovrControlMinimum.y)
+				moveLeft = true;
+			if (diffPosTrackDir.y >= ovrControlMinimum.y)
+				moveRight = true;*/
+
+			if (diffPosTrackDir.x <= -ovrControlMinimum.x){
+				diffPosTrackDir.x += ovrControlMinimum.x;
+				if (ovrXAxisAction == OvrXAxisAction.Strafe) {
+					diffPosTrackDir.x *= ovrControlSensitivity.x;
+				} else {
+					transform.Rotate(0, diffPosTrackDir.x * ovrControlSensitivity.x, 0);
+					diffPosTrackDir.x = 0;
+				}
+			}
+			else if (diffPosTrackDir.x >= ovrControlMinimum.x) {
+				diffPosTrackDir.x -= ovrControlMinimum.x;
+				if (ovrXAxisAction == OvrXAxisAction.Strafe) {
+					diffPosTrackDir.x *= ovrControlSensitivity.x;
+				} else {
+					transform.Rotate(0, diffPosTrackDir.x * ovrControlSensitivity.x, 0);
+					diffPosTrackDir.x = 0;
+				}
+			} else {
+				diffPosTrackDir.x = 0;
+			}
+			if (diffPosTrackDir.z <= -ovrControlMinimum.z){
+				diffPosTrackDir.z += ovrControlMinimum.z;
+				diffPosTrackDir.z *= ovrControlSensitivity.z;
+			}
+			else if(diffPosTrackDir.z >= ovrControlMinimum.z) {
+				diffPosTrackDir.z -= ovrControlMinimum.z;
+				diffPosTrackDir.z *= ovrControlSensitivity.z;
+			} else {
+				diffPosTrackDir.z = 0;
+			}
+			directionVector = new Vector3(diffPosTrackDir.x, 0, diffPosTrackDir.z);
+		}
+		
+		// juming when head is high
+		/*if (ovrJump && diffPosTrackDir.y > ovrControlMinimum.y)
+			Jump();*/
+		// crounching if oculus is low enough
+		if (moveDown || diffPosTrackDir.y <= -ovrControlMinimum.y)
+			crounched = true;
+		if (moveUp || diffPosTrackDir.y >= ovrControlMinimum.y)
+			crounched = false;
+		if (!crounched && Controller.height < InitialHeight)
+			Controller.height += ovrControlSensitivity.y;
+		if (crounched && Controller.height > crouchHeight)
+						Controller.height -= ovrControlSensitivity.y;
+
+		// end dubois_d
 
 		bool dpad_move = false;
 
@@ -208,11 +312,10 @@ public class OVRPlayerController : MonoBehaviour
 			dpad_move = true;
 		}
 
-		MoveScale = 1.0f;
 
 		if ( (moveForward && moveLeft) || (moveForward && moveRight) ||
 			 (moveBack && moveLeft)    || (moveBack && moveRight) )
-			MoveScale = 0.70710678f;
+			MoveScale *= 0.70710678f;
 
 		// No positional movement if we are in the air
 		if (!Controller.isGrounded)
@@ -240,6 +343,13 @@ public class OVRPlayerController : MonoBehaviour
 			MoveThrottle += ort * (transform.lossyScale.x * moveInfluence * BackAndSideDampen * Vector3.left);
 		if (moveRight)
 			MoveThrottle += ort * (transform.lossyScale.x * moveInfluence * BackAndSideDampen * Vector3.right);
+		// dubois_d ovr movement
+		MoveThrottle += ort * (moveInfluence * new Vector3(directionVector.x * transform.lossyScale.x * BackAndSideDampen * ovrControlSensitivity.x,
+		                                                   0, directionVector.z * transform.lossyScale.z * ovrControlSensitivity.z
+		                                                   * (directionVector.z < 0? BackAndSideDampen : 1))); // performs actual movement
+		// end dubois_d
+		//if (jump)
+		//	Jump ();
 
 		bool curHatLeft = OVRGamepadController.GPC_GetButton(OVRGamepadController.Button.LeftShoulder);
 
