@@ -31,10 +31,11 @@ public class OVRPlayerController : MonoBehaviour
 	#region Movement dubois_d
 	public bool ovrMovement = true;                              // Enable move player by moving head on X and Z axis
 	public bool ovrJump = false;                                  // Enable player jumps by moving head on Y axis upwards
+	public Vector3 ovrRotationMinimum = new Vector3 (60, 60, 0); // Sensitivity to trigger rotation movement
 	public Vector3 ovrControlSensitivity = new Vector3(10f, 0.05f, 2f);  // Multiplier of positiona tracking move/jump actions
-	public Vector3 ovrControlMinimum = new Vector3(0.05f, 0.05f, 0.05f);      // Min distance of head from centre to move/jump
+	public Vector3 ovrControlMinimum = new Vector3(0.15f, 0.05f, 0.05f);      // Min distance of head from centre to move/jump
 	public enum OvrXAxisAction { Strafe = 0, Rotate = 1 }
-	public OvrXAxisAction ovrXAxisAction = OvrXAxisAction.Rotate; // Whether x axis positional tracking performs strafing or rotation
+	public OvrXAxisAction ovrXAxisAction = OvrXAxisAction.Strafe; // Whether x axis positional tracking performs strafing or rotation
 
 	// OVR positional tracking, currently works via tilting head
 	private Vector3? initPosTrackDir = null;
@@ -270,6 +271,7 @@ public class OVRPlayerController : MonoBehaviour
 			} else {
 				diffPosTrackDir.x = 0;
 			}
+
 			if (diffPosTrackDir.z <= -ovrControlMinimum.z){
 				diffPosTrackDir.z += ovrControlMinimum.z;
 				diffPosTrackDir.z *= ovrControlSensitivity.z;
@@ -287,9 +289,9 @@ public class OVRPlayerController : MonoBehaviour
 		/*if (ovrJump && diffPosTrackDir.y > ovrControlMinimum.y)
 			Jump();*/
 		// crounching if oculus is low enough
-		if (moveDown || diffPosTrackDir.y <= -ovrControlMinimum.y)
+		if (moveDown/* || diffPosTrackDir.y <= -ovrControlMinimum.y*/)
 			crounched = true;
-		if (moveUp || diffPosTrackDir.y >= ovrControlMinimum.y)
+		if (moveUp/* || diffPosTrackDir.y >= ovrControlMinimum.y*/)
 			crounched = false;
 		if (!crounched && Controller.height < InitialHeight)
 			Controller.height += ovrControlSensitivity.y;
@@ -369,10 +371,14 @@ public class OVRPlayerController : MonoBehaviour
 
 		//Use keys to ratchet rotation
 		if (Input.GetKey(KeyCode.A))
-			euler.y -= RotationRatchet;
+			euler.y -= RotationAmount;
 
 		if (Input.GetKey(KeyCode.E))
-			euler.y += RotationRatchet;
+			euler.y += RotationAmount;
+
+		// dubois_d OVR movement rotation
+		if (ovrMovement)
+			OvrRotationUpdate(ref euler);
 
 		float rotateInfluence = SimulationRate * Time.deltaTime * RotationAmount * RotationScaleMultiplier;
 
@@ -405,6 +411,39 @@ public class OVRPlayerController : MonoBehaviour
 		euler.y += rightAxisX * rotateInfluence;
 
 		transform.rotation = Quaternion.Euler(euler);
+	}
+
+	/// <summary>
+	/// Moves according to OVR rotation
+	/// </summary>
+	private void OvrRotationUpdate(ref Vector3 euler)
+	{
+		// rotation left / right
+		float yAngle = CameraController.centerEyeAnchor.transform.localRotation.eulerAngles.y;
+		if (yAngle > 180) // on the left side : 360->180
+		{
+			yAngle = -1 * (yAngle - 360); // recentering the angle on 0 - 90
+			if (yAngle > ovrRotationMinimum.y)
+				euler.y -= (yAngle - ovrRotationMinimum.y) * RotationAmount / (90 - ovrRotationMinimum.y);
+		}
+		else // on the right side : 0 -> 180
+		{
+			if (yAngle > ovrRotationMinimum.y)
+				euler.y += (yAngle - ovrRotationMinimum.y) * RotationAmount / (90 - ovrRotationMinimum.y);
+		}
+
+		float xAngle = CameraController.centerEyeAnchor.transform.localRotation.eulerAngles.x;
+		if (xAngle > 180) // on the top side : 360->180
+		{
+			xAngle = -1 * (xAngle - 360); // recentering the angle on 0 - 90
+			if (xAngle > ovrRotationMinimum.x)
+				crounched = false;
+		}
+		else // on the bottom side : 0 -> 180
+		{
+			if (xAngle > ovrRotationMinimum.x)
+				crounched = true;
+		}
 	}
 
 	/// <summary>
