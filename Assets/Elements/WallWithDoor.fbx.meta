@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 6e20f0b05afd4dd4fab61119021707ba
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 18
   fileIDToRecycleName:
     100000: Base
     100002: Camera
@@ -11,6 +11,7 @@ ModelImporter:
     100010: Lamp
     100012: Wall
     100014: //RootNode
+    100016: DoorknobBack
     400000: Base
     400002: Camera
     400004: Door
@@ -19,21 +20,25 @@ ModelImporter:
     400010: Lamp
     400012: Wall
     400014: //RootNode
+    400016: DoorknobBack
     2300000: Base
     2300002: Door
     2300004: DoorknobBAck
     2300006: DoorknobFront
     2300008: Wall
+    2300010: DoorknobBack
     3300000: Base
     3300002: Door
     3300004: DoorknobBAck
     3300006: DoorknobFront
     3300008: Wall
+    3300010: DoorknobBack
     4300000: DoorknobFront
     4300002: Wall
     4300004: Base
     4300006: Door
     4300008: DoorknobBAck
+    4300010: DoorknobBack
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -62,11 +67,13 @@ ModelImporter:
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
+    keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
@@ -89,3 +96,5 @@ ModelImporter:
   animationType: 2
   additionalBone: 0
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 
