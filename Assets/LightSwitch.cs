@@ -4,6 +4,7 @@ using System.Collections;
 public class LightSwitch : MonoBehaviour {
 
 	public GameObject light;
+	public GameObject shadow;
 
 	// Use this for initialization
 	void Start () {
@@ -11,5 +12,6 @@ public class LightSwitch : MonoBehaviour {
 
 	void OnTriggerEnter() {
 		light.SetActive (!light.activeSelf);
+		shadow.SetActive (!shadow.activeSelf);
 	}
 }
