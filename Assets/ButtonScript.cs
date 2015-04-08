@@ -19,54 +19,68 @@ public class ButtonScript : MonoBehaviour
 	// Whether the chain should be reset on failure
 	protected bool reset = true;
 	
+	// Whether we can toggle single elements
+	protected bool singlereset = true;
+	
 	public bool toggle()
 	{
 		// When we toggle again the last element
-		if (enabled && (next == null || !next.GetComponent<ButtonScript>().enabled))
+		if (enabled && singlereset)
 		{
-			disable(false);
+			_disable(false);
 			return false;
 		}
 		
 		// If we try to toggle an invalid element
 		if (!isValid())
 		{
-			disable(reset);
+			_disable(reset);
 			return false;
 		}
 		
-		return enable();
+		return _enable();
 	}
 	
-	public void disable(bool recursive = true)
+	void disable()
+	{
+	}
+	void _disable(bool recursive, ButtonScript from = null)
 	{
 		enabled = false;
+		disable();
 		
 		// Recursive disabling disables all the chain
-		if (prev != null && recursive)
-			prev.GetComponent<ButtonScript>().disable(true);
-		if (next != null && recursive)
-			next.GetComponent<ButtonScript>().disable(true);
+		if (recursive)
+		{
+			if (prev != null && prev.GetComponent<ButtonScript>() != from)
+				prev.GetComponent<ButtonScript>()._disable(true, this);
+			if (next != null && next.GetComponent<ButtonScript>() != from)
+				next.GetComponent<ButtonScript>()._disable(true, this);
+		}
 	}
 	
-	public bool enable()
+	void enable()
+	{
+	}
+	bool _enable()
 	{
 		enabled = true;
-		
+		enable();
+
 		// If this element is the last of the chain
 		if (next == null || final)
 		{
 			// In case of multiple possible activations, we reset the chain
 			if (multiple)
-				disable(true);
+				_disable(true);
 			
 			return true;
 		}
 		
-		return true;
+		return false;
 	}
 	
-	public bool isValid()
+	bool isValid()
 	{
 		if (prev != null && !prev.GetComponent<ButtonScript>().enabled)
 			return false;

@@ -10,19 +10,23 @@ public class ButtonLampScript : ButtonScript
 	{
 		this.multiple = true;
 		this.reset = true;
+		this.singlereset = true;
 	}
 	
 	void OnTriggerEnter(Collider other)
 	{
-		Debug.Log("OnTriggerEnter");
-		if (toggle())
-		{
-			Debug.Log("Toggle");
-			lamp.intensity =
-				lamp.intensity <= 0.0001f
-				? intensity
-				: 0
-			;
-		}
+		toggle();
+		
+		transform.Rotate(0, 180f, 0f);
+	}
+	
+	void enable()
+	{
+		lamp.intensity = intensity;
+	}
+
+	void disable()
+	{
+		lamp.intensity = 0f;
 	}
 }
