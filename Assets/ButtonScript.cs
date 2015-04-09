@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ButtonScript : MonoBehaviour
+public abstract class ButtonScript : MonoBehaviour
 {
 	// Next and previous elements for the chain
 	public GameObject next = null;
@@ -25,7 +25,7 @@ public class ButtonScript : MonoBehaviour
 	public bool toggle()
 	{
 		// When we toggle again the last element
-		if (enabled && singlereset)
+		if (enabled && singlereset && (next == null || !next.GetComponent<ButtonScript>().enabled))
 		{
 			_disable(false);
 			return false;
@@ -41,9 +41,7 @@ public class ButtonScript : MonoBehaviour
 		return _enable();
 	}
 	
-	void disable()
-	{
-	}
+	public abstract void disable();
 	void _disable(bool recursive, ButtonScript from = null)
 	{
 		enabled = false;
@@ -59,19 +57,17 @@ public class ButtonScript : MonoBehaviour
 		}
 	}
 	
-	void enable()
-	{
-	}
+	public abstract void enable();
 	bool _enable()
 	{
 		enabled = true;
 		enable();
 
 		// If this element is the last of the chain
-		if (next == null || final)
+		if (isFinal())
 		{
 			// In case of multiple possible activations, we reset the chain
-			if (multiple)
+			if (multiple && (!singlereset || prev != null))
 				_disable(true);
 			
 			return true;
@@ -86,5 +82,10 @@ public class ButtonScript : MonoBehaviour
 			return false;
 		
 		return true;
+	}
+	
+	public bool isFinal()
+	{
+		return (next == null || final);
 	}
 }

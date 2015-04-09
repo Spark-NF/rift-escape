@@ -2485,19 +2485,6 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100012, guid: 54dc0ed3d621061419e7ca4bf79b6b70, type: 3}
   m_PrefabInternal: {fileID: 1959687876}
---- !u!114 &1054890173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1054890169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41506e8cea494654bbe1f9efba14b177, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  light: {fileID: 318619287}
-  shadow: {fileID: 2005314734}
 --- !u!65 &1054890174
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2523,10 +2510,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   next: {fileID: 0}
   prev: {fileID: 0}
-  enabled: 0
+  enabled: 1
   final: 1
   lamp: {fileID: 318619288}
-  intensity: 1
+  intensity: 3
 --- !u!1 &1080346544
 GameObject:
   m_ObjectHideFlags: 0
@@ -4912,11 +4899,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 718f26e59b1f1704fbf7f805330af9f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: .550000012
+      value: .0500000007
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: 718f26e59b1f1704fbf7f805330af9f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -.550000012
+      value: -.0500000007
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 718f26e59b1f1704fbf7f805330af9f2, type: 3}
