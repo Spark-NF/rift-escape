@@ -1,57 +1,41 @@
 fileFormatVersion: 2
-guid: 06be296d40ed6564993a764a6c663ce9
+guid: 85617393f0739a54fa026a0f2215ea5d
+timeCreated: 1429537098
+licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: base
-    100002: Camera
-    100004: Lamp
-    100006: //RootNode
-    100008: LightBubble
-    100010: plafond
-    100012: torchere_1
-    100014: Torus
-    100016: AttachDown
-    100018: AttachUp
-    100020: Cylinder
-    100022: Wire
-    400000: base
-    400002: Camera
-    400004: Lamp
-    400006: //RootNode
-    400008: LightBubble
-    400010: plafond
-    400012: torchere_1
-    400014: Torus
-    400016: AttachDown
-    400018: AttachUp
-    400020: Cylinder
-    400022: Wire
-    2300000: base
-    2300002: LightBubble
-    2300004: plafond
-    2300006: Torus
-    2300008: AttachDown
-    2300010: AttachUp
-    2300012: Cylinder
-    2300014: Wire
-    3300000: base
-    3300002: LightBubble
-    3300004: plafond
-    3300006: Torus
-    3300008: AttachDown
-    3300010: AttachUp
-    3300012: Cylinder
-    3300014: Wire
-    4300000: plafond
-    4300002: base
-    4300004: LightBubble
-    4300006: Torus
-    4300008: AttachUp
-    4300010: Wire
-    4300012: Cylinder
-    4300014: AttachDown
-    9500000: //RootNode
+    100000: Camera
+    100002: Lamp
+    100004: Left
+    100006: MetalLeft
+    100008: MetalRight
+    100010: Right
+    100012: //RootNode
+    100014: Wire
+    400000: Camera
+    400002: Lamp
+    400004: Left
+    400006: MetalLeft
+    400008: MetalRight
+    400010: Right
+    400012: //RootNode
+    400014: Wire
+    2300000: Left
+    2300002: MetalLeft
+    2300004: MetalRight
+    2300006: Right
+    2300008: Wire
+    3300000: Left
+    3300002: MetalLeft
+    3300004: MetalRight
+    3300006: Right
+    3300008: Wire
+    4300000: Left
+    4300002: MetalRight
+    4300004: MetalLeft
+    4300006: Right
+    4300008: Wire
   materials:
     importMaterials: 1
     materialName: 0
@@ -85,7 +69,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
@@ -105,7 +89,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
