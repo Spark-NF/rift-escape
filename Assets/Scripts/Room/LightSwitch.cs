@@ -3,7 +3,7 @@ using System.Collections;
 
 public class LightSwitch : MonoBehaviour {
 
-	public GameObject light;
+	public GameObject myLight;
 	public GameObject shadow;
 
 	// Use this for initialization
@@ -11,7 +11,7 @@ public class LightSwitch : MonoBehaviour {
 	}
 
 	void OnTriggerEnter() {
-		light.SetActive (!light.activeSelf);
+		myLight.SetActive (!myLight.activeSelf);
 		shadow.SetActive (!shadow.activeSelf);
 	}
 }

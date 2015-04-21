@@ -8,7 +8,7 @@ public abstract class ButtonScript : MonoBehaviour
 	public GameObject prev = null;
 	
 	// Represents the current status of the element
-	public bool enabled = false;
+	public bool myEnabled = false;
 	
 	// Whether it's the last button in the chain or not
 	public bool final = false;
@@ -25,12 +25,12 @@ public abstract class ButtonScript : MonoBehaviour
 	public bool toggle()
 	{
 		// When we toggle again the last element
-		if (enabled && singlereset && (next == null || !next.GetComponent<ButtonScript>().enabled))
+		if (myEnabled && singlereset && (next == null || !next.GetComponent<ButtonScript>().myEnabled))
 		{
 			_disable(false);
 			return false;
 		}
-		
+
 		// If we try to toggle an invalid element
 		if (!isValid())
 		{
@@ -44,7 +44,7 @@ public abstract class ButtonScript : MonoBehaviour
 	public abstract void disable();
 	void _disable(bool recursive, ButtonScript from = null)
 	{
-		enabled = false;
+		myEnabled = false;
 		disable();
 		
 		// Recursive disabling disables all the chain
@@ -60,7 +60,7 @@ public abstract class ButtonScript : MonoBehaviour
 	public abstract void enable();
 	bool _enable()
 	{
-		enabled = true;
+		myEnabled = true;
 		enable();
 
 		// If this element is the last of the chain
@@ -78,7 +78,7 @@ public abstract class ButtonScript : MonoBehaviour
 	
 	bool isValid()
 	{
-		if (prev != null && !prev.GetComponent<ButtonScript>().enabled)
+		if (prev != null && !prev.GetComponent<ButtonScript>().myEnabled)
 			return false;
 		
 		return true;
