@@ -692,7 +692,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}
+    m_HighlightedColor: {r: .862745106, g: .862745106, b: .862745106, a: 1}
     m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
     m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
     m_ColorMultiplier: 1
@@ -833,7 +833,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}
+    m_HighlightedColor: {r: .862745106, g: .862745106, b: .862745106, a: 1}
     m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
     m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
     m_ColorMultiplier: 1
@@ -1160,6 +1160,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1011638630}
   - 65: {fileID: 1011638629}
+  - 114: {fileID: 1011638631}
   m_Layer: 0
   m_Name: Options
   m_TagString: Untagged
@@ -1191,6 +1192,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 127904970}
   m_RootOrder: 2
+--- !u!114 &1011638631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1011638628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b3aacdeaa765d94197cf04abb1bef8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events: {fileID: 48530885}
 --- !u!1 &1145687917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,6 +1213,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1145687918}
   - 65: {fileID: 1145687919}
+  - 114: {fileID: 1145687920}
   m_Layer: 0
   m_Name: Quit
   m_TagString: Untagged
@@ -1231,6 +1245,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1145687920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1145687917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95c3de34742672348a57882f2ad45791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events: {fileID: 48530885}
 --- !u!1 &1374843793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,7 +1315,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}
+    m_HighlightedColor: {r: .862745106, g: .862745106, b: .862745106, a: 1}
     m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
     m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
     m_ColorMultiplier: 1
@@ -1381,6 +1407,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1614648472}
   - 65: {fileID: 1614648473}
+  - 114: {fileID: 1614648474}
   m_Layer: 0
   m_Name: Play
   m_TagString: Untagged
@@ -1412,6 +1439,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1614648474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1614648471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f047376045603f347a9159d9b6e86720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events: {fileID: 48530885}
 --- !u!20 &1686440177
 Camera:
   m_PrefabParentObject: {fileID: 2000000, guid: ce816f2e6abb0504092c23ed9b970dfd,
