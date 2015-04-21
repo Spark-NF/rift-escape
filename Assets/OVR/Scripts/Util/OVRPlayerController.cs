@@ -36,6 +36,7 @@ public class OVRPlayerController : MonoBehaviour
 	public Vector3 ovrControlMinimum = new Vector3(0.15f, 0.05f, 0.05f);      // Min distance of head from centre to move/jump
 	public enum OvrXAxisAction { Strafe = 0, Rotate = 1 }
 	public OvrXAxisAction ovrXAxisAction = OvrXAxisAction.Strafe; // Whether x axis positional tracking performs strafing or rotation
+	public bool softCrounching = false;
 
 	// OVR positional tracking, currently works via tilting head
 	private Vector3? initPosTrackDir = null;
@@ -289,9 +290,9 @@ public class OVRPlayerController : MonoBehaviour
 		/*if (ovrJump && diffPosTrackDir.y > ovrControlMinimum.y)
 			Jump();*/
 		// crounching if oculus is low enough
-		if (moveDown/* || diffPosTrackDir.y <= -ovrControlMinimum.y*/)
+		if (moveDown || diffPosTrackDir.y <= -ovrControlMinimum.y)
 			crounched = true;
-		if (moveUp/* || diffPosTrackDir.y >= ovrControlMinimum.y*/)
+		if (moveUp || diffPosTrackDir.y >= ovrControlMinimum.y)
 			crounched = false;
 		if (!crounched && Controller.height < InitialHeight)
 			Controller.height += ovrControlSensitivity.y;
