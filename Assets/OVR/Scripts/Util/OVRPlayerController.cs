@@ -290,14 +290,21 @@ public class OVRPlayerController : MonoBehaviour
 		/*if (ovrJump && diffPosTrackDir.y > ovrControlMinimum.y)
 			Jump();*/
 		// crounching if oculus is low enough
-		if (moveDown || diffPosTrackDir.y <= -ovrControlMinimum.y)
-			crounched = true;
-		if (moveUp || diffPosTrackDir.y >= ovrControlMinimum.y)
-			crounched = false;
-		if (!crounched && Controller.height < InitialHeight)
-			Controller.height += ovrControlSensitivity.y;
-		if (crounched && Controller.height > crouchHeight)
-						Controller.height -= ovrControlSensitivity.y;
+		if (softCrounching) {
+			if ((moveDown || diffPosTrackDir.y <= -ovrControlMinimum.y) && Controller.height > crouchHeight)
+				Controller.height -= ovrControlSensitivity.y;
+			if ((moveUp || diffPosTrackDir.y >= ovrControlMinimum.y) && Controller.height < InitialHeight)
+				Controller.height += ovrControlSensitivity.y;
+		} else {
+			if (moveDown || diffPosTrackDir.y <= -ovrControlMinimum.y)
+				crounched = true;
+			if (moveUp || diffPosTrackDir.y >= ovrControlMinimum.y)
+				crounched = false;
+			if (!crounched && Controller.height < InitialHeight)
+				Controller.height += ovrControlSensitivity.y;
+			if (crounched && Controller.height > crouchHeight)
+				Controller.height -= ovrControlSensitivity.y;
+		}
 
 		// end dubois_d
 

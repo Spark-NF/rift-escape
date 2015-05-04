@@ -119,8 +119,8 @@ public class LeapImageRetriever : MonoBehaviour
 
   private LM_DEVICE GetDevice(int width)
   {
+	/* dubois_d : unreachable
     const bool OVERRIDE_MANTIS = false;
-		/* dubois_d : unreachable
     if (OVERRIDE_MANTIS)
     {
       return LM_DEVICE.MANTIS;
@@ -441,7 +441,8 @@ public class LeapImageRetriever : MonoBehaviour
   }
 
   void OnApplicationFocus(bool focusStatus) {
-    bool paused = focusStatus;
+	/* dubois_d useless variable
+    bool paused = focusStatus;*/
     if (focusStatus) {
             // Ensure reinitialization in Update
             attached_device_.width = 0;
