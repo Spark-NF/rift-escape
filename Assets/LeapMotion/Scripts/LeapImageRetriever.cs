@@ -120,10 +120,11 @@ public class LeapImageRetriever : MonoBehaviour
   private LM_DEVICE GetDevice(int width)
   {
     const bool OVERRIDE_MANTIS = false;
+		/* dubois_d : unreachable
     if (OVERRIDE_MANTIS)
     {
       return LM_DEVICE.MANTIS;
-    }
+    }*/
 
     if (width == LMDevice.PERIPERAL_WIDTH)
     {
