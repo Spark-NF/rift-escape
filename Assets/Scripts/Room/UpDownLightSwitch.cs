@@ -16,6 +16,7 @@ namespace AssemblyCSharp
 	public class UpDownLightSwitch : MonoBehaviour
 	{
 		public Light lamp;
+		public GameObject bulb;
 		public float intensitySet = 1.0f;
 		public GameObject ButtonToMove;
 		private float nextFire = 0.0f;
@@ -30,6 +31,16 @@ namespace AssemblyCSharp
 			if (lamp.intensity != intensitySet) {
 
 				lamp.intensity = intensitySet;
+				if (intensitySet == 0)
+				{
+					Material newMat = Resources.Load("Lamp/LampWhite", typeof(Material)) as Material;
+					bulb.GetComponent<Renderer>().material = newMat;
+				}
+				else
+				{
+					Material newMat = Resources.Load("Lamp/LightWhite", typeof(Material)) as Material;
+					bulb.GetComponent<Renderer>().material = newMat;
+				}
 				// Making the button move
 				ButtonToMove.transform.Rotate(0, 180f, 0f);
 				// rotating everything else so just the object is rotated bot nothing else
