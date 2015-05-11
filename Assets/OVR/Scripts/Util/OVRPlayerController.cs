@@ -37,6 +37,7 @@ public class OVRPlayerController : MonoBehaviour
 	public enum OvrXAxisAction { Strafe = 0, Rotate = 1 }
 	public OvrXAxisAction ovrXAxisAction = OvrXAxisAction.Strafe; // Whether x axis positional tracking performs strafing or rotation
 	public bool softCrounching = false;
+	public float upDetection = .15f;
 
 	// OVR positional tracking, currently works via tilting head
 	private Vector3? initPosTrackDir = null;
@@ -290,6 +291,13 @@ public class OVRPlayerController : MonoBehaviour
 		/*if (ovrJump && diffPosTrackDir.y > ovrControlMinimum.y)
 			Jump();*/
 		// crounching if oculus is low enough
+
+		if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + Controller.height / 2, transform.position.z),
+		                    transform.TransformDirection (Vector3.up), upDetection)) {
+			// nearly colliding with top => moving down
+			moveDown = true;
+			//Debug.Log("There is something in front of the object!");
+		}
 		if (softCrounching) {
 			if ((moveDown || diffPosTrackDir.y <= -ovrControlMinimum.y) && Controller.height > crouchHeight)
 				Controller.height -= ovrControlSensitivity.y;
