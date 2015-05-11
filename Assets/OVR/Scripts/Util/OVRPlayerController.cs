@@ -304,10 +304,10 @@ public class OVRPlayerController : MonoBehaviour
 			if ((moveUp || diffPosTrackDir.y >= ovrControlMinimum.y) && Controller.height < InitialHeight)
 				Controller.height += ovrControlSensitivity.y;
 		} else {
-			if (moveDown || diffPosTrackDir.y <= -ovrControlMinimum.y)
-				crounched = true;
 			if (moveUp || diffPosTrackDir.y >= ovrControlMinimum.y)
 				crounched = false;
+			if (moveDown || diffPosTrackDir.y <= -ovrControlMinimum.y)
+				crounched = true;
 			if (!crounched && Controller.height < InitialHeight)
 				Controller.height += ovrControlSensitivity.y;
 			if (crounched && Controller.height > crouchHeight)
