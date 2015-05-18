@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+using Leap;
+
 public class PauseMenu : MonoBehaviour {
 
 	public AudioSource audio = null;
@@ -9,6 +11,15 @@ public class PauseMenu : MonoBehaviour {
 
 	public GameObject canvas;
 	private bool paused = false;
+
+	public HandController hand;
+	public Controller leap;
+
+	void Start()
+	{
+		leap = hand.GetLeapController ();
+		leap.EnableGesture (Gesture.GestureType.TYPECIRCLE);
+	}
 
 	bool togglePause()
 	{
@@ -40,6 +51,14 @@ public class PauseMenu : MonoBehaviour {
 
 	void Update()
 	{
+		Frame frame = leap.Frame ();
+		foreach (Gesture gest in frame.Gestures()) {
+			if (gest.Type == Gesture.GestureType.TYPECIRCLE) {
+				Debug.Log("Circle");
+				paused = togglePause();
+			}
+		}
+
 		if (Input.GetKeyDown(KeyCode.P))
 		{
 			paused = togglePause();
