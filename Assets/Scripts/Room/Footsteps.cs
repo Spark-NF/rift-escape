@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Footsteps : MonoBehaviour
 {
-	public AudioSource audio = null;
+	public AudioSource source = null;
 	public AudioClip[] footsteps;
 	public float runningInterval;
 	public float walkingInterval;

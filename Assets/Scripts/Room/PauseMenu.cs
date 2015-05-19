@@ -3,9 +3,9 @@ using System.Collections;
 
 using Leap;
 
-public class PauseMenu : MonoBehaviour {
-
-	public AudioSource audio = null;
+public class PauseMenu : MonoBehaviour
+{
+	public AudioSource source = null;
 	public AudioClip pause = null;
 	public AudioClip unpause = null;
 
@@ -17,8 +17,8 @@ public class PauseMenu : MonoBehaviour {
 
 	void Start()
 	{
-		leap = hand.GetLeapController ();
-		leap.EnableGesture (Gesture.GestureType.TYPECIRCLE);
+		leap = hand.GetLeapController();
+		leap.EnableGesture(Gesture.GestureType.TYPECIRCLE);
 	}
 
 	bool togglePause()
@@ -51,10 +51,11 @@ public class PauseMenu : MonoBehaviour {
 
 	void Update()
 	{
-		Frame frame = leap.Frame ();
-		foreach (Gesture gest in frame.Gestures()) {
-			if (gest.Type == Gesture.GestureType.TYPECIRCLE) {
-				Debug.Log("Circle");
+		Frame frame = leap.Frame();
+		foreach (Gesture gest in frame.Gestures())
+		{
+			if (gest.Type == Gesture.GestureType.TYPECIRCLE)
+			{
 				paused = togglePause();
 			}
 		}
