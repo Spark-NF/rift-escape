@@ -8,8 +8,8 @@ public class AudioOnSceneLoad : MonoBehaviour {
 
 	void Start()
 	{
-		audio.clip = background;
-		audio.loop = true;
-		audio.Play();
+		source.clip = background;
+		source.loop = true;
+		source.Play();
 	}
 }

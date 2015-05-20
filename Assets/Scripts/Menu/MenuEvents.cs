@@ -3,21 +3,20 @@ using System.Collections;
 
 public class MenuEvents : MonoBehaviour
 {
-	public AudioSource source;
+	public AudioSource source = null;
 	public AudioClip onPlay = null;
 	public AudioClip onQuit = null;
 
 	public void MenuQuit()
 	{
-		if (onQuit != null && audio != null)
+		if (onQuit != null && source != null)
 			StartCoroutine(WaitForAudio(onQuit));
 
 		Application.Quit();
 	}
-
 	public void MenuPlay()
 	{
-		if (onPlay != null && audio != null)
+		if (onPlay != null && source != null)
 			StartCoroutine(WaitForAudio(onPlay));
 
 		Application.LoadLevel("Room");
@@ -28,9 +27,9 @@ public class MenuEvents : MonoBehaviour
 		Debug.LogWarning("Options");
 	}
 
-	void WaitForAudio(AudioClip sound)
+	IEnumerator WaitForAudio(AudioClip sound)
 	{
-		audio.PlayOneShot(sound);
+		source.PlayOneShot(sound);
 		yield return new WaitForSeconds(sound.length);
 	}
 }

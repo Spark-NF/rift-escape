@@ -25,9 +25,9 @@ public class PauseMenu : MonoBehaviour
 	{
 		if (Time.timeScale == 0f)
 		{
-			if (audio != null && unpause != null)
+			if (source != null && unpause != null)
 			{
-				audio.PlayOneShot(unpause);
+				source.PlayOneShot(unpause);
 			}
 
 			Time.timeScale = 1f;
@@ -37,9 +37,9 @@ public class PauseMenu : MonoBehaviour
 		}
 		else
 		{
-			if (audio != null && pause != null)
+			if (source != null && pause != null)
 			{
-				audio.PlayOneShot(pause);
+				source.PlayOneShot(pause);
 			}
 
 			Time.timeScale = 0f;
