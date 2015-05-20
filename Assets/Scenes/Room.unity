@@ -385,7 +385,7 @@ TextMesh:
   m_Text: "Salut \xE0 toi,\r\n\r\nJe suppose que tu te demandes\r\nce que tu fais
     ici, \xE0 vrai dire je\r\nn'en sais trop rien, les\r\ncr\xE9ateurs de ce jeu ne
     se sont\r\npas encore fix\xE9s sur le\r\nsc\xE9nario, mais il est probable\r\nque
-    tu es la gueule de bois.\r\n\t\t\t\t\t\t\t\t\t\tX"
+    tu aies la gueule de bois.\r\n\t\t\t\t\t\t\t\t\t\tX"
   m_OffsetZ: 0
   m_CharacterSize: .00899999961
   m_LineSpacing: 1
@@ -1003,7 +1003,7 @@ TextMesh:
   m_Text: "Salut \xE0 toi,\r\n\r\nJe suppose que tu te demandes\r\nce que tu fais
     ici, \xE0 vrai dire je\r\nn'en sais trop rien, les\r\ncr\xE9ateurs de ce jeu ne
     se sont\r\npas encore fix\xE9s sur le\r\nsc\xE9nario, mais il est probable\r\nque
-    tu ais la gueule de bois.\r\n\t\t\t\t\t\t\t\t\t\tX"
+    tu aies la gueule de bois.\r\n\t\t\t\t\t\t\t\t\t\tX"
   m_OffsetZ: 0
   m_CharacterSize: .00899999961
   m_LineSpacing: 1
@@ -1858,7 +1858,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
-    m_Font: {fileID: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -3562,7 +3562,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
-    m_Font: {fileID: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -3591,7 +3591,6 @@ GameObject:
   - 20: {fileID: 1196974986}
   - 124: {fileID: 1196974985}
   - 92: {fileID: 1196974984}
-  - 81: {fileID: 1196974983}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -3611,13 +3610,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1704449404}
   m_RootOrder: 0
---- !u!81 &1196974983
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1196974981}
-  m_Enabled: 0
 --- !u!92 &1196974984
 Behaviour:
   m_ObjectHideFlags: 0
@@ -4171,7 +4163,7 @@ MonoBehaviour:
   - {fileID: 11400004, guid: fa3f3c00a3a0b468eb15ed53304a2c4b, type: 2}
   - {fileID: 11400010, guid: 59d37bd572fe54eb490dcbae28e3e382, type: 2}
   - {fileID: 11400010, guid: 95a8b1228f1034c8f9070761f4f13b21, type: 2}
---- !u!114 &1383165345
+--- !u!1 &1393282496
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
