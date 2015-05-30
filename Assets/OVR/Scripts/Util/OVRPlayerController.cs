@@ -29,15 +29,25 @@ using System.Collections.Generic;
 public class OVRPlayerController : MonoBehaviour
 {
 	#region Movement dubois_d
-	public bool ovrMovement = true;                              // Enable move player by moving head on X and Z axis
-	public bool ovrJump = false;                                  // Enable player jumps by moving head on Y axis upwards
-	public Vector3 ovrRotationMinimum = new Vector3 (60, 60, 0); // Sensitivity to trigger rotation movement
-	public Vector3 ovrControlSensitivity = new Vector3(10f, 0.05f, 2f);  // Multiplier of positiona tracking move/jump actions
-	public Vector3 ovrControlMinimum = new Vector3(0.15f, 0.05f, 0.05f);      // Min distance of head from centre to move/jump
+	public static bool ovrMovement = true;                              // Enable move player by moving head on X and Z axis
+	public static bool LeapMovement = true;
+	public static Vector3 ovrRotationMinimum = new Vector3 (60, 60, 0); // Sensitivity to trigger rotation movement
+	public static Vector3 ovrControlSensitivity = new Vector3(10f, 0.05f, 2f);  // Multiplier of positiona tracking move/jump actions
+	public static Vector3 ovrControlMinimum = new Vector3(0.15f, 0.05f, 0.05f);      // Min distance of head from centre to move/jump
 	public enum OvrXAxisAction { Strafe = 0, Rotate = 1 }
-	public OvrXAxisAction ovrXAxisAction = OvrXAxisAction.Strafe; // Whether x axis positional tracking performs strafing or rotation
-	public bool softCrounching = false;
-	public float upDetection = .15f;
+	public static OvrXAxisAction ovrXAxisAction = OvrXAxisAction.Strafe; // Whether x axis positional tracking performs strafing or rotation
+	public static bool softCrounching = false;
+	public static float upDetection = .15f;
+	public enum LeapMovementAction
+	{
+		Forward,
+		RotLeft,
+		RotRight,
+		Up,
+		Down,
+		None
+	}
+	public static LeapMovementAction nextAction = LeapMovementAction.None;
 
 	// OVR positional tracking, currently works via tilting head
 	private Vector3? initPosTrackDir = null;
@@ -46,7 +56,7 @@ public class OVRPlayerController : MonoBehaviour
 
 	// Variables for bending
 	private float InitialHeight;
-	public float crouchHeight = 0.8f;
+	public static float crouchHeight = 0.8f;
 	private bool crounched = false;
 	#endregion
 
@@ -217,17 +227,20 @@ public class OVRPlayerController : MonoBehaviour
 			return;
 
 		MoveScale = 1.0f;
-		bool moveForward = Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow);
+		bool moveForward = Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow) || (LeapMovement && nextAction == LeapMovementAction.Forward);
 		bool moveLeft = Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow);
 		bool moveRight = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow);
 		bool moveBack = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
 		bool jump = Input.GetKey(KeyCode.Space);
 
 		// dubois_d  Get the input vector from OVR positional tracking and add bending / standing up
-
+		bool lookRight = false;
+		bool lookLeft = false;
 		bool moveUp = Input.GetKey(KeyCode.R);
 		bool moveDown = Input.GetKey(KeyCode.F);
 		bool Reinit_movepos = Input.GetKey (KeyCode.RightControl) || Input.GetKey (KeyCode.LeftControl);
+
+		nextAction = LeapMovementAction.None; // Now that the next action is taken into account we reset it
 
 		if (initPosTrackDir == null) {
 			initPosTrackDir = CameraController.centerEyeAnchor.transform.localPosition;
@@ -237,7 +250,7 @@ public class OVRPlayerController : MonoBehaviour
 			initPosTrackDir = CameraController.centerEyeAnchor.transform.localPosition;
 				}
 
-		if (ovrMovement || ovrJump) {
+		if (ovrMovement) {
 			curPosTrackDir = CameraController.centerEyeAnchor.transform.localPosition;
 			diffPosTrackDir = curPosTrackDir - initPosTrackDir.GetValueOrDefault();
 		}
