@@ -240,8 +240,6 @@ public class OVRPlayerController : MonoBehaviour
 		bool moveDown = Input.GetKey(KeyCode.F);
 		bool Reinit_movepos = Input.GetKey (KeyCode.RightControl) || Input.GetKey (KeyCode.LeftControl);
 
-		nextAction = LeapMovementAction.None; // Now that the next action is taken into account we reset it
-
 		if (initPosTrackDir == null) {
 			initPosTrackDir = CameraController.centerEyeAnchor.transform.localPosition;
 		}
@@ -406,8 +404,9 @@ public class OVRPlayerController : MonoBehaviour
 			euler.y += RotationAmount;
 
 		// dubois_d OVR movement rotation
-		if (ovrMovement)
-			OvrRotationUpdate(ref euler);
+		OvrRotationUpdate(ref euler);
+		nextAction = LeapMovementAction.None; // Now that the next action is taken into account we reset it
+		// end dubois_d
 
 		float rotateInfluence = SimulationRate * Time.deltaTime * RotationAmount * RotationScaleMultiplier;
 
@@ -447,31 +446,33 @@ public class OVRPlayerController : MonoBehaviour
 	/// </summary>
 	private void OvrRotationUpdate(ref Vector3 euler)
 	{
-		// rotation left / right
-		float yAngle = CameraController.centerEyeAnchor.transform.localRotation.eulerAngles.y;
-		if (yAngle > 180) // on the left side : 360->180
-		{
-			yAngle = -1 * (yAngle - 360); // recentering the angle on 0 - 90
-			if (yAngle > ovrRotationMinimum.y)
-				euler.y -= (yAngle - ovrRotationMinimum.y) * RotationAmount / (90 - ovrRotationMinimum.y);
-		}
-		else // on the right side : 0 -> 180
-		{
-			if (yAngle > ovrRotationMinimum.y)
-				euler.y += (yAngle - ovrRotationMinimum.y) * RotationAmount / (90 - ovrRotationMinimum.y);
-		}
+		if (ovrMovement) {
+			// rotation left / right
+			float yAngle = CameraController.centerEyeAnchor.transform.localRotation.eulerAngles.y;
+			if (yAngle > 180) { // on the left side : 360->180
+				yAngle = -1 * (yAngle - 360); // recentering the angle on 0 - 90
+				if (yAngle > ovrRotationMinimum.y)
+					euler.y -= (yAngle - ovrRotationMinimum.y) * RotationAmount / (90 - ovrRotationMinimum.y);
+			} else { // on the right side : 0 -> 180
+				if (yAngle > ovrRotationMinimum.y)
+					euler.y += (yAngle - ovrRotationMinimum.y) * RotationAmount / (90 - ovrRotationMinimum.y);
+			}
 
-		float xAngle = CameraController.centerEyeAnchor.transform.localRotation.eulerAngles.x;
-		if (xAngle > 180) // on the top side : 360->180
-		{
-			xAngle = -1 * (xAngle - 360); // recentering the angle on 0 - 90
-			if (xAngle > ovrRotationMinimum.x)
-				crounched = false;
+			float xAngle = CameraController.centerEyeAnchor.transform.localRotation.eulerAngles.x;
+			if (xAngle > 180) { // on the top side : 360->180
+				xAngle = -1 * (xAngle - 360); // recentering the angle on 0 - 90
+				if (xAngle > ovrRotationMinimum.x)
+					crounched = false;
+			} else { // on the bottom side : 0 -> 180
+				if (xAngle > ovrRotationMinimum.x)
+					crounched = true;
+			}
 		}
-		else // on the bottom side : 0 -> 180
-		{
-			if (xAngle > ovrRotationMinimum.x)
-				crounched = true;
+		if (LeapMovement) {
+		 if (nextAction == LeapMovementAction.RotLeft)
+				euler.y -= RotationAmount;
+		 if (nextAction == LeapMovementAction.RotRight)
+				euler.y += RotationAmount;
 		}
 	}
 
