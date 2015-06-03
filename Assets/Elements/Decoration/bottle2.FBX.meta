@@ -1,32 +1,18 @@
 fileFormatVersion: 2
-guid: 3da57b887e4888947839b3313e880f28
+guid: 43991dbc601468e44a784820f8dad169
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: Camera
-    100002: minutenzeiger
-    100004: stundenzeiger
-    100006: //RootNode
-    100008: wanduhr
-    400000: Camera
-    400002: minutenzeiger
-    400004: stundenzeiger
-    400006: //RootNode
-    400008: wanduhr
-    2300000: minutenzeiger
-    2300002: stundenzeiger
-    2300004: wanduhr
-    3300000: minutenzeiger
-    3300002: stundenzeiger
-    3300004: wanduhr
-    4300000: minutenzeiger
-    4300002: wanduhr
-    4300004: stundenzeiger
-    11100000: //RootNode
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: bottle-2
+    9500000: //RootNode
   materials:
     importMaterials: 1
-    materialName: 2
-    materialSearch: 0
+    materialName: 0
+    materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -58,9 +44,9 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 0
   tangentSpace:
-    normalSmoothAngle: 42
+    normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0
@@ -76,7 +62,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 1
+  animationType: 2
   additionalBone: 0
   userData: 
   assetBundleName: 
