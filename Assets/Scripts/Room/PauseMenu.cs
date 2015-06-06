@@ -56,7 +56,7 @@ public class PauseMenu : MonoBehaviour
 		{
 			if (gest.Type == Gesture.GestureType.TYPECIRCLE)
 			{
-				paused = togglePause();
+				//paused = togglePause();
 			}
 		}
 

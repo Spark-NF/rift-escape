@@ -590,10 +590,12 @@ public class OVRMainMenu : MonoBehaviour
 	
 	void UpdateRecenterPose()
 	{
+		/* dubois_d disabling this keymap
 		if(Input.GetKeyDown(KeyCode.R))
 		{
 			OVRManager.display.RecenterPose();
 		}
+		*/
 	}
 	
 	/// <summary>

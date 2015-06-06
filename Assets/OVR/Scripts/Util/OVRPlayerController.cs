@@ -29,14 +29,14 @@ using System.Collections.Generic;
 public class OVRPlayerController : MonoBehaviour
 {
 	#region Movement dubois_d
-	public static bool ovrMovement = true;                              // Enable move player by moving head on X and Z axis
+	public static bool ovrMovement = false;                              // Enable move player by moving head on X and Z axis
 	public static bool LeapMovement = true;
 	public static Vector3 ovrRotationMinimum = new Vector3 (60, 60, 0); // Sensitivity to trigger rotation movement
 	public static Vector3 ovrControlSensitivity = new Vector3(10f, 0.05f, 2f);  // Multiplier of positiona tracking move/jump actions
 	public static Vector3 ovrControlMinimum = new Vector3(0.15f, 0.05f, 0.05f);      // Min distance of head from centre to move/jump
 	public enum OvrXAxisAction { Strafe = 0, Rotate = 1 }
 	public static OvrXAxisAction ovrXAxisAction = OvrXAxisAction.Strafe; // Whether x axis positional tracking performs strafing or rotation
-	public static bool softCrounching = false;
+	public static bool softCrounching = true;
 	public static float upDetection = .15f;
 	public enum LeapMovementAction
 	{
@@ -48,6 +48,7 @@ public class OVRPlayerController : MonoBehaviour
 		None
 	}
 	public static LeapMovementAction nextAction = LeapMovementAction.None;
+	public GameObject LeapMovementColliders;
 
 	// OVR positional tracking, currently works via tilting head
 	private Vector3? initPosTrackDir = null;
@@ -236,8 +237,8 @@ public class OVRPlayerController : MonoBehaviour
 		// dubois_d  Get the input vector from OVR positional tracking and add bending / standing up
 		bool lookRight = false;
 		bool lookLeft = false;
-		bool moveUp = Input.GetKey(KeyCode.R);
-		bool moveDown = Input.GetKey(KeyCode.F);
+		bool moveUp = Input.GetKey(KeyCode.R) || (LeapMovement && nextAction == LeapMovementAction.Up);
+		bool moveDown = Input.GetKey(KeyCode.F) || (LeapMovement && nextAction == LeapMovementAction.Down);
 		bool Reinit_movepos = Input.GetKey (KeyCode.RightControl) || Input.GetKey (KeyCode.LeftControl);
 
 		if (initPosTrackDir == null) {
@@ -311,18 +312,18 @@ public class OVRPlayerController : MonoBehaviour
 		}
 		if (softCrounching) {
 			if ((moveDown || diffPosTrackDir.y <= -ovrControlMinimum.y) && Controller.height > crouchHeight)
-				Controller.height -= ovrControlSensitivity.y;
+				movedown();
 			if ((moveUp || diffPosTrackDir.y >= ovrControlMinimum.y) && Controller.height < InitialHeight)
-				Controller.height += ovrControlSensitivity.y;
+				moveup();
 		} else {
 			if (moveUp || diffPosTrackDir.y >= ovrControlMinimum.y)
 				crounched = false;
 			if (moveDown || diffPosTrackDir.y <= -ovrControlMinimum.y)
 				crounched = true;
 			if (!crounched && Controller.height < InitialHeight)
-				Controller.height += ovrControlSensitivity.y;
+				moveup();
 			if (crounched && Controller.height > crouchHeight)
-				Controller.height -= ovrControlSensitivity.y;
+				movedown();
 		}
 
 		// end dubois_d
@@ -474,6 +475,26 @@ public class OVRPlayerController : MonoBehaviour
 		 if (nextAction == LeapMovementAction.RotRight)
 				euler.y += RotationAmount;
 		}
+	}
+
+	private void movedown()
+	{
+		Controller.height -= ovrControlSensitivity.y;
+		foreach (LeapMovementScript script in GetComponents<LeapMovementScript>()) {
+			Debug.Log("One element found !");
+			script.transform.position.Set(script.transform.position.x, script.transform.position.y - ovrControlSensitivity.y / 2, script.transform.position.z);
+		}
+
+		// Unity is moving colliders slightly, but not enough
+		LeapMovementColliders.transform.position = new Vector3(LeapMovementColliders.transform.position.x, LeapMovementColliders.transform.position.y - ovrControlSensitivity.y / 4, LeapMovementColliders.transform.position.z);
+
+	}
+
+	private void moveup()
+	{
+		Controller.height += ovrControlSensitivity.y;
+		// Unity is moving colliders slightly, but not enough
+		LeapMovementColliders.transform.position = new Vector3(LeapMovementColliders.transform.position.x, LeapMovementColliders.transform.position.y + ovrControlSensitivity.y / 4, LeapMovementColliders.transform.position.z);
 	}
 
 	/// <summary>
