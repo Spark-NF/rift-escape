@@ -19,13 +19,15 @@ public class Footsteps : MonoBehaviour
 	
 	void Update()	
 	{
-		if (cc.isGrounded == true && cc.velocity.magnitude > 0.3f && source.isPlaying == false && !playing)
+		Vector3 horizontalVelocity = new Vector3(cc.velocity.x, 0, cc.velocity.z);
+
+		if (cc.isGrounded == true && horizontalVelocity.magnitude > 0.3f && source.isPlaying == false && !playing)
 		{
 			source.volume = Random.Range(0.8f, 1);
 			source.pitch = Random.Range(0.8f, 1.1f);
 			source.PlayOneShot(footsteps[Random.Range(0, footsteps.Length)]);
 			
-			bool running = cc.velocity.magnitude > 2f;
+			bool running = horizontalVelocity.magnitude > 2f;
 			StartCoroutine(WaitForNextFoot(running ? runningInterval : walkingInterval));
 		}
 	}
