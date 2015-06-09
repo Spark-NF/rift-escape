@@ -24,7 +24,7 @@ public class PauseMenu : MonoBehaviour
 
 	public bool togglePause()
 	{
-		if (Time.timeScale == 0f)
+		if (Time.timeScale == 0.99f)
 		{
 			if (source != null && unpause != null)
 			{
@@ -43,7 +43,7 @@ public class PauseMenu : MonoBehaviour
 				source.PlayOneShot(pause);
 			}
 
-			Time.timeScale = 0f;
+			Time.timeScale = 0.99f;
 			canvas.SetActive(true);
 
 			return true;    
