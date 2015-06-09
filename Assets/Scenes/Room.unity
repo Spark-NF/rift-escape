@@ -1066,6 +1066,10 @@ Prefab:
       propertyPath: m_ReceiveShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9d94cb1bb8dc06342a424c09e2e7f247, type: 3}
+      propertyPath: m_TagString
+      value: TwoHandsGrabbable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d94cb1bb8dc06342a424c09e2e7f247, type: 3}
   m_IsPrefabParent: 0
@@ -5922,6 +5926,10 @@ Prefab:
       propertyPath: LeapMovementColliders
       value: 
       objectReference: {fileID: 1205317883}
+    - target: {fileID: 100004, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
   m_IsPrefabParent: 0
