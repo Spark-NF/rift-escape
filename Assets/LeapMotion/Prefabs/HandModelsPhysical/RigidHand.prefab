@@ -361,6 +361,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400034}
   - 114: {fileID: 11400008}
+  - 114: {fileID: 11403798}
   m_Layer: 0
   m_Name: RigidHand
   m_TagString: Untagged
@@ -1217,6 +1218,34 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   filtering: .5
+--- !u!114 &11403798
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feefc2f01ecd948f9bd88d185b4fc0ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabbableLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  grabTriggerDistance: .699999988
+  releaseTriggerDistance: 1.20000005
+  grabObjectDistance: .400000006
+  releaseBreakDistance: .300000012
+  releaseStrengthCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  rotationFiltering: .400000006
+  positionFiltering: .400000006
+  minConfidence: .100000001
+  maxMovement: {x: Infinity, y: Infinity, z: Infinity}
+  minMovement: {x: -Infinity, y: -Infinity, z: -Infinity}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -1228,4 +1257,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100042}
   m_IsPrefabParent: 1
-  m_IsExploded: 1
