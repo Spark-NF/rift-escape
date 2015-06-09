@@ -17,7 +17,8 @@ public class PauseMenu : MonoBehaviour
 
 	void Start()
 	{
-		/*leap = hand.GetLeapController();
+		/*Debug.Log("Pause");
+		leap = hand.GetLeapController();
 		leap.EnableGesture(Gesture.GestureType.TYPECIRCLE);*/
 	}
 

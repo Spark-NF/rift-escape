@@ -85,14 +85,23 @@ public class GrabbingHand : MonoBehaviour {
       float sqr_distance = (pinch_position - close_things[j].transform.position).sqrMagnitude;
 
       if (close_things[j].GetComponent<Rigidbody>() != null && sqr_distance < closest_sqr_distance &&
-          !close_things[j].transform.IsChildOf(transform) &&
-          close_things[j].tag != "NotGrabbable") {
-
-        GrabbableObject grabbable = close_things[j].GetComponent<GrabbableObject>();
-        if (grabbable == null || !grabbable.IsGrabbed()) {
-          closest = close_things[j];
-          closest_sqr_distance = sqr_distance;
-        }
+          !close_things[j].transform.IsChildOf(transform)) {
+			
+		GrabbableObject grabbable = close_things[j].GetComponent<GrabbableObject>();
+		if (close_things[j].tag != "NotGrabbable") {	
+			if (grabbable == null || !grabbable.IsGrabbed()) {
+				closest = close_things[j];
+				closest_sqr_distance = sqr_distance;
+			}
+		}/* else if (close_things[j].tag == "TwoHandsGrabbable") {
+			if (grabbable != null && grabbable.IsGrabbed()) {
+				Debug.Log("Can be grabbed");
+				closest = close_things[j];
+				closest_sqr_distance = sqr_distance;
+			} else {
+				Debug.Log ("Require two hands");
+			}
+		}*/
       }
     }
 
