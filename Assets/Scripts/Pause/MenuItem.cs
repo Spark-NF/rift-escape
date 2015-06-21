@@ -7,15 +7,28 @@ public abstract class MenuItem : MonoBehaviour
 	protected float fireRate = 1.0f;
 	protected float nextFire = 0.0f;
 
+	public static bool activated = false;
+
 	public abstract void activate();
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.transform.parent && other.transform.parent.parent && other.transform.parent.parent.GetComponent<HandModel>() && Time.time > nextFire)
+		if (!activated && other.transform.parent && other.transform.parent.parent && other.transform.parent.parent.GetComponent<HandModel>() && Time.time > nextFire)
 	    {
 			activate();
 			nextFire = Time.time + fireRate;
+			activated = true;
 		}
+	}
+
+	void OnTriggerExit(Collider other)
+	{
+		activated = false;
+	}
+
+	void OnTriggerStay(Collider other)
+	{
+		activated = true;
 	}
 
 	void Update()

@@ -15,7 +15,6 @@ public class PauseButtonHand : MonoBehaviour {
 	
 	void OnTriggerStay(Collider other) 
 	{
-		Debug.Log ("Pause button!");
 		if (IsHand (other) && !triggered) {
 			triggered = true;
 			PauseMenu pm = GameObject.FindGameObjectWithTag("Player").GetComponent<PauseMenu>();
