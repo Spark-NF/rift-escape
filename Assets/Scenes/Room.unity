@@ -3831,8 +3831,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.99981821, y: 2.99999952, z: 2}
-  m_Center: {x: -8.64267349e-05, y: -.500013351, z: 1.35600203e-06}
+  m_Size: {x: 2.00849319, y: 1.99883175, z: 1.99999964}
+  m_Center: {x: -41.9970398, y: -3.61327291, z: -.976242959}
 --- !u!65 &885098733
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3843,8 +3843,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.00028706, y: .994928718, z: 2}
-  m_Center: {x: 4.99986839, y: -1.50265074, z: 1.08707366e-06}
+  m_Size: {x: 9.75170517, y: 1.0003289, z: 1.99999952}
+  m_Center: {x: -37.8771667, y: -5.11367273, z: -.976380527}
 --- !u!1 &893320001 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: 63a2f6adf012ae844846a13a600f5cb3, type: 3}
@@ -6707,8 +6707,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.99981821, y: 2.99999952, z: 2}
-  m_Center: {x: -8.64267349e-05, y: -.500013351, z: 1.35600203e-06}
+  m_Size: {x: 1.99918568, y: 2.0130477, z: 1.99999976}
+  m_Center: {x: -42.0016632, y: -3.61997342, z: .976616979}
 --- !u!65 &1393282499
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6719,8 +6719,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.00028706, y: .994928718, z: 2}
-  m_Center: {x: 4.99986839, y: -1.50265074, z: 1.08707366e-06}
+  m_Size: {x: 9.7515955, y: .975903928, z: 1.99999952}
+  m_Center: {x: -37.8770981, y: -5.12553883, z: .976617455}
 --- !u!1 &1394062267
 GameObject:
   m_ObjectHideFlags: 0
@@ -8337,8 +8337,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.00000072, y: 2.00000119, z: 1.99999964}
-  m_Center: {x: -1.78813963e-07, y: 3.81469727e-06, z: -1.7881392e-07}
+  m_Size: {x: 2.00020385, y: 2.00000119, z: 1.99999964}
+  m_Center: {x: -1.01828325, y: 3.04102718e-06, z: 1.80382449e-05}
 --- !u!1001 &1647970574
 Prefab:
   m_ObjectHideFlags: 0
@@ -8410,6 +8410,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6412fc3d848100c499da33874dbf7c38, type: 2}
+    - target: {fileID: 100000, guid: 076d391cd1649c642b91523f6de474e2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 076d391cd1649c642b91523f6de474e2, type: 3}
   m_IsPrefabParent: 0
