@@ -33,6 +33,7 @@ public abstract class MenuItem : MonoBehaviour
 
 	void Update()
 	{
+		// TODO fix double fire on activation
 		if (letter != 0 && Input.GetKeyDown(letter))
 		{
 			activate();
