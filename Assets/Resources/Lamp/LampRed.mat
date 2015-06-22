@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Metal pattern 30
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _NORMALMAP
+  m_Name: LampRed
+  m_Shader: {fileID: 32, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -18,15 +18,15 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: cf54ca3e7acb32d4693f50824fc13fa5, type: 3}
-          m_Scale: {x: 3, y: 3}
+          m_Texture: {fileID: 2800000, guid: b575dbf201a0a0047b44cfcb90f3accc, type: 3}
+          m_Scale: {x: 1000, y: 1000}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 2800000, guid: abef4bb70b2ac9d4d88cf773aa70bbea, type: 3}
-          m_Scale: {x: 3, y: 3}
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -68,18 +68,11 @@ Material:
           name: _DetailAlbedoMap
         second:
           m_Texture: {fileID: 0}
-          m_Scale: {x: 3, y: 3}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _MetallicGlossMap
-        second:
-          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _SpecGlossMap
+          name: _MetallicGlossMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -92,7 +85,7 @@ Material:
       data:
         first:
           name: _Shininess
-        second: .126613587
+        second: .930000007
       data:
         first:
           name: _SrcBlend
@@ -112,7 +105,7 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: .300000012
+        second: .5
       data:
         first:
           name: _BumpScale
@@ -140,7 +133,7 @@ Material:
       data:
         first:
           name: _Metallic
-        second: .800000012
+        second: 0
     m_Colors:
       data:
         first:
@@ -149,11 +142,11 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: 1, g: 0, b: 0, a: 1}
       data:
         first:
           name: _SpecColor
-        second: {r: .898039222, g: 1, b: 1, a: 1}
+        second: {r: .996078432, g: .996078432, b: .996078432, a: 0}
       data:
         first:
           name: _EmissionColorUI

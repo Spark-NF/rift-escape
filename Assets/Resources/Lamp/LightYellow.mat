@@ -6,10 +6,10 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Lamp
-  m_Shader: {fileID: 32, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: LightYellow
+  m_Shader: {fileID: 12, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
-  m_LightmapFlags: 5
+  m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   m_SavedProperties:
     serializedVersion: 2
@@ -18,8 +18,8 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: b575dbf201a0a0047b44cfcb90f3accc, type: 3}
-          m_Scale: {x: 1000, y: 1000}
+          m_Texture: {fileID: 2800000, guid: 5ae23c64e8965754bb96ef2e9265ef81, type: 3}
+          m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -77,6 +77,13 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Illum
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -85,7 +92,7 @@ Material:
       data:
         first:
           name: _Shininess
-        second: .930000007
+        second: .00999999978
       data:
         first:
           name: _SrcBlend
@@ -138,15 +145,15 @@ Material:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 0}
+        second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
           name: _Color
-        second: {r: 1, g: 0, b: 0, a: 1}
+        second: {r: 1, g: .600000024, b: 0, a: 1}
       data:
         first:
           name: _SpecColor
-        second: {r: .996078432, g: .996078432, b: .996078432, a: 0}
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _EmissionColorUI
