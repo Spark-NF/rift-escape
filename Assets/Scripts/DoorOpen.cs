@@ -17,6 +17,11 @@ public class DoorOpen : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) 
 	{
+		OpenAction (other);
+	}
+
+	protected void OpenAction(Collider other) 
+	{
 		if (!animating && other.transform.parent && other.transform.parent.parent && other.transform.parent.parent.GetComponent<HandModel>())
 		{
 			opened = !opened;
@@ -29,14 +34,17 @@ public class DoorOpen : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update() {
+		UpdateAction();
+	}
+
+	protected void UpdateAction() {
 		if (animating) {
 			Vector3 destination = opened? openedrotation : closedrotation;
 			if (Vector3.SqrMagnitude(transform.rotation.eulerAngles - destination) < 0.1f) { // animation finished
 				animating = false;
 				return;
 			}
-			Debug.Log (transform.rotation.eulerAngles + " vs " + destination);
 			Vector3 euler = new Vector3(GetAnglechange(destination.x, transform.rotation.eulerAngles.x),
 			                      GetAnglechange(destination.y, transform.rotation.eulerAngles.y),
 			                      GetAnglechange(destination.z, transform.rotation.eulerAngles.z));
