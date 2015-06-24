@@ -1153,7 +1153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   def: 5
   min: 0
-  max: 10
+  max: 30
   step: 1
   label: {fileID: 1464449349}
 --- !u!115 &152515789
@@ -2069,7 +2069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   def: 5
   min: 0
-  max: 10
+  max: 30
   step: 1
   label: {fileID: 129422035}
 --- !u!1 &413922468
@@ -13173,10 +13173,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f8c4df08417034696fffc5c4c43a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  def: 5
-  min: 0
-  max: 10
-  step: 1
+  def: 60
+  min: 30
+  max: 90
+  step: 5
   label: {fileID: 566553069}
 --- !u!1 &1776098312
 GameObject:
