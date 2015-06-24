@@ -5,7 +5,7 @@ public class MenuValueOvrX : MenuValue
 {
 	public override void change(int oldValue, int newValue)
 	{
-		// FIXME change OVR X value
-		Debug.Log("OVR change X");
+		OVRPlayerController.ovrControlSensitivity.x = (float)newValue / 100;
+		Debug.Log (OVRPlayerController.ovrControlSensitivity.x);
 	}
 }

@@ -41,7 +41,7 @@ public class DoorOpen : MonoBehaviour {
 	protected void UpdateAction() {
 		if (animating) {
 			Vector3 destination = opened? openedrotation : closedrotation;
-			if (Vector3.SqrMagnitude(transform.rotation.eulerAngles - destination) < 0.1f) { // animation finished
+			if (Vector3.SqrMagnitude(transform.rotation.eulerAngles - destination) < 1f) { // animation finished
 				animating = false;
 				return;
 			}
