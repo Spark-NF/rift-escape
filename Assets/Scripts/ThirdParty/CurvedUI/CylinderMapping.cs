@@ -8,6 +8,11 @@ public class CylinderMapping : CanvasMapping
 	protected override void Awake()
 	{
 		base.Awake();
+
+		if (m_canvas.renderMode != RenderMode.ScreenSpaceCamera)
+		{
+			Debug.LogWarning("Cylinder mapping works best in ScreenSpaceCamera mode", this);
+		}
 	}
 	#region CanvasMapping
 	
@@ -27,9 +32,8 @@ public class CylinderMapping : CanvasMapping
 
 			// Calculate the view space size of the canvas
 			float thetaFOVH = worldCamera.fieldOfView * 0.5f * Mathf.Deg2Rad;
-			float aspect = worldCamera.aspect;
 			float tanFOVH = Mathf.Tan(thetaFOVH);
-			float tanFOVW = tanFOVH * aspect;
+			float tanFOVW = tanFOVH * worldCamera.aspect;
 
 			// Flatten cylinder and ray to 2D so this becomes a ray circle intersection
 			Vector2 rayDirection2D = new Vector2(localRayDirection.x, localRayDirection.z);

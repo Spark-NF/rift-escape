@@ -7,15 +7,14 @@ float Cylinder_Radius;
 
 float4 MapCoordinate(float4 coord)
 {
-    float sx = 500;
-    float theta = (coord.x / sx) * Cylinder_Angle;
-    float radius = Cylinder_Radius * sx;
-    float depth = Cylinder_Depth * sx;
-    
-    coord.x = sin(theta) * radius;
-    coord.z = (cos(theta) * radius) + depth;
-    
-    return coord;
-} 
+	float theta = (coord.x / _ScreenParams.x) * Cylinder_Angle;
+	float radius = Cylinder_Radius * _ScreenParams.x;
+	float depth = Cylinder_Depth * _ScreenParams.x;
+	
+	coord.x = sin(theta) * radius;
+	coord.z = (cos(theta) * radius) + depth;
+	
+	return coord;
+}
 
 #endif
