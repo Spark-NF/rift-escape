@@ -23,6 +23,8 @@ public class GrabbableObject : MonoBehaviour {
   protected bool grabbed_ = false;
   protected bool hovered_ = false;
 
+	public HandController hand;
+
   public bool IsHovered() {
     return hovered_;
   }
@@ -49,8 +51,17 @@ public class GrabbableObject : MonoBehaviour {
         breakJoint.breakForce = breakForce;
         breakJoint.breakTorque = breakTorque;
       }
-    }
+    }	
   }
+
+	public void Update() {
+		if (hand != null && grabbed_) {
+
+			this.transform.position = hand.transform.position 
+				+ new Vector3(0,0.5f,0);
+			this.transform.rotation = hand.transform.rotation;
+		}
+	}
 
   public virtual void OnRelease() {
     grabbed_ = false;
