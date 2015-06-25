@@ -13,6 +13,13 @@ ModelImporter:
     100010: BaseRight
     100012: WallBackRight
     100014: WallFront
+    100016: BaseLeft
+    100018: Door
+    100020: Doorknob
+    100022: DoorknobBack
+    100024: DoorknobFront
+    100026: Key
+    100028: WallBackLeft
     400000: Base.001
     400002: Camera.001
     400004: Cube
@@ -21,24 +28,52 @@ ModelImporter:
     400010: BaseRight
     400012: WallBackRight
     400014: WallFront
+    400016: BaseLeft
+    400018: Door
+    400020: Doorknob
+    400022: DoorknobBack
+    400024: DoorknobFront
+    400026: Key
+    400028: WallBackLeft
     2300000: Base.001
     2300002: Cube
     2300004: Wall.001
     2300006: BaseRight
     2300008: WallBackRight
     2300010: WallFront
+    2300012: BaseLeft
+    2300014: Door
+    2300016: Doorknob
+    2300018: DoorknobBack
+    2300020: DoorknobFront
+    2300022: Key
+    2300024: WallBackLeft
     3300000: Base.001
     3300002: Cube
     3300004: Wall.001
     3300006: BaseRight
     3300008: WallBackRight
     3300010: WallFront
+    3300012: BaseLeft
+    3300014: Door
+    3300016: Doorknob
+    3300018: DoorknobBack
+    3300020: DoorknobFront
+    3300022: Key
+    3300024: WallBackLeft
     4300000: Base.001
     4300002: Wall.001
     4300004: Cube
     4300006: BaseRight
     4300008: WallFront
     4300010: WallBackRight
+    4300012: WallBackLeft
+    4300014: BaseLeft
+    4300016: Door
+    4300018: DoorknobFront
+    4300020: DoorknobBack
+    4300022: Doorknob
+    4300024: Key
   materials:
     importMaterials: 0
     materialName: 0
