@@ -13,6 +13,9 @@ ModelImporter:
     100010: Pipe
     100012: Tap
     100014: Top
+    100016: TopBack
+    100018: TopFront
+    100020: Washbain
     400000: Base
     400002: Cube
     400004: Door
@@ -21,6 +24,9 @@ ModelImporter:
     400010: Pipe
     400012: Tap
     400014: Top
+    400016: TopBack
+    400018: TopFront
+    400020: Washbain
     2300000: Base
     2300002: Cube
     2300004: Door
@@ -28,6 +34,9 @@ ModelImporter:
     2300008: Pipe
     2300010: Tap
     2300012: Top
+    2300014: TopBack
+    2300016: TopFront
+    2300018: Washbain
     3300000: Base
     3300002: Cube
     3300004: Door
@@ -35,6 +44,9 @@ ModelImporter:
     3300008: Pipe
     3300010: Tap
     3300012: Top
+    3300014: TopBack
+    3300016: TopFront
+    3300018: Washbain
     4300000: Handle
     4300002: Door
     4300004: Base
@@ -42,6 +54,9 @@ ModelImporter:
     4300008: Cube
     4300010: Tap
     4300012: Pipe
+    4300014: TopFront
+    4300016: Washbain
+    4300018: TopBack
   materials:
     importMaterials: 0
     materialName: 0
