@@ -3811,7 +3811,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 06be296d40ed6564993a764a6c663ce9, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2300002, guid: 06be296d40ed6564993a764a6c663ce9, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6973,7 +6973,7 @@ Prefab:
     - target: {fileID: 11400000, guid: c9f2277f2b4414ff9abf05e783890171, type: 2}
       propertyPath: leftPhysicsModel
       value: 
-      objectReference: {fileID: 11423220, guid: e4323d517511c0548b1dedc3dd20c80b,
+      objectReference: {fileID: 11404354, guid: e4323d517511c0548b1dedc3dd20c80b,
         type: 2}
     - target: {fileID: 11400000, guid: c9f2277f2b4414ff9abf05e783890171, type: 2}
       propertyPath: rightPhysicsModel
@@ -12356,7 +12356,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400028, guid: 2098a9d7cf49ea04591094255bf189d4, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 2098a9d7cf49ea04591094255bf189d4, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -13829,7 +13829,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: cc7d1bc4a318d6647adba62a9c91dbb1, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: cc7d1bc4a318d6647adba62a9c91dbb1, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -15613,7 +15613,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 718f26e59b1f1704fbf7f805330af9f2, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 718f26e59b1f1704fbf7f805330af9f2, type: 3}
       propertyPath: m_LocalScale.x
