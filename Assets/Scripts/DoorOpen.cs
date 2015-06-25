@@ -10,6 +10,7 @@ public class DoorOpen : MonoBehaviour {
 	public float rotationspeed;
 	private bool opened = false;
 	private bool animating = false;
+
 	// Use this for initialization
 	void Start () {
 	
