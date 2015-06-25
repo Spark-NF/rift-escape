@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TwoHandsGrabbable
   - NotGrabbable
+  - BedroomUnlock
   layers:
   - Default
   - TransparentFX
