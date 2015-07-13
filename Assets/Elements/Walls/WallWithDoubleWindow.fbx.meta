@@ -1,0 +1,132 @@
+fileFormatVersion: 2
+guid: 92634905ac89b614f855a29635d99619
+timeCreated: 1436801317
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: GlassL
+    100002: GlassR
+    100004: PlankL1
+    100006: PlankL3
+    100008: PlankL4
+    100010: PlankL5
+    100012: PlankR1
+    100014: PlankR3
+    100016: PlankR4
+    100018: PlankR5
+    100020: Wall
+    100022: //RootNode
+    100024: WindowStructL
+    100026: WindowStructR
+    400000: GlassL
+    400002: GlassR
+    400004: PlankL1
+    400006: PlankL3
+    400008: PlankL4
+    400010: PlankL5
+    400012: PlankR1
+    400014: PlankR3
+    400016: PlankR4
+    400018: PlankR5
+    400020: Wall
+    400022: //RootNode
+    400024: WindowStructL
+    400026: WindowStructR
+    2300000: GlassL
+    2300002: GlassR
+    2300004: PlankL1
+    2300006: PlankL3
+    2300008: PlankL4
+    2300010: PlankL5
+    2300012: PlankR1
+    2300014: PlankR3
+    2300016: PlankR4
+    2300018: PlankR5
+    2300020: Wall
+    2300022: WindowStructL
+    2300024: WindowStructR
+    3300000: GlassL
+    3300002: GlassR
+    3300004: PlankL1
+    3300006: PlankL3
+    3300008: PlankL4
+    3300010: PlankL5
+    3300012: PlankR1
+    3300014: PlankR3
+    3300016: PlankR4
+    3300018: PlankR5
+    3300020: Wall
+    3300022: WindowStructL
+    3300024: WindowStructR
+    4300000: GlassL
+    4300002: WindowStructL
+    4300004: PlankL1
+    4300006: PlankL3
+    4300008: PlankL4
+    4300010: PlankL5
+    4300012: GlassR
+    4300014: PlankR1
+    4300016: PlankR3
+    4300018: PlankR4
+    4300020: PlankR5
+    4300022: WindowStructR
+    4300024: Wall
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
