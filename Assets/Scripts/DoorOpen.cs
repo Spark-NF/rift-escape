@@ -42,19 +42,23 @@ public class DoorOpen : MonoBehaviour {
 	protected void UpdateAction() {
 		if (animating) {
 			Vector3 destination = opened? openedrotation : closedrotation;
-			if (Vector3.SqrMagnitude(transform.rotation.eulerAngles - destination) < 1f) { // animation finished
+			Vector3 local = transform.localRotation.eulerAngles;
+			if (Vector3.SqrMagnitude(local - destination) < 1f) { // animation finished
 				animating = false;
 				return;
 			}
-			Vector3 euler = new Vector3(GetAnglechange(destination.x, transform.rotation.eulerAngles.x),
-			                      GetAnglechange(destination.y, transform.rotation.eulerAngles.y),
-			                      GetAnglechange(destination.z, transform.rotation.eulerAngles.z));
-			transform.rotation = Quaternion.Euler(euler + transform.rotation.eulerAngles);
+			Vector3 euler = new Vector3(GetAnglechange(destination.x, local.x),
+			                            GetAnglechange(destination.y, local.y),
+			                            GetAnglechange(destination.z, local.z));
+			transform.localRotation = Quaternion.Euler(euler + local);
 		}
 	}
 
 	private float GetAnglechange(float destination, float current)
 	{
+		// if the rotaton goes bellow 0, i have to cheat by moving the angle so that i take the shortest way
+		if (Mathf.Abs(destination - current) > 180)
+		    current += destination > current ? 360 : -360;
 		float diff = destination - current;
 		if (Mathf.Abs (diff) <= rotationspeed) {
 			return diff;
