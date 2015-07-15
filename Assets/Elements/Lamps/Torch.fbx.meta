@@ -28,7 +28,7 @@ ModelImporter:
     4300004: End
     4300006: Base
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:
