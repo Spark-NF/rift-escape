@@ -5745,7 +5745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 175039fefecea8e4288925ccbc34744b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 108
+  letter: 99
   checkmark: {fileID: 2066259929}
   value: 1
 --- !u!65 &523703643
@@ -6129,6 +6129,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4affd5b1c0255d5478d2e93e14144dd8, type: 3}
   runningInterval: .300000012
   walkingInterval: .699999988
+--- !u!114 &559794760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 559794756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ebdbdea02f02443aa528c698745d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &559794764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14158,7 +14169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1165100122
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22811,7 +22822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 628e84d3204bac14791a483731679b4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 111
+  letter: 104
   checkmark: {fileID: 855767361}
   value: 1
 --- !u!1 &1672743762
