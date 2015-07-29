@@ -8,10 +8,11 @@ public class LoadOptions : MonoBehaviour
 		OVRPlayerController.LeapMovement = PlayerPrefs.GetInt("LeapMovement") == 1;
 		OVRPlayerController.ovrMovement = PlayerPrefs.GetInt("ovrMovement") == 1;
 		OVRPlayerController.softCrounching = PlayerPrefs.GetInt("softCrounching") == 1;
-		
-		OVRPlayerController.ovrControlSensitivity.x = PlayerPrefs.GetFloat("ovrControlSensitivity.x");
+
+		// TODO check this, you may be setting it zero...
+		/*OVRPlayerController.ovrControlSensitivity.x = PlayerPrefs.GetFloat("ovrControlSensitivity.x");
 		OVRPlayerController.ovrControlSensitivity.y = PlayerPrefs.GetFloat("ovrControlSensitivity.y");
 		OVRPlayerController.ovrControlSensitivity.z = PlayerPrefs.GetFloat("ovrControlSensitivity.z");
-		OVRPlayerController.ovrRotationMinimum.y = PlayerPrefs.GetInt("ovrRotationMinimum.y");
+		OVRPlayerController.ovrRotationMinimum.y = PlayerPrefs.GetInt("ovrRotationMinimum.y");*/
 	}
 }

@@ -51,7 +51,6 @@ namespace AssemblyCSharp
 				// rotating everything else so just the object is rotated bot nothing else
 				foreach (Transform obj in ButtonToMove.transform)
 				{
-					Debug.Log("Rotating one object : " + obj.name);
 					obj.transform.Rotate(0, 180f, 0f);
 				}
 			}
