@@ -20,7 +20,6 @@ namespace AssemblyCSharp
 		public float intensitySet = 1.0f;
 		public GameObject ButtonToMove;
 		private float nextFire = 0.0f;
-		public GameObject floor; //TODO : Supprimer après la soutenance.
 
 		void OnTriggerEnter(Collider other)
 		{
@@ -41,10 +40,6 @@ namespace AssemblyCSharp
 				{
 					Material newMat = Resources.Load("Lamp/LightWhite", typeof(Material)) as Material;
 					bulb.GetComponent<Renderer>().material = newMat;
-					// Begin TODO : Supprimer ça après la soutenance
-					Material floorMat = Resources.Load("Wooden floor/Wooden floor 03", typeof(Material)) as Material;
-					floor.GetComponent<Renderer>().material = floorMat;
-					// End
 				}
 				// Making the button move
 				ButtonToMove.transform.Rotate(0, 180f, 0f);

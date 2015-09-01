@@ -77,7 +77,7 @@ ModelImporter:
     4300022: Wall
     4300024: WindowStructR
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:
