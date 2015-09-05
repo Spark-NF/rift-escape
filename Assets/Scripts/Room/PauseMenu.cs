@@ -29,7 +29,8 @@ public class PauseMenu : MonoBehaviour
 			{
 				source.PlayOneShot(unpause);
 			}
-
+			// Stopping movement
+			OVRPlayerController.paused = false;
 			Time.timeScale = 1f;
 			canvas.SetActive(false);
 
@@ -41,7 +42,7 @@ public class PauseMenu : MonoBehaviour
 			{
 				source.PlayOneShot(pause);
 			}
-
+			OVRPlayerController.paused = true;
 			Time.timeScale = 0.99f;
 			canvas.SetActive(true);
 

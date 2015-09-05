@@ -29,10 +29,11 @@ using System.Collections.Generic;
 public class OVRPlayerController : MonoBehaviour
 {
 	#region Movement dubois_d
+	public static bool paused = false;
 	public static bool ovrMovement = true;                              // Enable move player by moving head on X and Z axis
 	public static bool LeapMovement = false;
 	public static Vector3 ovrRotationMinimum = new Vector3 (60, 60, 0); // Sensitivity to trigger rotation movement
-	public static Vector3 ovrControlSensitivity = new Vector3(10f, 0.05f, 2f);  // Multiplier of positiona tracking move/jump actions
+	public static Vector3 ovrControlSensitivity = new Vector3(2f, 0.05f, 2f);  // Multiplier of positiona tracking move/jump actions
 	public static Vector3 ovrControlMinimum = new Vector3(0.15f, 0.05f, 0.05f);      // Min distance of head from centre to move/jump
 	public enum OvrXAxisAction { Strafe = 0, Rotate = 1 }
 	public static OvrXAxisAction ovrXAxisAction = OvrXAxisAction.Strafe; // Whether x axis positional tracking performs strafing or rotation
@@ -155,6 +156,10 @@ public class OVRPlayerController : MonoBehaviour
 		*/
 		if (Controller != null)
 			InitialHeight = Controller.height;
+
+		// Recentering at the begining of the scene to avoid moving
+		OVRManager.display.RecenterPose();
+		initPosTrackDir = CameraController.centerEyeAnchor.transform.localPosition;
 		// end dubois_d
 
 #if UNITY_ANDROID && !UNITY_EDITOR
@@ -224,7 +229,7 @@ public class OVRPlayerController : MonoBehaviour
 
 	public virtual void UpdateMovement()
 	{
-		if (HaltUpdateMovement)
+		if (HaltUpdateMovement || paused)
 			return;
 
 		MoveScale = 1.0f;

@@ -12,7 +12,7 @@ public class LockedRoomDoor : DoorOpen {
 	public AudioClip wrongCode;
 	private static string actualCode = "";
 
-	public static string code = "9637#";
+	public static string code = "12569";
 	
 	void OnTriggerEnter(Collider other) 
 	{

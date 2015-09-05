@@ -5,7 +5,7 @@ public abstract class MenuItem : MonoBehaviour
 {
 	public KeyCode letter = 0;
 	protected float fireRate = 1.0f;
-	protected float nextFire = 0.0f;
+	protected static float nextFire = 0.0f;
 
 	public static bool activated = false;
 
