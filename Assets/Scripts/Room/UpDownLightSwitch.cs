@@ -20,6 +20,8 @@ namespace AssemblyCSharp
 		public float intensitySet = 1.0f;
 		public GameObject ButtonToMove;
 		private float nextFire = 0.0f;
+		public AudioSource source;
+		public AudioClip activateSound;
 
 		void OnTriggerEnter(Collider other)
 		{
@@ -29,7 +31,8 @@ namespace AssemblyCSharp
 			//nextFire = Time.time + 1.0f;
 
 			if (lamp.intensity != intensitySet) {
-
+				if (source != null && activateSound != null)
+					source.PlayOneShot(activateSound);
 				lamp.intensity = intensitySet;
 				if (intensitySet == 0)
 				{
