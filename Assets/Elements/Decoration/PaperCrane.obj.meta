@@ -1,54 +1,17 @@
 fileFormatVersion: 2
-guid: e0344778c2b9df14e8bb76707775e1ce
-timeCreated: 1436191071
+guid: 98767943e2fa30f40bec9714f1848eae
+timeCreated: 1441183508
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: Base
-    100002: DownDoor
-    100004: DownHandle
-    100006: //RootNode
-    100008: Join
-    100010: UpDoor
-    100012: UpHandle
-    100014: DownShelf
-    100016: Fridge
-    100018: UpShelf
-    400000: Base
-    400002: DownDoor
-    400004: DownHandle
-    400006: //RootNode
-    400008: Join
-    400010: UpDoor
-    400012: UpHandle
-    400014: DownShelf
-    400016: Fridge
-    400018: UpShelf
-    2300000: Base
-    2300002: DownDoor
-    2300004: DownHandle
-    2300006: Join
-    2300008: UpDoor
-    2300010: UpHandle
-    2300012: DownShelf
-    2300014: UpShelf
-    3300000: Base
-    3300002: DownDoor
-    3300004: DownHandle
-    3300006: Join
-    3300008: UpDoor
-    3300010: UpHandle
-    3300012: DownShelf
-    3300014: UpShelf
-    4300000: DownDoor
-    4300002: UpDoor
-    4300004: Join
-    4300006: DownHandle
-    4300008: UpHandle
-    4300010: Base
-    4300012: UpShelf
-    4300014: DownShelf
+    100000: default
+    100002: //RootNode
+    400000: default
+    400002: //RootNode
+    2300000: default
+    3300000: default
+    4300000: default
   materials:
     importMaterials: 0
     materialName: 0
@@ -68,7 +31,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1.10000002
+    globalScale: .100000001
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
