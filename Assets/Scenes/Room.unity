@@ -17626,6 +17626,10 @@ MonoBehaviour:
   animSpeed: .00499999989
   ActivateSound: {fileID: 8300000, guid: 32597b1902ac5b84897434d1ca1c14a6, type: 3}
   source: {fileID: 694721338}
+  OnLight: {fileID: 1749411041}
+  OffLight: {fileID: 2095062691}
+  GreenDisabled: {fileID: 2100000, guid: 06d0f784bd7045b4bb7942b8fd3ee028, type: 2}
+  RedEnabled: {fileID: 2100000, guid: ef5ce2b7b85f9584ebbf4e80f5d53486, type: 2}
 --- !u!1 &1121296670
 GameObject:
   m_ObjectHideFlags: 0
@@ -30765,6 +30769,10 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!1 &1749411041 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100006, guid: 730d867a6ad5e114bb3586534760c189, type: 3}
+  m_PrefabInternal: {fileID: 158977974}
 --- !u!1001 &1749620034
 Prefab:
   m_ObjectHideFlags: 0
@@ -37419,6 +37427,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2093356416}
+--- !u!1 &2095062691 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100010, guid: 730d867a6ad5e114bb3586534760c189, type: 3}
+  m_PrefabInternal: {fileID: 158977974}
 --- !u!1 &2100314415
 GameObject:
   m_ObjectHideFlags: 0
