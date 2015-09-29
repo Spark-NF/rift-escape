@@ -10,10 +10,7 @@ public class LaserButton : MonoBehaviour {
 	private bool animation = false;
 	public static bool LaserDisabled = false;
 	public AudioSource source;
-	public GameObject OnLight;
-	public GameObject OffLight;
-	public Material GreenDisabled;
-	public Material RedEnabled;
+    public LED LEDs;
 
 	// Update is called once per frame
 	void Update () {
@@ -33,8 +30,7 @@ public class LaserButton : MonoBehaviour {
 			if (ActivateSound != null)
 				source.PlayOneShot(ActivateSound);
 			animation = true;
-			OnLight.GetComponent<MeshRenderer>().material = GreenDisabled;
-			OffLight.GetComponent<MeshRenderer>().material = RedEnabled;
+            LEDs.SetOff();
 		}
 	}
 

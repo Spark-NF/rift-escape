@@ -8,6 +8,9 @@ public class CircuitBreaker : MonoBehaviour {
     public List<GameObject> lights;
     public GameObject lasers;
 
+    public LED ElectricityLED;
+    public LED LoungeLED;
+
     public bool activated;
 
     float rotation = 30f;
@@ -51,10 +54,13 @@ public class CircuitBreaker : MonoBehaviour {
         activated = false;
         foreach (GameObject l in lights)
             l.SetActive(false);
+        ElectricityLED.SetOff();
 
-
-        lasers.SetActive(false);
-        LaserButton.LaserDisabled = true;
+        if (!LaserButton.LaserDisabled)
+        {
+            lasers.SetActive(false);
+            LoungeLED.SetOff();
+        }
 
         GetComponent<BoxCollider>().enabled = true;
     }
@@ -72,8 +78,12 @@ public class CircuitBreaker : MonoBehaviour {
         activated = true;
         foreach (GameObject l in lights)
             l.SetActive(true);
+        ElectricityLED.SetOn();
         if (!LaserButton.LaserDisabled)
+        {
             lasers.SetActive(true);
+            LoungeLED.SetOn();
+        }
         GetComponent<BoxCollider>().enabled = true;
     }
 }
