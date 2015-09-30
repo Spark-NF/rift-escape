@@ -159,7 +159,8 @@ public class OVRPlayerController : MonoBehaviour
 
 		// Recentering at the begining of the scene to avoid moving
 		OVRManager.display.RecenterPose();
-		initPosTrackDir = CameraController.centerEyeAnchor.transform.localPosition;
+		if (CameraController.centerEyeAnchor != null)
+			initPosTrackDir = CameraController.centerEyeAnchor.transform.localPosition;
 		// end dubois_d
 
 #if UNITY_ANDROID && !UNITY_EDITOR
