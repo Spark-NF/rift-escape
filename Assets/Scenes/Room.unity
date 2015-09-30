@@ -3106,10 +3106,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 213048700}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1630cb2ee3c416947ad3f47a6aa9c81d, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ba503ebb829c8348be47ca325282af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 110
+  letter: 115
 --- !u!65 &213048703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3130,7 +3130,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 213048700}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 639047154}
+  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -3161,7 +3161,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 213048702}
+      - m_Target: {fileID: 0}
         m_MethodName: activate
         m_Mode: 1
         m_Arguments:
