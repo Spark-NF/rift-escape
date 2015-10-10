@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
-using UnityEditor;
+//using UnityEditor;
 
 public class PauseSave : MenuItem
 {
 	public override void activate()
 	{
-		EditorApplication.SaveScene("save.bin");
+		//EditorApplication.SaveScene("save.bin");
 	}
 }
