@@ -161,6 +161,9 @@ public class OVRPlayerController : MonoBehaviour
 		OVRManager.display.RecenterPose();
 		if (CameraController.centerEyeAnchor != null)
 			initPosTrackDir = CameraController.centerEyeAnchor.transform.localPosition;
+
+		// Avoiding collisions with hands
+		Physics.IgnoreLayerCollision(LayerMask.NameToLayer("PlayerLayer"), LayerMask.NameToLayer("HandLayer"));
 		// end dubois_d
 
 #if UNITY_ANDROID && !UNITY_EDITOR

@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 417458}
   - 65: {fileID: 6580044}
   - 54: {fileID: 5451860}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   - 223: {fileID: 22398676}
   - 114: {fileID: 11481564}
   - 114: {fileID: 11469572}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: NotGrabbable
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - 4: {fileID: 458214}
   - 65: {fileID: 6560324}
   - 54: {fileID: 5488518}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 489136}
   - 114: {fileID: 11477368}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: thumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 453488}
   - 114: {fileID: 11457006}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - 4: {fileID: 486942}
   - 65: {fileID: 6540988}
   - 54: {fileID: 5425122}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   - 4: {fileID: 409848}
   - 65: {fileID: 6505784}
   - 54: {fileID: 5455006}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   - 4: {fileID: 426708}
   - 114: {fileID: 11426798}
   - 114: {fileID: 11426732}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigidHandButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - 4: {fileID: 473906}
   - 65: {fileID: 6555156}
   - 54: {fileID: 5487274}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   - 65: {fileID: 6581186}
   - 23: {fileID: 2328216}
   - 114: {fileID: 11451364}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: NotGrabbable
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   - 224: {fileID: 22453186}
   - 222: {fileID: 22237076}
   - 114: {fileID: 11492568}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   - 4: {fileID: 432562}
   - 65: {fileID: 6553260}
   - 54: {fileID: 5402886}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   - 4: {fileID: 485188}
   - 65: {fileID: 6524884}
   - 54: {fileID: 5411288}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 411532}
   - 114: {fileID: 11470002}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pinky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   - 4: {fileID: 431794}
   - 65: {fileID: 6553522}
   - 54: {fileID: 5444132}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 468454}
   - 114: {fileID: 11425372}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   - 222: {fileID: 22206288}
   - 114: {fileID: 11493354}
   - 114: {fileID: 11416750}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +299,7 @@ GameObject:
   - 4: {fileID: 471452}
   - 65: {fileID: 6565076}
   - 54: {fileID: 5400130}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -316,7 +316,7 @@ GameObject:
   - 4: {fileID: 405196}
   - 65: {fileID: 6599056}
   - 54: {fileID: 5411336}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +333,7 @@ GameObject:
   - 4: {fileID: 467244}
   - 65: {fileID: 6579318}
   - 54: {fileID: 5491444}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +350,7 @@ GameObject:
   - 4: {fileID: 496756}
   - 65: {fileID: 6570152}
   - 54: {fileID: 5469512}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 477278}
   - 114: {fileID: 11489296}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: index
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +383,7 @@ GameObject:
   - 4: {fileID: 412234}
   - 65: {fileID: 6556502}
   - 54: {fileID: 5414882}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,7 +400,7 @@ GameObject:
   - 4: {fileID: 467400}
   - 65: {fileID: 6534588}
   - 54: {fileID: 5407676}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,7 +417,7 @@ GameObject:
   - 4: {fileID: 464750}
   - 65: {fileID: 6587434}
   - 54: {fileID: 5422996}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: palm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -434,7 +434,7 @@ GameObject:
   - 4: {fileID: 404564}
   - 65: {fileID: 6550986}
   - 54: {fileID: 5416202}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bone1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
