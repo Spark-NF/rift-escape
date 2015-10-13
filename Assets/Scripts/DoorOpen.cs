@@ -10,6 +10,7 @@ public class DoorOpen : MonoBehaviour {
 	public float rotationspeed;
 	private bool opened = false;
 	private bool animating = false;
+    private bool disabled = false;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +19,8 @@ public class DoorOpen : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) 
 	{
-		OpenAction (other);
+        if (!disabled)
+		    OpenAction (other);
 	}
 
 	protected void OpenAction(Collider other) 
@@ -65,5 +67,15 @@ public class DoorOpen : MonoBehaviour {
 		}
 		return diff < 0 ? -rotationspeed : rotationspeed;
 	}
+
+    public void Disable()
+    {
+        disabled = true;
+    }
+
+    public void Enable()
+    {
+        disabled = false;
+    }
 
 }

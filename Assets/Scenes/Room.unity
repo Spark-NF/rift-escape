@@ -3114,7 +3114,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!4 &213168685 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 400002, guid: 98767943e2fa30f40bec9714f1848eae, type: 3}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 213168684}
 --- !u!1 &230964006
 GameObject:
@@ -3145,7 +3145,7 @@ Transform:
   m_LocalScale: {x: .109999999, y: .110000007, z: .0075000003}
   m_Children: []
   m_Father: {fileID: 602035366}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!65 &230964008
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9026,6 +9026,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 602035366}
+  - 114: {fileID: 602035367}
+  - 65: {fileID: 602035368}
   m_Layer: 0
   m_Name: Microwave
   m_TagString: Untagged
@@ -9043,12 +9045,39 @@ Transform:
   m_LocalPosition: {x: -10.8990002, y: 1.32099998, z: 10.941}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1021161477}
   - {fileID: 1624718152}
   - {fileID: 1698168060}
   - {fileID: 1842698787}
   - {fileID: 230964007}
   m_Father: {fileID: 260874223}
   m_RootOrder: 2
+--- !u!114 &602035367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 602035365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaadf6c7faa68c840b9c605771d464fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  microwaveLight: {fileID: 1021161478}
+  iceToMelt: {fileID: 1781680422}
+  door: {fileID: 1842698786}
+--- !u!65 &602035368
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 602035365}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .495449305, y: .367566109, z: .359966666}
+  m_Center: {x: -.0730543062, y: -.00458180904, z: .0144147947}
 --- !u!1001 &603738397
 Prefab:
   m_ObjectHideFlags: 0
@@ -9109,7 +9138,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!4 &603738398 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 400002, guid: 98767943e2fa30f40bec9714f1848eae, type: 3}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 603738397}
 --- !u!1001 &610626132
 Prefab:
@@ -9491,8 +9520,8 @@ HingeJoint:
   m_Limits:
     min: 0
     max: 0
-    minBounce: 0
-    maxBounce: 0
+    bounciness: 0
+    bounceMinVelocity: .200000003
     contactDistance: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -11665,8 +11694,8 @@ HingeJoint:
   m_Limits:
     min: 0
     max: 0
-    minBounce: 0
-    maxBounce: 0
+    bounciness: 0
+    bounceMinVelocity: .200000003
     contactDistance: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -11743,8 +11772,8 @@ HingeJoint:
   m_Limits:
     min: 0
     max: 0
-    minBounce: 0
-    maxBounce: 0
+    bounciness: 0
+    bounceMinVelocity: .200000003
     contactDistance: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -13229,8 +13258,8 @@ HingeJoint:
   m_Limits:
     min: 0
     max: 0
-    minBounce: 0
-    maxBounce: 0
+    bounciness: 0
+    bounceMinVelocity: .200000003
     contactDistance: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -15531,6 +15560,66 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!1 &1021161476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1021161477}
+  - 108: {fileID: 1021161478}
+  m_Layer: 0
+  m_Name: MicrowaveLight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1021161477
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1021161476}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.0719999969, y: .147, z: -.128999993}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 602035366}
+  m_RootOrder: 0
+--- !u!108 &1021161478
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1021161476}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_Type: 2
+  m_Color: {r: 1, g: .765517294, b: 0, a: 1}
+  m_Intensity: 8
+  m_Range: 1
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_NormalBias: .400000006
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_AreaSize: {x: 1, y: 1}
 --- !u!1 &1021381715
 GameObject:
   m_ObjectHideFlags: 0
@@ -18949,6 +19038,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!1 &1201624394
 GameObject:
   m_ObjectHideFlags: 0
@@ -27746,6 +27836,7 @@ MonoBehaviour:
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
+  m_RepeatDelay: .5
   m_AllowActivationOnMobileDevice: 0
 --- !u!114 &1591959789
 MonoBehaviour:
@@ -28463,7 +28554,7 @@ Transform:
   m_LocalScale: {x: .243000016, y: .159999996, z: .144000009}
   m_Children: []
   m_Father: {fileID: 602035366}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!65 &1624718153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29592,7 +29683,7 @@ Transform:
   m_LocalScale: {x: .0299999993, y: .0199999996, z: .0300000012}
   m_Children: []
   m_Father: {fileID: 602035366}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!65 &1698168061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31402,6 +31493,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .189724877, y: .0617572069, z: .330185324}
   m_Center: {x: -.000576834194, y: .00053024292, z: .0553331748}
+--- !u!114 &1781680425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1781680422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7c3fb28cceaed488ea6ae37c712435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ice: {fileID: 1781680417}
+  Key: {fileID: 1781680416}
 --- !u!1 &1782844360
 GameObject:
   m_ObjectHideFlags: 0
@@ -33276,6 +33380,7 @@ GameObject:
   - 23: {fileID: 1842698790}
   - 65: {fileID: 1842698789}
   - 65: {fileID: 1842698788}
+  - 114: {fileID: 1842698792}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -33296,7 +33401,7 @@ Transform:
   - {fileID: 1152540725}
   - {fileID: 1554218050}
   m_Father: {fileID: 602035366}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!65 &1842698788
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33354,6 +33459,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1842698786}
   m_Mesh: {fileID: 4300004, guid: 1ba597c03540d9640a54ccbc282de590, type: 3}
+--- !u!114 &1842698792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1842698786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6711e9c8b14334e8ba377a0625e67e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 0}
+  opensound: {fileID: 0}
+  closesound: {fileID: 0}
+  closedrotation: {x: 270, y: 180, z: 0}
+  openedrotation: {x: 270, y: 260, z: 0}
+  rotationspeed: 1
 --- !u!1 &1846616421
 GameObject:
   m_ObjectHideFlags: 0
