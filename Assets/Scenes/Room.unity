@@ -37,9 +37,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 657357253}
---- !u!127 &3
-LevelGameManager:
-  m_ObjectHideFlags: 0
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -68,6 +65,7 @@ LightmapSettings:
     m_TextureCompression: 0
     m_FinalGather: 1
     m_FinalGatherRayCount: 1024
+    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 112000000, guid: bb5b94b723b7a1744bba6d4053a4b30d,
     type: 2}
   m_RuntimeCPUUsage: 25
@@ -571,6 +569,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -730,6 +729,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -827,6 +827,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -921,12 +922,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b960668985e004dae54a4d9f55cf9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lamp: {fileID: 1143988109}
-  bulb: {fileID: 1470829466}
-  intensitySet: 0
-  ButtonToMove: {fileID: 1721526029}
-  source: {fileID: 381876620}
-  activateSound: {fileID: 8300000, guid: ec487bc980cfafc40a9d514ab3584829, type: 3}
+  lamp: {fileID: 0}
+  bulb: {fileID: 0}
+  intensitySet: 1
+  ButtonToMove: {fileID: 0}
+  source: {fileID: 0}
+  activateSound: {fileID: 0}
 --- !u!65 &57875232
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1230,8 +1231,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c8a3e59cebff145b2df3307b885932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 120
-  menuValue: {fileID: 148229108}
+  letter: 0
+  menuValue: {fileID: 0}
 --- !u!65 &73351758
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1309,6 +1310,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: b8e5942fc4bb45d4291399576959b906, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -2004,8 +2011,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da08258055399b94ca32d3d0d00a1abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 119
-  menuValue: {fileID: 1773035100}
+  letter: 0
+  menuValue: {fileID: 0}
 --- !u!65 &115370343
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2083,6 +2090,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 683455b25a851b94498f74df95e0a283, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -2147,7 +2160,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400006, guid: 72aad1bf9f20f974198a3fdc9f3ad193, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 117480394}
-  m_LocalRotation: {x: 0, y: 0, z: -.138969705, w: .990296602}
+  m_LocalRotation: {x: 0, y: 0, z: -.138969719, w: .990296662}
   m_LocalPosition: {x: .631834149, y: 1.42490757, z: 3.24900007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2202,6 +2215,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -2268,6 +2287,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -2567,11 +2592,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e26786a19ae4f45b96cab35ce95062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  def: 5
+  def: 0
   min: 0
-  max: 30
+  max: 10
   step: 1
-  label: {fileID: 1464449349}
+  label: {fileID: 0}
 --- !u!1 &148601496
 GameObject:
   m_ObjectHideFlags: 0
@@ -2813,6 +2838,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
@@ -3036,12 +3067,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b960668985e004dae54a4d9f55cf9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lamp: {fileID: 1738996814}
-  bulb: {fileID: 1422779633}
-  intensitySet: 0
-  ButtonToMove: {fileID: 1564082922}
-  source: {fileID: 1021043156}
-  activateSound: {fileID: 8300000, guid: ec487bc980cfafc40a9d514ab3584829, type: 3}
+  lamp: {fileID: 0}
+  bulb: {fileID: 0}
+  intensitySet: 1
+  ButtonToMove: {fileID: 0}
+  source: {fileID: 0}
+  activateSound: {fileID: 0}
 --- !u!65 &200443459
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3101,6 +3132,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -3243,7 +3280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba503ebb829c8348be47ca325282af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 115
+  letter: 0
 --- !u!65 &213048703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3321,6 +3358,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 9ce057b1768876843be13af6ef101912, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -3588,12 +3631,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b960668985e004dae54a4d9f55cf9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lamp: {fileID: 1143988109}
-  bulb: {fileID: 1470829466}
-  intensitySet: 4
-  ButtonToMove: {fileID: 1721526029}
-  source: {fileID: 381876620}
-  activateSound: {fileID: 8300000, guid: 06c016b1609b39044b8c45cb80ef11ca, type: 3}
+  lamp: {fileID: 0}
+  bulb: {fileID: 0}
+  intensitySet: 1
+  ButtonToMove: {fileID: 0}
+  source: {fileID: 0}
+  activateSound: {fileID: 0}
 --- !u!65 &248710314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3606,10 +3649,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 5, z: 1.5}
   m_Center: {x: 0, y: 0, z: 1}
---- !u!1 &250161100 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100012, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
-  m_PrefabInternal: {fileID: 1618106473}
 --- !u!1 &257543946
 GameObject:
   m_ObjectHideFlags: 0
@@ -3641,7 +3680,7 @@ Transform:
   - {fileID: 385799606}
   - {fileID: 1559726505}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1 &260874222
 GameObject:
   m_ObjectHideFlags: 0
@@ -3724,7 +3763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4864d5ce064ce3f46aa356742c6be186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  action: 4
+  action: 5
 --- !u!1 &269184008
 GameObject:
   m_ObjectHideFlags: 0
@@ -4104,6 +4143,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -4244,6 +4289,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -4636,12 +4682,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b960668985e004dae54a4d9f55cf9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lamp: {fileID: 526101505}
-  bulb: {fileID: 97484835}
-  intensitySet: 4
-  ButtonToMove: {fileID: 1946210798}
-  source: {fileID: 2138727689}
-  activateSound: {fileID: 8300000, guid: 06c016b1609b39044b8c45cb80ef11ca, type: 3}
+  lamp: {fileID: 0}
+  bulb: {fileID: 0}
+  intensitySet: 1
+  ButtonToMove: {fileID: 0}
+  source: {fileID: 0}
+  activateSound: {fileID: 0}
 --- !u!65 &312447055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5152,12 +5198,6 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 478802, guid: bed7794fe4bb0ad4b9ee4bfce367119d, type: 2}
   m_PrefabInternal: {fileID: 1715003241}
---- !u!114 &343157716 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11418760, guid: bed7794fe4bb0ad4b9ee4bfce367119d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1715003241}
-  m_Script: {fileID: 11500000, guid: 9ed77059a7188054094c4a6ef0e643f2, type: 3}
 --- !u!1001 &346669753
 Prefab:
   m_ObjectHideFlags: 0
@@ -5441,12 +5481,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b960668985e004dae54a4d9f55cf9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lamp: {fileID: 1402328337}
-  bulb: {fileID: 1406141315}
-  intensitySet: 0
-  ButtonToMove: {fileID: 903581739}
-  source: {fileID: 45136976}
-  activateSound: {fileID: 8300000, guid: ec487bc980cfafc40a9d514ab3584829, type: 3}
+  lamp: {fileID: 0}
+  bulb: {fileID: 0}
+  intensitySet: 1
+  ButtonToMove: {fileID: 0}
+  source: {fileID: 0}
+  activateSound: {fileID: 0}
 --- !u!65 &361526264
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5822,6 +5862,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -6130,8 +6171,9 @@ Transform:
   - {fileID: 38566009}
   - {fileID: 1196677062}
   - {fileID: 1709338562}
+  - {fileID: 1498133562}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &403188717
 GameObject:
   m_ObjectHideFlags: 0
@@ -6253,11 +6295,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4f9f0f77b5fa604e8074a059af3854f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  def: 5
+  def: 0
   min: 0
-  max: 30
+  max: 10
   step: 1
-  label: {fileID: 129422035}
+  label: {fileID: 0}
 --- !u!1 &407291966
 GameObject:
   m_ObjectHideFlags: 0
@@ -6334,6 +6376,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 0a48c62020c8d3449aa8d72c4d700a78, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -7137,6 +7185,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: .117647052, g: .117647052, b: .117647052, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -7198,6 +7252,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -7257,12 +7317,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b960668985e004dae54a4d9f55cf9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lamp: {fileID: 1402328337}
-  bulb: {fileID: 1406141315}
-  intensitySet: 3
-  ButtonToMove: {fileID: 903581739}
-  source: {fileID: 45136976}
-  activateSound: {fileID: 8300000, guid: 06c016b1609b39044b8c45cb80ef11ca, type: 3}
+  lamp: {fileID: 0}
+  bulb: {fileID: 0}
+  intensitySet: 1
+  ButtonToMove: {fileID: 0}
+  source: {fileID: 0}
+  activateSound: {fileID: 0}
 --- !u!65 &456050519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7877,6 +7937,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -7939,6 +8005,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -8084,7 +8151,7 @@ Transform:
   - {fileID: 824164140}
   - {fileID: 1666507005}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &507999497
 GameObject:
   m_ObjectHideFlags: 0
@@ -8237,7 +8304,7 @@ Transform:
   - {fileID: 962228447}
   - {fileID: 750674484}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &523703640
 GameObject:
   m_ObjectHideFlags: 0
@@ -8286,8 +8353,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 175039fefecea8e4288925ccbc34744b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 99
-  checkmark: {fileID: 2066259929}
+  letter: 0
+  checkmark: {fileID: 0}
   value: 1
 --- !u!65 &523703643
 BoxCollider:
@@ -8553,6 +8620,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -8816,11 +8889,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c01287c7c225b646b6b6329d06987df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 951051723}
-  pause: {fileID: 8300000, guid: 16939747722198b4e8046624365d72f4, type: 3}
-  unpause: {fileID: 8300000, guid: 9ee38b7af08822a42bac382a7600b83d, type: 3}
-  canvas: {fileID: 1165100121}
-  hand: {fileID: 1383165343}
+  source: {fileID: 0}
+  pause: {fileID: 0}
+  unpause: {fileID: 0}
+  canvas: {fileID: 0}
+  hand: {fileID: 0}
 --- !u!114 &559794759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8832,11 +8905,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0432c8d1359562f4486185fabe5cfdad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 1306503859}
-  footsteps:
-  - {fileID: 8300000, guid: 4affd5b1c0255d5478d2e93e14144dd8, type: 3}
-  runningInterval: .300000012
-  walkingInterval: .699999988
+  source: {fileID: 0}
+  footsteps: []
+  runningInterval: 0
+  walkingInterval: 0
 --- !u!114 &559794760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8859,8 +8931,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8856a7efde223684b9a4982d30973ed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1467044648}
-  input: {fileID: 446815525}
+  canvas: {fileID: 0}
+  input: {fileID: 0}
   toggleKey: 111
 --- !u!1 &561451235
 GameObject:
@@ -8902,12 +8974,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b960668985e004dae54a4d9f55cf9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lamp: {fileID: 1596630775}
-  bulb: {fileID: 374097042}
-  intensitySet: 0
-  ButtonToMove: {fileID: 1781212531}
-  source: {fileID: 1226523835}
-  activateSound: {fileID: 8300000, guid: ec487bc980cfafc40a9d514ab3584829, type: 3}
+  lamp: {fileID: 0}
+  bulb: {fileID: 0}
+  intensitySet: 1
+  ButtonToMove: {fileID: 0}
+  source: {fileID: 0}
+  activateSound: {fileID: 0}
 --- !u!65 &561451238
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8982,6 +9054,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -9299,6 +9377,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -9493,6 +9577,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -9781,6 +9871,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -9845,9 +9941,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaadf6c7faa68c840b9c605771d464fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  microwaveLight: {fileID: 1021161478}
-  iceToMelt: {fileID: 1781680422}
-  door: {fileID: 1842698786}
+  microwaveLight: {fileID: 0}
+  iceToMelt: {fileID: 0}
+  door: {fileID: 0}
 --- !u!65 &602035368
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10035,6 +10131,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -10303,8 +10405,8 @@ HingeJoint:
   m_Limits:
     min: 0
     max: 0
-    minBounce: 0
-    maxBounce: 0
+    bounciness: 0
+    bounceMinVelocity: .200000003
     contactDistance: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -10812,7 +10914,7 @@ Transform:
   m_LocalScale: {x: .99999994, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1001 &660780483
 Prefab:
   m_ObjectHideFlags: 0
@@ -11068,9 +11170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5c41b54845fbc24a83340b836de2d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevitationPosition: {x: 0, y: .200000003, z: .400000006}
-  LevitationAnchor: {fileID: 250161100}
-  animSpeed: 1
+  LevitationPosition: {x: 0, y: 0, z: 0}
+  LevitationAnchor: {fileID: 0}
+  animSpeed: 10
 --- !u!108 &662302648
 Light:
   m_ObjectHideFlags: 0
@@ -11114,14 +11216,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 858533f59ac0d944bab338459474d21f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 662302648}
-  colors:
-  - {r: 0, g: .83448267, b: 1, a: 0}
-  - {r: 0, g: 1, b: .255172253, a: 0}
-  - {r: 1, g: .600000024, b: 0, a: 0}
-  - {r: 1, g: 0, b: 0, a: 0}
-  - {r: 1, g: 0, b: .931034565, a: 0}
-  o: {fileID: 662302643}
+  light: {fileID: 0}
+  colors: []
+  o: {fileID: 0}
 --- !u!135 &662302651
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11750,6 +11847,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -12021,6 +12119,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -12572,8 +12676,8 @@ HingeJoint:
   m_Limits:
     min: 0
     max: 0
-    minBounce: 0
-    maxBounce: 0
+    bounciness: 0
+    bounceMinVelocity: .200000003
     contactDistance: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -12650,8 +12754,8 @@ HingeJoint:
   m_Limits:
     min: 0
     max: 0
-    minBounce: 0
-    maxBounce: 0
+    bounciness: 0
+    bounceMinVelocity: .200000003
     contactDistance: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -13011,12 +13115,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6711e9c8b14334e8ba377a0625e67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 1021381717}
-  opensound: {fileID: 8300000, guid: 72cb8a3888af8954290c4e4f10716fa6, type: 3}
-  closesound: {fileID: 8300000, guid: 991d437e24dbc5c44a97b194e22327e4, type: 3}
-  closedrotation: {x: 270, y: 180, z: 0}
-  openedrotation: {x: 270, y: 100, z: 0}
-  rotationspeed: 1
+  source: {fileID: 0}
+  opensound: {fileID: 0}
+  closesound: {fileID: 0}
+  closedrotation: {x: 0, y: 0, z: 0}
+  openedrotation: {x: 0, y: 0, z: 0}
+  rotationspeed: 0
 --- !u!65 &795920961
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13114,12 +13218,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b960668985e004dae54a4d9f55cf9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lamp: {fileID: 1738996814}
-  bulb: {fileID: 1422779633}
-  intensitySet: 4
-  ButtonToMove: {fileID: 1564082922}
-  source: {fileID: 1021043156}
-  activateSound: {fileID: 8300000, guid: 06c016b1609b39044b8c45cb80ef11ca, type: 3}
+  lamp: {fileID: 0}
+  bulb: {fileID: 0}
+  intensitySet: 1
+  ButtonToMove: {fileID: 0}
+  source: {fileID: 0}
+  activateSound: {fileID: 0}
 --- !u!65 &803227994
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13200,12 +13304,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6711e9c8b14334e8ba377a0625e67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 1814458272}
-  opensound: {fileID: 8300000, guid: b284709b85cc97c4ba041ddbe051a991, type: 3}
-  closesound: {fileID: 8300000, guid: b284709b85cc97c4ba041ddbe051a991, type: 3}
-  closedrotation: {x: 270, y: 180, z: 0}
-  openedrotation: {x: 270, y: 270, z: 0}
-  rotationspeed: 1
+  source: {fileID: 0}
+  opensound: {fileID: 0}
+  closesound: {fileID: 0}
+  closedrotation: {x: 0, y: 0, z: 0}
+  openedrotation: {x: 0, y: 0, z: 0}
+  rotationspeed: 0
 --- !u!23 &811500302
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13495,12 +13599,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6711e9c8b14334e8ba377a0625e67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 493766970}
-  opensound: {fileID: 8300000, guid: b284709b85cc97c4ba041ddbe051a991, type: 3}
-  closesound: {fileID: 8300000, guid: b284709b85cc97c4ba041ddbe051a991, type: 3}
-  closedrotation: {x: 270, y: 180, z: 0}
-  openedrotation: {x: 270, y: 90, z: 0}
-  rotationspeed: 1
+  source: {fileID: 0}
+  opensound: {fileID: 0}
+  closesound: {fileID: 0}
+  closedrotation: {x: 0, y: 0, z: 0}
+  openedrotation: {x: 0, y: 0, z: 0}
+  rotationspeed: 0
 --- !u!1 &855767361
 GameObject:
   m_ObjectHideFlags: 0
@@ -13548,6 +13652,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 0a48c62020c8d3449aa8d72c4d700a78, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -13695,12 +13805,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b960668985e004dae54a4d9f55cf9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lamp: {fileID: 655598}
-  bulb: {fileID: 1783251928}
-  intensitySet: 3
-  ButtonToMove: {fileID: 1490229679}
-  source: {fileID: 45136976}
-  activateSound: {fileID: 8300000, guid: 06c016b1609b39044b8c45cb80ef11ca, type: 3}
+  lamp: {fileID: 0}
+  bulb: {fileID: 0}
+  intensitySet: 1
+  ButtonToMove: {fileID: 0}
+  source: {fileID: 0}
+  activateSound: {fileID: 0}
 --- !u!65 &857317713
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13756,6 +13866,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -14136,8 +14247,8 @@ HingeJoint:
   m_Limits:
     min: 0
     max: 0
-    minBounce: 0
-    maxBounce: 0
+    bounciness: 0
+    bounceMinVelocity: .200000003
     contactDistance: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -14543,10 +14654,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400006, guid: 72aad1bf9f20f974198a3fdc9f3ad193, type: 3}
   m_PrefabInternal: {fileID: 894023142}
---- !u!1 &903581739 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100018, guid: 718f26e59b1f1704fbf7f805330af9f2, type: 3}
-  m_PrefabInternal: {fileID: 1587364558}
 --- !u!4 &903581740 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400018, guid: 718f26e59b1f1704fbf7f805330af9f2, type: 3}
@@ -14946,6 +15053,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -15053,8 +15161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da08258055399b94ca32d3d0d00a1abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 119
-  menuValue: {fileID: 148229108}
+  letter: 0
+  menuValue: {fileID: 0}
 --- !u!65 &960800328
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15132,6 +15240,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 683455b25a851b94498f74df95e0a283, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -15302,6 +15416,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -15368,6 +15488,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -15589,7 +15715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4864d5ce064ce3f46aa356742c6be186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  action: 3
+  action: 5
 --- !u!1 &984913584
 GameObject:
   m_ObjectHideFlags: 0
@@ -15691,12 +15817,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6711e9c8b14334e8ba377a0625e67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 287642432}
-  opensound: {fileID: 8300000, guid: b284709b85cc97c4ba041ddbe051a991, type: 3}
-  closesound: {fileID: 8300000, guid: b284709b85cc97c4ba041ddbe051a991, type: 3}
-  closedrotation: {x: 270, y: 180, z: 0}
-  openedrotation: {x: 270, y: 90, z: 0}
-  rotationspeed: 1
+  source: {fileID: 0}
+  opensound: {fileID: 0}
+  closesound: {fileID: 0}
+  closedrotation: {x: 0, y: 0, z: 0}
+  openedrotation: {x: 0, y: 0, z: 0}
+  rotationspeed: 0
 --- !u!1 &990805614
 GameObject:
   m_ObjectHideFlags: 0
@@ -15967,7 +16093,7 @@ RectTransform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -15986,6 +16112,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -16107,12 +16239,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b960668985e004dae54a4d9f55cf9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lamp: {fileID: 318619288}
-  bulb: {fileID: 1753946893}
-  intensitySet: 0
-  ButtonToMove: {fileID: 1054890169}
-  source: {fileID: 1277049341}
-  activateSound: {fileID: 8300000, guid: ec487bc980cfafc40a9d514ab3584829, type: 3}
+  lamp: {fileID: 0}
+  bulb: {fileID: 0}
+  intensitySet: 1
+  ButtonToMove: {fileID: 0}
+  source: {fileID: 0}
+  activateSound: {fileID: 0}
 --- !u!65 &1006498577
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16370,7 +16502,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e50b009f4ce17fa42ae67882f1558d9e, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: e50b009f4ce17fa42ae67882f1558d9e, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -16394,7 +16526,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: e896e192659886c4d8e6dfde4f7ce47f, type: 2}
     - target: {fileID: 400010, guid: e50b009f4ce17fa42ae67882f1558d9e, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: e50b009f4ce17fa42ae67882f1558d9e, type: 3}
       propertyPath: m_RootOrder
@@ -16520,6 +16652,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -16677,6 +16810,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -16875,7 +17009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4864d5ce064ce3f46aa356742c6be186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  action: 2
+  action: 5
 --- !u!1 &1041995292
 GameObject:
   m_ObjectHideFlags: 0
@@ -17234,12 +17368,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6711e9c8b14334e8ba377a0625e67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 857878613}
-  opensound: {fileID: 8300000, guid: b284709b85cc97c4ba041ddbe051a991, type: 3}
-  closesound: {fileID: 8300000, guid: b284709b85cc97c4ba041ddbe051a991, type: 3}
-  closedrotation: {x: 270, y: 180, z: 0}
-  openedrotation: {x: 270, y: 270, z: 0}
-  rotationspeed: 1
+  source: {fileID: 0}
+  opensound: {fileID: 0}
+  closesound: {fileID: 0}
+  closedrotation: {x: 0, y: 0, z: 0}
+  openedrotation: {x: 0, y: 0, z: 0}
+  rotationspeed: 0
 --- !u!65 &1048359662
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17292,12 +17426,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b960668985e004dae54a4d9f55cf9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lamp: {fileID: 655598}
-  bulb: {fileID: 1783251928}
-  intensitySet: 0
-  ButtonToMove: {fileID: 1490229679}
-  source: {fileID: 45136976}
-  activateSound: {fileID: 8300000, guid: ec487bc980cfafc40a9d514ab3584829, type: 3}
+  lamp: {fileID: 0}
+  bulb: {fileID: 0}
+  intensitySet: 1
+  ButtonToMove: {fileID: 0}
+  source: {fileID: 0}
+  activateSound: {fileID: 0}
 --- !u!65 &1051342234
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17310,12 +17444,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 5, z: 1.5}
   m_Center: {x: 0, y: 0, z: -1}
---- !u!114 &1053204659 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11418760, guid: bed7794fe4bb0ad4b9ee4bfce367119d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1380771477}
-  m_Script: {fileID: 11500000, guid: 9ed77059a7188054094c4a6ef0e643f2, type: 3}
 --- !u!1 &1053785909
 GameObject:
   m_ObjectHideFlags: 0
@@ -17378,10 +17506,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1998305839}
   m_RootOrder: 1
---- !u!1 &1054890169 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100012, guid: 54dc0ed3d621061419e7ca4bf79b6b70, type: 3}
-  m_PrefabInternal: {fileID: 1959687876}
 --- !u!4 &1054890170 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400012, guid: 54dc0ed3d621061419e7ca4bf79b6b70, type: 3}
@@ -17417,7 +17541,7 @@ Transform:
   - {fileID: 1451892507}
   - {fileID: 407291967}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &1062474963
 GameObject:
   m_ObjectHideFlags: 0
@@ -17458,12 +17582,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b960668985e004dae54a4d9f55cf9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lamp: {fileID: 1596630775}
-  bulb: {fileID: 374097042}
-  intensitySet: 4
-  ButtonToMove: {fileID: 1781212531}
-  source: {fileID: 1226523835}
-  activateSound: {fileID: 8300000, guid: 06c016b1609b39044b8c45cb80ef11ca, type: 3}
+  lamp: {fileID: 0}
+  bulb: {fileID: 0}
+  intensitySet: 1
+  ButtonToMove: {fileID: 0}
+  source: {fileID: 0}
+  activateSound: {fileID: 0}
 --- !u!65 &1062474966
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17508,7 +17632,7 @@ Transform:
   - {fileID: 1734765401}
   - {fileID: 1521513943}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1001 &1069516247
 Prefab:
   m_ObjectHideFlags: 0
@@ -17770,10 +17894,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 112afe53dc43d0841940a907d1717ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 111
-  currentPanel: {fileID: 1473285696}
-  nextPanel: {fileID: 1739371782}
-  eventSystem: {fileID: 1591959789}
+  letter: 0
+  currentPanel: {fileID: 0}
+  nextPanel: {fileID: 0}
+  eventSystem: {fileID: 0}
 --- !u!65 &1084985573
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17851,6 +17975,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: b8e5942fc4bb45d4291399576959b906, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -18002,12 +18132,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6711e9c8b14334e8ba377a0625e67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 53763481}
-  opensound: {fileID: 8300000, guid: b284709b85cc97c4ba041ddbe051a991, type: 3}
-  closesound: {fileID: 8300000, guid: b284709b85cc97c4ba041ddbe051a991, type: 3}
-  closedrotation: {x: 270, y: 180, z: 0}
-  openedrotation: {x: 270, y: 90, z: 0}
-  rotationspeed: 1
+  source: {fileID: 0}
+  opensound: {fileID: 0}
+  closesound: {fileID: 0}
+  closedrotation: {x: 0, y: 0, z: 0}
+  openedrotation: {x: 0, y: 0, z: 0}
+  rotationspeed: 0
 --- !u!65 &1097090087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18327,6 +18457,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 9ce057b1768876843be13af6ef101912, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -18364,7 +18500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74c6d777d2d9dd7479a3271e6ba5a767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 113
+  letter: 0
 --- !u!1 &1108278855
 GameObject:
   m_ObjectHideFlags: 0
@@ -18549,6 +18685,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -18599,12 +18741,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa4ddce2523929e4fbc9275cf13dedce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lasers: {fileID: 1017795278}
-  offPosition: {x: 0, y: 0, z: -.1153}
-  animSpeed: .00499999989
-  ActivateSound: {fileID: 8300000, guid: 32597b1902ac5b84897434d1ca1c14a6, type: 3}
-  source: {fileID: 694721338}
-  LEDs: {fileID: 1053204659}
+  lasers: {fileID: 0}
+  offPosition: {x: 0, y: 0, z: 0}
+  animSpeed: 0
+  ActivateSound: {fileID: 0}
+  source: {fileID: 0}
+  LEDs: {fileID: 0}
 --- !u!1 &1121296670
 GameObject:
   m_ObjectHideFlags: 0
@@ -18652,6 +18794,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -18715,21 +18863,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d18bb38674e20e64187fcf3c974f1142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BrokenGlassGO:
-  - {fileID: 100022, guid: 81a2d17cb1973e14785bcf4996b01cb8, type: 2}
-  - {fileID: 100022, guid: 72b7738b049e0464fa5c8c3419a75ada, type: 2}
-  - {fileID: 100022, guid: 8b40d5edf07889849b52aa41a97da91d, type: 2}
-  - {fileID: 100022, guid: 03e39012bbf6df042a47ba15fbf1a902, type: 2}
-  BreakSound: 0
+  BrokenGlassGO: []
+  BreakSound: 1
   SoundEmitter: {fileID: 0}
   SoundEmitterLifetime: 2
   ShardsLifetime: 3
   ShardMass: .5
-  ShardMaterial: {fileID: 2100000, guid: 057d5430214e8414cafeee34639cae34, type: 2}
-  BreakByVelocity: 0
-  BreakVelocity: 10
-  BreakByImpulse: 1
-  BreakImpulse: 20
+  ShardMaterial: {fileID: 0}
+  BreakByVelocity: 1
+  BreakVelocity: 2
+  BreakByImpulse: 0
+  BreakImpulse: 2
   BreakByClick: 0
   SlowdownCoefficient: .600000024
 --- !u!23 &1122699910
@@ -19025,7 +19169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5e5558c6be0231458b213591ff312b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paper: {fileID: 1144433561}
+  paper: {fileID: 0}
 --- !u!65 &1144433564
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19334,6 +19478,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 959b22ea0a3f2e24e9d6c191ab5219a1, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -19710,6 +19860,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -20147,6 +20303,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -20324,10 +20486,12 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
+  m_TargetEye: 3
   m_HDR: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!1 &1201624394
 GameObject:
   m_ObjectHideFlags: 0
@@ -20524,6 +20688,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -20746,6 +20911,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -20805,7 +20976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4864d5ce064ce3f46aa356742c6be186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  action: 1
+  action: 5
 --- !u!65 &1250013585
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21313,6 +21484,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -21741,6 +21913,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: .39199999}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 6de9318e88590a84980605842ef5d7a3, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -21871,6 +22049,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -22437,10 +22616,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 112afe53dc43d0841940a907d1717ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 98
-  currentPanel: {fileID: 1296343450}
-  nextPanel: {fileID: 1739371782}
-  eventSystem: {fileID: 1591959789}
+  letter: 0
+  currentPanel: {fileID: 0}
+  nextPanel: {fileID: 0}
+  eventSystem: {fileID: 0}
 --- !u!65 &1337268860
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22518,6 +22697,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 683455b25a851b94498f74df95e0a283, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -22590,7 +22775,7 @@ Transform:
   - {fileID: 857878612}
   - {fileID: 1554121355}
   m_Father: {fileID: 1922431256}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &1344288237
 GameObject:
   m_ObjectHideFlags: 0
@@ -23021,12 +23206,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6711e9c8b14334e8ba377a0625e67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 857878613}
-  opensound: {fileID: 8300000, guid: b284709b85cc97c4ba041ddbe051a991, type: 3}
-  closesound: {fileID: 8300000, guid: b284709b85cc97c4ba041ddbe051a991, type: 3}
-  closedrotation: {x: 270, y: 180, z: 0}
-  openedrotation: {x: 270, y: 90, z: 0}
-  rotationspeed: 1
+  source: {fileID: 0}
+  opensound: {fileID: 0}
+  closesound: {fileID: 0}
+  closedrotation: {x: 0, y: 0, z: 0}
+  openedrotation: {x: 0, y: 0, z: 0}
+  rotationspeed: 0
 --- !u!65 &1344288266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23050,12 +23235,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6711e9c8b14334e8ba377a0625e67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 857878613}
-  opensound: {fileID: 8300000, guid: b284709b85cc97c4ba041ddbe051a991, type: 3}
-  closesound: {fileID: 8300000, guid: b284709b85cc97c4ba041ddbe051a991, type: 3}
-  closedrotation: {x: 270, y: 180, z: 0}
-  openedrotation: {x: 270, y: 270, z: 0}
-  rotationspeed: 1
+  source: {fileID: 0}
+  opensound: {fileID: 0}
+  closesound: {fileID: 0}
+  closedrotation: {x: 0, y: 0, z: 0}
+  openedrotation: {x: 0, y: 0, z: 0}
+  rotationspeed: 0
 --- !u!1001 &1347186251
 Prefab:
   m_ObjectHideFlags: 0
@@ -23271,12 +23456,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6711e9c8b14334e8ba377a0625e67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 56781673}
-  opensound: {fileID: 8300000, guid: 05f32ce659968184c8423706fe2996be, type: 3}
-  closesound: {fileID: 8300000, guid: fffa8470e9730b94f9d8faa62d05024d, type: 3}
-  closedrotation: {x: 270, y: 180, z: 0}
-  openedrotation: {x: 270, y: 270, z: 0}
-  rotationspeed: 1
+  source: {fileID: 0}
+  opensound: {fileID: 0}
+  closesound: {fileID: 0}
+  closedrotation: {x: 0, y: 0, z: 0}
+  openedrotation: {x: 0, y: 0, z: 0}
+  rotationspeed: 0
 --- !u!23 &1352211995
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23697,6 +23882,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 683455b25a851b94498f74df95e0a283, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -23734,10 +23925,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 112afe53dc43d0841940a907d1717ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 98
-  currentPanel: {fileID: 1739371782}
-  nextPanel: {fileID: 1473285696}
-  eventSystem: {fileID: 1591959789}
+  letter: 0
+  currentPanel: {fileID: 0}
+  nextPanel: {fileID: 0}
+  eventSystem: {fileID: 0}
 --- !u!1 &1371018935
 GameObject:
   m_ObjectHideFlags: 0
@@ -24072,12 +24263,6 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: c9f2277f2b4414ff9abf05e783890171, type: 2}
   m_PrefabInternal: {fileID: 1045381203}
---- !u!114 &1383165343 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11400000, guid: c9f2277f2b4414ff9abf05e783890171,
-    type: 2}
-  m_PrefabInternal: {fileID: 1045381203}
-  m_Script: {fileID: 11500000, guid: 2c4e0350c46ae405b8db39262c18b8f5, type: 3}
 --- !u!114 &1383165344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24089,30 +24274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aeed8ce4dd04446aa743d6468a99b65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftHands:
-  - {fileID: 11400008, guid: e52d7ac5daec443ebb309c944ad3c825, type: 2}
-  - {fileID: 11400010, guid: b05d31c870ee943a18bc114347790536, type: 2}
-  - {fileID: 11400000, guid: 9ae8a8acf486840e19397b18a914d915, type: 2}
-  - {fileID: 11400004, guid: 704f5d64b4ac849cbb1d88b6a50f0975, type: 2}
-  - {fileID: 11400010, guid: e734beeefc33b46219db092ade06f82f, type: 2}
-  - {fileID: 11400010, guid: 692c0a0bd7cda4829871ffbf694af029, type: 2}
-  - {fileID: 11400010, guid: cb1d88ce102bb427cb16488041638669, type: 2}
-  - {fileID: 11400010, guid: fe4de8a9a720449a0829dd9a0e49431f, type: 2}
-  - {fileID: 11400002, guid: f838193a394db4bc9b92979104685e9b, type: 2}
-  - {fileID: 11400010, guid: e728ddf0a849b493d9153b051fad8004, type: 2}
-  - {fileID: 11400010, guid: 95a8b1228f1034c8f9070761f4f13b21, type: 2}
-  rightHands:
-  - {fileID: 11400006, guid: c71966c97cd79448bb78426d92c4166a, type: 2}
-  - {fileID: 11400010, guid: 0c286504d675f4f388780324725d8274, type: 2}
-  - {fileID: 11400010, guid: 0c6c9cacc3ef1487daa06cb206b2f421, type: 2}
-  - {fileID: 11400010, guid: 7a511c744b475498891a2b1acc35e348, type: 2}
-  - {fileID: 11400010, guid: fb2d6e2c3c6ef431caaff3cf8beb3b75, type: 2}
-  - {fileID: 11400010, guid: c261d0b9921014c4ea425092ef121aa8, type: 2}
-  - {fileID: 11400010, guid: 04bf48858739548a7bfa278f04616f75, type: 2}
-  - {fileID: 11400010, guid: 59d37bd572fe54eb490dcbae28e3e382, type: 2}
-  - {fileID: 11400004, guid: fa3f3c00a3a0b468eb15ed53304a2c4b, type: 2}
-  - {fileID: 11400010, guid: 59d37bd572fe54eb490dcbae28e3e382, type: 2}
-  - {fileID: 11400010, guid: 95a8b1228f1034c8f9070761f4f13b21, type: 2}
+  leftHands: []
+  rightHands: []
 --- !u!1001 &1389695825
 Prefab:
   m_ObjectHideFlags: 0
@@ -24481,12 +24644,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b960668985e004dae54a4d9f55cf9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lamp: {fileID: 318619288}
-  bulb: {fileID: 1753946893}
-  intensitySet: 4
-  ButtonToMove: {fileID: 1054890169}
-  source: {fileID: 1277049341}
-  activateSound: {fileID: 8300000, guid: 06c016b1609b39044b8c45cb80ef11ca, type: 3}
+  lamp: {fileID: 0}
+  bulb: {fileID: 0}
+  intensitySet: 1
+  ButtonToMove: {fileID: 0}
+  source: {fileID: 0}
+  activateSound: {fileID: 0}
 --- !u!65 &1399879200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25123,11 +25286,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61cb8adfb7c41c24c948bd8d829278f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  def: 15
+  def: 0
   min: 0
-  max: 30
+  max: 10
   step: 1
-  label: {fileID: 541509974}
+  label: {fileID: 0}
 --- !u!1001 &1417833812
 Prefab:
   m_ObjectHideFlags: 0
@@ -25260,6 +25423,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: .669117689, g: .669117689, b: .669117689, a: .501960814}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
@@ -25868,8 +26037,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da08258055399b94ca32d3d0d00a1abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 113
-  menuValue: {fileID: 406169990}
+  letter: 0
+  menuValue: {fileID: 0}
 --- !u!65 &1453398363
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25947,6 +26116,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 683455b25a851b94498f74df95e0a283, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -26260,6 +26435,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -26605,6 +26786,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: .39199999}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 6de9318e88590a84980605842ef5d7a3, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -26893,8 +27080,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bda822edafbb4504d83d4ae92f8f588e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 108
-  checkmark: {fileID: 413922468}
+  letter: 0
+  checkmark: {fileID: 0}
   value: 1
 --- !u!1 &1486274091
 GameObject:
@@ -27111,14 +27298,154 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .134938702, y: 2.05000091, z: 2.05818152}
   m_Center: {x: .954754591, y: -.0250005666, z: -1.30049471e-09}
---- !u!1 &1490229679 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100016, guid: 718f26e59b1f1704fbf7f805330af9f2, type: 3}
-  m_PrefabInternal: {fileID: 1587364558}
 --- !u!4 &1490229680 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400016, guid: 718f26e59b1f1704fbf7f805330af9f2, type: 3}
   m_PrefabInternal: {fileID: 1587364558}
+--- !u!1 &1497592971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100006, guid: be8a6c40a7086c6469b6251654ffd799, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1497592972}
+  - 33: {fileID: 1497592977}
+  - 23: {fileID: 1497592976}
+  - 65: {fileID: 1497592975}
+  - 65: {fileID: 1497592974}
+  - 54: {fileID: 1497592973}
+  - 114: {fileID: 1497592978}
+  m_Layer: 0
+  m_Name: Crowbar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1497592972
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400006, guid: be8a6c40a7086c6469b6251654ffd799, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497592971}
+  m_LocalRotation: {x: .0380802266, y: .706080496, z: .0380802006, w: -.706080854}
+  m_LocalPosition: {x: -9.12100029, y: 1.31599998, z: 6.18300009}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1498133562}
+  m_RootOrder: 0
+--- !u!54 &1497592973
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497592971}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1497592974
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497592971}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .196812063, y: .0617030263, z: .0736250132}
+  m_Center: {x: 0, y: .472768784, z: 0}
+--- !u!65 &1497592975
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497592971}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .0860264301, y: .946101308, z: .0736250132}
+  m_Center: {x: -.0553936958, y: -.0305681229, z: 0}
+--- !u!23 &1497592976
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300004, guid: be8a6c40a7086c6469b6251654ffd799,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497592971}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: d79fc2a38ad3b4741a6157aa7e8db066, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1497592977
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300004, guid: be8a6c40a7086c6469b6251654ffd799,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497592971}
+  m_Mesh: {fileID: 4300004, guid: be8a6c40a7086c6469b6251654ffd799, type: 3}
+--- !u!114 &1497592978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497592971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376bb4bac33c6ae49837b912ac69d6e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1498133561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1498133562}
+  m_Layer: 0
+  m_Name: Others
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1498133562
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1498133561}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1497592972}
+  m_Father: {fileID: 403028227}
+  m_RootOrder: 3
 --- !u!1 &1498930383
 GameObject:
   m_ObjectHideFlags: 0
@@ -27676,7 +28003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4864d5ce064ce3f46aa356742c6be186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  action: 0
+  action: 5
 --- !u!4 &1541779637 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 133124c544ec5e84d93a11f6addcfcf8, type: 3}
@@ -27885,9 +28212,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   on: 0
-  source: {fileID: 1545565251}
-  on_texture: {fileID: 2100000, guid: 5c1c0a4643d3f8d48b34ecc735a894b3, type: 2}
-  off_texture: {fileID: 2100000, guid: b061f377975aa5345b9627ab346ea1a9, type: 2}
+  source: {fileID: 0}
+  on_texture: {fileID: 0}
+  off_texture: {fileID: 0}
 --- !u!65 &1545565253
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28329,10 +28656,6 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 54dc0ed3d621061419e7ca4bf79b6b70, type: 3}
   m_PrefabInternal: {fileID: 1564082918}
---- !u!1 &1564082922 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100012, guid: 54dc0ed3d621061419e7ca4bf79b6b70, type: 3}
-  m_PrefabInternal: {fileID: 1564082918}
 --- !u!65 &1564082923
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28674,8 +28997,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be5df9c8cb78ae4da125130ef6f4739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonValue: 48
-  doorLocked: {fileID: 1640100804}
+  buttonValue: 0
+  doorLocked: {fileID: 0}
 --- !u!114 &1565883663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28687,8 +29010,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be5df9c8cb78ae4da125130ef6f4739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonValue: 56
-  doorLocked: {fileID: 1640100804}
+  buttonValue: 0
+  doorLocked: {fileID: 0}
 --- !u!114 &1565883664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28700,8 +29023,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be5df9c8cb78ae4da125130ef6f4739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonValue: 53
-  doorLocked: {fileID: 1640100804}
+  buttonValue: 0
+  doorLocked: {fileID: 0}
 --- !u!114 &1565883665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28713,8 +29036,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be5df9c8cb78ae4da125130ef6f4739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonValue: 49
-  doorLocked: {fileID: 1640100804}
+  buttonValue: 0
+  doorLocked: {fileID: 0}
 --- !u!114 &1565883666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28726,8 +29049,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be5df9c8cb78ae4da125130ef6f4739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonValue: 50
-  doorLocked: {fileID: 1640100804}
+  buttonValue: 0
+  doorLocked: {fileID: 0}
 --- !u!114 &1565883667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28739,8 +29062,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be5df9c8cb78ae4da125130ef6f4739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonValue: 51
-  doorLocked: {fileID: 1640100804}
+  buttonValue: 0
+  doorLocked: {fileID: 0}
 --- !u!114 &1565883668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28752,8 +29075,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be5df9c8cb78ae4da125130ef6f4739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonValue: 42
-  doorLocked: {fileID: 1640100804}
+  buttonValue: 0
+  doorLocked: {fileID: 0}
 --- !u!114 &1565883669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28765,8 +29088,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be5df9c8cb78ae4da125130ef6f4739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonValue: 35
-  doorLocked: {fileID: 1640100804}
+  buttonValue: 0
+  doorLocked: {fileID: 0}
 --- !u!114 &1565883670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28778,8 +29101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be5df9c8cb78ae4da125130ef6f4739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonValue: 52
-  doorLocked: {fileID: 1640100804}
+  buttonValue: 0
+  doorLocked: {fileID: 0}
 --- !u!114 &1565883671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28791,8 +29114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be5df9c8cb78ae4da125130ef6f4739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonValue: 54
-  doorLocked: {fileID: 1640100804}
+  buttonValue: 0
+  doorLocked: {fileID: 0}
 --- !u!114 &1565883672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28804,8 +29127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be5df9c8cb78ae4da125130ef6f4739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonValue: 57
-  doorLocked: {fileID: 1640100804}
+  buttonValue: 0
+  doorLocked: {fileID: 0}
 --- !u!114 &1565883673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28817,8 +29140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be5df9c8cb78ae4da125130ef6f4739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonValue: 55
-  doorLocked: {fileID: 1640100804}
+  buttonValue: 0
+  doorLocked: {fileID: 0}
 --- !u!1 &1566714847
 GameObject:
   m_ObjectHideFlags: 0
@@ -29087,8 +29410,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da08258055399b94ca32d3d0d00a1abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 97
-  menuValue: {fileID: 1416602539}
+  letter: 0
+  menuValue: {fileID: 0}
 --- !u!65 &1589024300
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29166,6 +29489,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 683455b25a851b94498f74df95e0a283, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -29209,7 +29538,7 @@ MonoBehaviour:
   m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AllowActivationOnStandalone: 0
+  m_ForceModuleActive: 0
 --- !u!114 &1591959788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29226,7 +29555,8 @@ MonoBehaviour:
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
-  m_AllowActivationOnMobileDevice: 0
+  m_RepeatDelay: .5
+  m_ForceModuleActive: 0
 --- !u!114 &1591959789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29379,6 +29709,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -29626,9 +29962,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   on: 0
-  source: {fileID: 1614632543}
-  on_texture: {fileID: 2100000, guid: 2edc3485f251cf341b8e787da59bfe6b, type: 2}
-  off_texture: {fileID: 2100000, guid: 91576945906da4e4db6af3c0b37cfd5b, type: 2}
+  source: {fileID: 0}
+  on_texture: {fileID: 0}
+  off_texture: {fileID: 0}
 --- !u!1001 &1618106473
 Prefab:
   m_ObjectHideFlags: 0
@@ -30304,17 +30640,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6980f8fc52e31cd45a9acac259715705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 1924970170}
-  opensound: {fileID: 8300000, guid: 05f32ce659968184c8423706fe2996be, type: 3}
-  closesound: {fileID: 8300000, guid: fffa8470e9730b94f9d8faa62d05024d, type: 3}
-  closedrotation: {x: 270, y: 180, z: 0}
-  openedrotation: {x: 270, y: 270, z: 0}
-  rotationspeed: 2
-  lockedsound: {fileID: 8300000, guid: 0595b81b06baba54b919302ab2fe393e, type: 3}
-  unlocksound: {fileID: 8300000, guid: 60921dc295d30ca4a931fde2f917e38c, type: 3}
-  DigicodeSource: {fileID: 1753830712}
-  digicodePress: {fileID: 8300000, guid: 28e44d377707c5049b4e2bcade176622, type: 3}
-  wrongCode: {fileID: 8300000, guid: 3e8f34ecdff52894d885ca69af40ce93, type: 3}
+  source: {fileID: 0}
+  opensound: {fileID: 0}
+  closesound: {fileID: 0}
+  closedrotation: {x: 0, y: 0, z: 0}
+  openedrotation: {x: 0, y: 0, z: 0}
+  rotationspeed: 0
+  lockedsound: {fileID: 0}
+  unlocksound: {fileID: 0}
+  DigicodeSource: {fileID: 0}
+  digicodePress: {fileID: 0}
+  wrongCode: {fileID: 0}
 --- !u!65 &1640100810
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30474,6 +30810,52 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1646159678}
   m_Mesh: {fileID: 4300006, guid: 760d70a0d8e17f544a163c1217db2a9e, type: 3}
+--- !u!1 &1647338861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: be8a6c40a7086c6469b6251654ffd799, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1647338863}
+  - 95: {fileID: 1647338862}
+  m_Layer: 0
+  m_Name: CatanaAndCrowbar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1647338862
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: be8a6c40a7086c6469b6251654ffd799,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647338861}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: be8a6c40a7086c6469b6251654ffd799, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!4 &1647338863
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: be8a6c40a7086c6469b6251654ffd799, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647338861}
+  m_LocalRotation: {x: -.5, y: -.5, z: -.5, w: .5}
+  m_LocalPosition: {x: -9.22022152, y: .644191504, z: 6.11381721}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!1 &1658958213 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: e50b009f4ce17fa42ae67882f1558d9e, type: 3}
@@ -30692,8 +31074,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 628e84d3204bac14791a483731679b4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 104
-  checkmark: {fileID: 855767361}
+  letter: 0
+  checkmark: {fileID: 0}
   value: 1
 --- !u!1 &1666088586
 GameObject:
@@ -30867,10 +31249,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 112afe53dc43d0841940a907d1717ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 115
-  currentPanel: {fileID: 1739371782}
-  nextPanel: {fileID: 1296343450}
-  eventSystem: {fileID: 1591959789}
+  letter: 0
+  currentPanel: {fileID: 0}
+  nextPanel: {fileID: 0}
+  eventSystem: {fileID: 0}
 --- !u!65 &1672743765
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30948,6 +31330,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: b8e5942fc4bb45d4291399576959b906, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -31412,12 +31800,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6711e9c8b14334e8ba377a0625e67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 857878613}
-  opensound: {fileID: 8300000, guid: b284709b85cc97c4ba041ddbe051a991, type: 3}
-  closesound: {fileID: 8300000, guid: b284709b85cc97c4ba041ddbe051a991, type: 3}
-  closedrotation: {x: 270, y: 180, z: 0}
-  openedrotation: {x: 270, y: 90, z: 0}
-  rotationspeed: 1
+  source: {fileID: 0}
+  opensound: {fileID: 0}
+  closesound: {fileID: 0}
+  closedrotation: {x: 0, y: 0, z: 0}
+  openedrotation: {x: 0, y: 0, z: 0}
+  rotationspeed: 0
 --- !u!65 &1709966910
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31753,10 +32141,6 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400012, guid: 54dc0ed3d621061419e7ca4bf79b6b70, type: 3}
   m_PrefabInternal: {fileID: 1721526026}
---- !u!1 &1721526029 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100012, guid: 54dc0ed3d621061419e7ca4bf79b6b70, type: 3}
-  m_PrefabInternal: {fileID: 1721526026}
 --- !u!1 &1721526030 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 54dc0ed3d621061419e7ca4bf79b6b70, type: 3}
@@ -32037,6 +32421,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: .39199999}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 6de9318e88590a84980605842ef5d7a3, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -32172,6 +32562,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -32288,6 +32684,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -32477,11 +32874,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f8c4df08417034696fffc5c4c43a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  def: 60
-  min: 30
-  max: 90
-  step: 5
-  label: {fileID: 566553069}
+  def: 0
+  min: 0
+  max: 10
+  step: 1
+  label: {fileID: 0}
 --- !u!1 &1776098312
 GameObject:
   m_ObjectHideFlags: 0
@@ -32585,6 +32982,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 9ce057b1768876843be13af6ef101912, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -32622,7 +33025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1630cb2ee3c416947ad3f47a6aa9c81d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 110
+  letter: 0
 --- !u!1001 &1781212527
 Prefab:
   m_ObjectHideFlags: 0
@@ -32720,10 +33123,6 @@ Transform:
 --- !u!1 &1781212530 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 54dc0ed3d621061419e7ca4bf79b6b70, type: 3}
-  m_PrefabInternal: {fileID: 1781212527}
---- !u!1 &1781212531 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100012, guid: 54dc0ed3d621061419e7ca4bf79b6b70, type: 3}
   m_PrefabInternal: {fileID: 1781212527}
 --- !u!65 &1781212532
 BoxCollider:
@@ -32955,8 +33354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e7c3fb28cceaed488ea6ae37c712435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ice: {fileID: 1781680417}
-  Key: {fileID: 1781680416}
+  Ice: {fileID: 0}
+  Key: {fileID: 0}
 --- !u!1 &1782844360
 GameObject:
   m_ObjectHideFlags: 0
@@ -34016,6 +34415,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -34743,6 +35143,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 959b22ea0a3f2e24e9d6c191ab5219a1, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -34797,12 +35203,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b960668985e004dae54a4d9f55cf9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lamp: {fileID: 526101505}
-  bulb: {fileID: 97484835}
-  intensitySet: 0
-  ButtonToMove: {fileID: 1946210798}
-  source: {fileID: 2138727689}
-  activateSound: {fileID: 8300000, guid: ec487bc980cfafc40a9d514ab3584829, type: 3}
+  lamp: {fileID: 0}
+  bulb: {fileID: 0}
+  intensitySet: 1
+  ButtonToMove: {fileID: 0}
+  source: {fileID: 0}
+  activateSound: {fileID: 0}
 --- !u!65 &1839642242
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34924,9 +35330,9 @@ MonoBehaviour:
   source: {fileID: 0}
   opensound: {fileID: 0}
   closesound: {fileID: 0}
-  closedrotation: {x: 270, y: 180, z: 0}
-  openedrotation: {x: 270, y: 260, z: 0}
-  rotationspeed: 1
+  closedrotation: {x: 0, y: 0, z: 0}
+  openedrotation: {x: 0, y: 0, z: 0}
+  rotationspeed: 0
 --- !u!1 &1846616421
 GameObject:
   m_ObjectHideFlags: 0
@@ -34991,7 +35397,7 @@ Transform:
   - {fileID: 433152078}
   - {fileID: 1327746504}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1856142620
 GameObject:
   m_ObjectHideFlags: 0
@@ -35483,6 +35889,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 683455b25a851b94498f74df95e0a283, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -35520,8 +35932,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf1bf9891cb9a904db4c96db15a14e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 114
-  pauseController: {fileID: 559794756}
+  letter: 0
+  pauseController: {fileID: 0}
 --- !u!1 &1888884951
 GameObject:
   m_ObjectHideFlags: 0
@@ -35929,11 +36341,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   next: {fileID: 0}
-  prev: {fileID: 1911752867}
+  prev: {fileID: 0}
   myEnabled: 0
-  final: 1
-  lamp: {fileID: 1934584913}
-  intensity: 5
+  final: 0
+  lamp: {fileID: 0}
+  intensity: 1
 --- !u!65 &1911752870
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35957,12 +36369,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80f914ab12045b04a8f010146dc5615e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  next: {fileID: 1911752866}
+  next: {fileID: 0}
   prev: {fileID: 0}
   myEnabled: 0
   final: 0
-  lamp: {fileID: 1934584913}
-  intensity: 5
+  lamp: {fileID: 0}
+  intensity: 1
 --- !u!1 &1921958046
 GameObject:
   m_ObjectHideFlags: 0
@@ -36050,8 +36462,8 @@ Transform:
   m_Children:
   - {fileID: 534334716}
   - {fileID: 553259884}
-  - {fileID: 358714529}
   - {fileID: 1344288236}
+  - {fileID: 358714529}
   m_Father: {fileID: 1855332410}
   m_RootOrder: 2
 --- !u!1 &1924970168
@@ -36097,6 +36509,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -36265,12 +36678,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6711e9c8b14334e8ba377a0625e67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 1021381717}
-  opensound: {fileID: 8300000, guid: 72cb8a3888af8954290c4e4f10716fa6, type: 3}
-  closesound: {fileID: 8300000, guid: 991d437e24dbc5c44a97b194e22327e4, type: 3}
-  closedrotation: {x: 270, y: 180, z: 0}
-  openedrotation: {x: 270, y: 100, z: 0}
-  rotationspeed: 1
+  source: {fileID: 0}
+  opensound: {fileID: 0}
+  closesound: {fileID: 0}
+  closedrotation: {x: 0, y: 0, z: 0}
+  openedrotation: {x: 0, y: 0, z: 0}
+  rotationspeed: 0
 --- !u!65 &1929075565
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36467,18 +36880,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b098192a7871534988c22c2839ff790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lights:
-  - {fileID: 655596}
-  - {fileID: 1402328335}
-  - {fileID: 318619287}
-  - {fileID: 526101503}
-  - {fileID: 1596630773}
-  - {fileID: 1143988107}
-  - {fileID: 1738996812}
-  lasers: {fileID: 1017795278}
-  ElectricityLED: {fileID: 343157716}
-  LoungeLED: {fileID: 1053204659}
-  activated: 1
+  lights: []
+  lasers: {fileID: 0}
+  ElectricityLED: {fileID: 0}
+  LoungeLED: {fileID: 0}
+  activated: 0
 --- !u!1 &1934584912
 GameObject:
   m_ObjectHideFlags: 0
@@ -36582,6 +36988,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -36793,10 +37200,6 @@ Transform:
 --- !u!1 &1946210797 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 54dc0ed3d621061419e7ca4bf79b6b70, type: 3}
-  m_PrefabInternal: {fileID: 1946210794}
---- !u!1 &1946210798 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100012, guid: 54dc0ed3d621061419e7ca4bf79b6b70, type: 3}
   m_PrefabInternal: {fileID: 1946210794}
 --- !u!65 &1946210799
 BoxCollider:
@@ -37025,6 +37428,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 959b22ea0a3f2e24e9d6c191ab5219a1, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -38385,6 +38794,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -38676,6 +39091,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 0a48c62020c8d3449aa8d72c4d700a78, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -38980,12 +39401,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6711e9c8b14334e8ba377a0625e67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 1814458272}
-  opensound: {fileID: 8300000, guid: b284709b85cc97c4ba041ddbe051a991, type: 3}
-  closesound: {fileID: 8300000, guid: b284709b85cc97c4ba041ddbe051a991, type: 3}
-  closedrotation: {x: 270, y: 180, z: 0}
-  openedrotation: {x: 270, y: 90, z: 0}
-  rotationspeed: 1
+  source: {fileID: 0}
+  opensound: {fileID: 0}
+  closesound: {fileID: 0}
+  closedrotation: {x: 0, y: 0, z: 0}
+  openedrotation: {x: 0, y: 0, z: 0}
+  rotationspeed: 0
 --- !u!23 &2079082173
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39216,6 +39637,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 83e1e5d9be5489d46992a13446077bac, type: 3}
     m_FontSize: 24
@@ -39299,8 +39726,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c8a3e59cebff145b2df3307b885932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 115
-  menuValue: {fileID: 406169990}
+  letter: 0
+  menuValue: {fileID: 0}
 --- !u!65 &2093356419
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39378,6 +39805,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: b8e5942fc4bb45d4291399576959b906, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -40087,6 +40520,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -40190,8 +40624,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c8a3e59cebff145b2df3307b885932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: 122
-  menuValue: {fileID: 1416602539}
+  letter: 0
+  menuValue: {fileID: 0}
 --- !u!65 &2139010476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40269,6 +40703,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: b8e5942fc4bb45d4291399576959b906, type: 3}
   m_Type: 1
   m_PreserveAspect: 0

@@ -2,12 +2,13 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
-public class TessellationVertexEffect : BaseVertexEffect
+public class TessellationVertexEffect : BaseMeshEffect
 {
 	#region BaseVertexEffect
 
-	public override void ModifyVertices(List<UIVertex> verts)
+	public void ModifyVertices(List<UIVertex> verts)
 	{
 		if (verts.Count == 0)
 		{
@@ -131,8 +132,13 @@ public class TessellationVertexEffect : BaseVertexEffect
 		return Color.Lerp(bottom, top, b);
 	}
 
-	#endregion
-	
-	[SerializeField]
+    public override void ModifyMesh(Mesh mesh)
+    {
+        throw new NotImplementedException();
+    }
+
+    #endregion
+
+    [SerializeField]
 	float m_tessellationSize = 10.0f;
 }
