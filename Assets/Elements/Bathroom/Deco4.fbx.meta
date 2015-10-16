@@ -6,10 +6,30 @@ ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Flask1
+    100004: Flask2
+    100006: Flask3
+    100008: Support
     400000: //RootNode
+    400002: Flask1
+    400004: Flask2
+    400006: Flask3
+    400008: Support
     2300000: //RootNode
+    2300002: Flask1
+    2300004: Flask2
+    2300006: Flask3
+    2300008: Support
     3300000: //RootNode
+    3300002: Flask1
+    3300004: Flask2
+    3300006: Flask3
+    3300008: Support
     4300000: Deco4
+    4300002: Support
+    4300004: Flask1
+    4300006: Flask2
+    4300008: Flask3
   materials:
     importMaterials: 0
     materialName: 0
@@ -19,6 +39,10 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
@@ -62,8 +86,10 @@ ModelImporter:
     legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
+    hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
+  humanoidOversampling: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
