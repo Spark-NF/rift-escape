@@ -15,6 +15,9 @@ ModelImporter:
     100014: Lamp
     100016: Wall
     100018: //RootNode
+    100020: DoorViewer1
+    100022: DoorViewer2
+    100024: DoorViewer3
     400000: Base
     400002: Camera
     400004: Door
@@ -25,6 +28,9 @@ ModelImporter:
     400014: Lamp
     400016: Wall
     400018: //RootNode
+    400020: DoorViewer1
+    400022: DoorViewer2
+    400024: DoorViewer3
     2300000: Base
     2300002: Door
     2300004: Doorknob
@@ -32,6 +38,9 @@ ModelImporter:
     2300008: DoorknobFront
     2300010: Key
     2300012: Wall
+    2300014: DoorViewer1
+    2300016: DoorViewer2
+    2300018: DoorViewer3
     3300000: Base
     3300002: Door
     3300004: Doorknob
@@ -39,6 +48,9 @@ ModelImporter:
     3300008: DoorknobFront
     3300010: Key
     3300012: Wall
+    3300014: DoorViewer1
+    3300016: DoorViewer2
+    3300018: DoorViewer3
     4300000: Key
     4300002: Doorknob
     4300004: DoorknobBack
@@ -46,8 +58,11 @@ ModelImporter:
     4300008: Door
     4300010: Base
     4300012: Wall
+    4300014: DoorViewer1
+    4300016: DoorViewer2
+    4300018: DoorViewer3
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:
