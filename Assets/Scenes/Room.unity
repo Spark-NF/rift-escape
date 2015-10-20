@@ -34035,18 +34035,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1781680424
-BoxCollider:
+--- !u!136 &1781680424
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1781680422}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: .189724877, y: .0617572069, z: .330185324}
-  m_Center: {x: -.000576834194, y: .00053024292, z: .0553331748}
+  m_Radius: .100000001
+  m_Height: .400000006
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: .0500000007}
 --- !u!114 &1781680425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34060,6 +34061,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ice: {fileID: 1781680417}
   Key: {fileID: 1781680416}
+--- !u!114 &1781680432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1781680422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5c41b54845fbc24a83340b836de2d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevitationPosition: {x: .200000003, y: .200000003, z: .300000012}
+  LevitationAnchor: {fileID: 250161100}
+  animSpeed: 1
 --- !u!1 &1782844360
 GameObject:
   m_ObjectHideFlags: 0
