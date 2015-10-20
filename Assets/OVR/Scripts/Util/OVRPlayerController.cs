@@ -41,13 +41,14 @@ public class OVRPlayerController : MonoBehaviour
 	public static float upDetection = .15f;
 	public enum LeapMovementAction
 	{
-		Forward,
-		RotLeft,
-		RotRight,
-		Up,
-		Down,
-		None
-	}
+        None = 0x00,
+        Forward = 0x10, // last byte used for movement intensity
+        Backward = 0x20,
+        RotLeft = 0x40,
+        RotRight = 0x80,
+        Up = 0x100,
+        Down = 0x200
+    }
 	public static LeapMovementAction nextAction = LeapMovementAction.None;
 	public GameObject LeapMovementColliders;
 
@@ -237,20 +238,22 @@ public class OVRPlayerController : MonoBehaviour
 			return;
 
 		MoveScale = 1.0f;
-		bool moveForward = Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow) || (LeapMovement && nextAction == LeapMovementAction.Forward);
+		bool moveForward = Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow) /*dubois_d : leap movement*/ || (LeapMovement && (nextAction & LeapMovementAction.Forward) != 0);
 		bool moveLeft = Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow);
 		bool moveRight = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow);
-		bool moveBack = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
+		bool moveBack = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) /*dubois_d : leap movement*/ || (LeapMovement && (nextAction & LeapMovementAction.Backward) != 0);
 		bool jump = Input.GetKey(KeyCode.Space);
 
 		// dubois_d  Get the input vector from OVR positional tracking and add bending / standing up
 		bool lookRight = false;
 		bool lookLeft = false;
-		bool moveUp = Input.GetKey(KeyCode.R) || (LeapMovement && nextAction == LeapMovementAction.Up);
-		bool moveDown = Input.GetKey(KeyCode.F) || (LeapMovement && nextAction == LeapMovementAction.Down);
+		bool moveUp = Input.GetKey(KeyCode.R) || (LeapMovement && (nextAction & LeapMovementAction.Up) != 0);
+		bool moveDown = Input.GetKey(KeyCode.F) || (LeapMovement && (nextAction & LeapMovementAction.Down) != 0);
 		bool Reinit_movepos = Input.GetKey (KeyCode.RightControl) || Input.GetKey (KeyCode.LeftControl);
 
-		if (initPosTrackDir == null) {
+        int leapscale = !LeapMovement ? 1 : nextAction == LeapMovementAction.None ? 1 : (int)nextAction & 0xf;
+
+        if (initPosTrackDir == null) {
 			initPosTrackDir = CameraController.centerEyeAnchor.transform.localPosition;
 		}
 		if (Reinit_movepos) {
@@ -363,7 +366,7 @@ public class OVRPlayerController : MonoBehaviour
 		MoveScale *= SimulationRate * Time.deltaTime;
 
 		// Compute this for key movement
-		float moveInfluence = Acceleration * 0.1f * MoveScale * MoveScaleMultiplier;
+		float moveInfluence = Acceleration * 0.1f * MoveScale * MoveScaleMultiplier /*dubois_d : leap run*/ * leapscale;
 
 		// Run!
 		if (dpad_move || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
@@ -479,10 +482,10 @@ public class OVRPlayerController : MonoBehaviour
 			}
 		}
 		if (LeapMovement) {
-		 if (nextAction == LeapMovementAction.RotLeft)
-				euler.y -= RotationAmount;
-		 if (nextAction == LeapMovementAction.RotRight)
-				euler.y += RotationAmount;
+		 if ((nextAction & LeapMovementAction.RotLeft) != 0)
+				euler.y -= RotationAmount * ((int)nextAction & 0xf);
+		 if ((nextAction & LeapMovementAction.RotRight) != 0)
+				euler.y += RotationAmount * ((int)nextAction & 0xf);
 		}
 	}
 
