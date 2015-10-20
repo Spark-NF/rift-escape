@@ -57,7 +57,7 @@ public class MicrowaveScript : MonoBehaviour {
 
         activated = false;
         microwaveLight.gameObject.SetActive(false);
-        iceToMelt.GetComponent<IceKeyScript>().SetKeyUsabled();
+        iceToMelt.GetComponent<IceKeyScript>().EnableKey();
         door.GetComponent<DoorOpen>().Disable();
     }
 

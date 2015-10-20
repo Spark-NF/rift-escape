@@ -6,15 +6,20 @@ public class IceKeyScript : MonoBehaviour {
     public GameObject Ice;
     public GameObject Key;
 
-    bool keyIsUsabled = false;
+    bool keyEnabled = false;
 
     public void ScaleIce()
     {
         Ice.transform.localScale *= 0.995f;
     }
 
-    public void SetKeyUsabled()
+    public void EnableKey()
     {
-        keyIsUsabled = true;
+        keyEnabled = true;
+    }
+
+    public bool IsEnabled()
+    {
+        return keyEnabled;
     }
 }
