@@ -6,18 +6,34 @@ public class ChangeTexture : MonoBehaviour {
 	public GameObject source;
 	public Material on_texture;
 	public Material off_texture;
-	
-	void OnTriggerEnter(Collider other)
+    public AudioSource audioSource = null;
+    public AudioClip sound = null;
+
+    bool canChange = true;
+
+    IEnumerator OnTriggerEnter(Collider other)
 	{
-		if (on)
-		{
-			source.GetComponent<Renderer>().material = off_texture;
-			on = false;
-		}
-		else
-		{
-			source.GetComponent<Renderer>().material = on_texture;
-			on = true;
-		}
+        if (canChange)
+        {
+            canChange = false;
+            if (on)
+            {
+                source.GetComponent<Renderer>().material = off_texture;
+                if (sound == null)
+                    audioSource.Stop();
+                on = false;
+            }
+            else
+            {
+                source.GetComponent<Renderer>().material = on_texture;
+                if (sound == null)
+                    audioSource.Play();
+                else
+                    audioSource.PlayOneShot(sound);
+                on = true;
+            }
+            yield return new WaitForSeconds(2);
+            canChange = true;
+        }
 	}
 }

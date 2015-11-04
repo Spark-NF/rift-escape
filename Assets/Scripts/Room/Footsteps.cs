@@ -23,7 +23,7 @@ public class Footsteps : MonoBehaviour
 
 		if (cc.isGrounded == true && horizontalVelocity.magnitude > 0.3f && source.isPlaying == false && !playing)
 		{
-			source.volume = Random.Range(0.8f, 1);
+			source.volume = Random.Range(0.1f, 0.2f);
 			source.pitch = Random.Range(0.8f, 1.1f);
 			source.PlayOneShot(footsteps[Random.Range(0, footsteps.Length)]);
 			
