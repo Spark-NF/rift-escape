@@ -1,9 +1,7 @@
 fileFormatVersion: 2
-guid: 07959890f2c97774fb3853c5a0a3294a
-labels:
-- Architecture
-- Concrete
-- Pattern
+guid: 64c0eac72928a304db3751441efa23da
+timeCreated: 1446735488
+licenseType: Free
 NativeFormatImporter:
   userData: 
   assetBundleName: 

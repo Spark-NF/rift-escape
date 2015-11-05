@@ -1,76 +1,72 @@
 fileFormatVersion: 2
-guid: 2ec99a8f41d41ab4498f617a465d082e
-timeCreated: 1435092983
+guid: ef417b9e9a7f66444b6a2edde4f5a400
+timeCreated: 1446741206
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: Base
-    100002: Camera
+    100000: BaseLeft
+    100002: Cube
     100004: Door
     100006: Doorknob
     100008: DoorknobBack
     100010: DoorknobFront
-    100012: Key
-    100014: Lamp
-    100016: Wall
+    100012: ElevatorBase
+    100014: ElevatorDoorLeft
+    100016: ElevatorDoorRight
     100018: //RootNode
-    100020: DoorViewer1
-    100022: DoorViewer2
-    100024: DoorViewer3
-    100026: WallExt
-    100028: WallHouse
-    400000: Base
-    400002: Camera
+    100020: Key
+    100022: Button
+    100024: Wall
+    400000: BaseLeft
+    400002: Cube
     400004: Door
     400006: Doorknob
     400008: DoorknobBack
     400010: DoorknobFront
-    400012: Key
-    400014: Lamp
-    400016: Wall
+    400012: ElevatorBase
+    400014: ElevatorDoorLeft
+    400016: ElevatorDoorRight
     400018: //RootNode
-    400020: DoorViewer1
-    400022: DoorViewer2
-    400024: DoorViewer3
-    400026: WallExt
-    400028: WallHouse
-    2300000: Base
-    2300002: Door
-    2300004: Doorknob
-    2300006: DoorknobBack
-    2300008: DoorknobFront
-    2300010: Key
-    2300012: Wall
-    2300014: DoorViewer1
-    2300016: DoorViewer2
-    2300018: DoorViewer3
-    2300020: WallExt
-    2300022: WallHouse
-    3300000: Base
-    3300002: Door
-    3300004: Doorknob
-    3300006: DoorknobBack
-    3300008: DoorknobFront
-    3300010: Key
-    3300012: Wall
-    3300014: DoorViewer1
-    3300016: DoorViewer2
-    3300018: DoorViewer3
-    3300020: WallExt
-    3300022: WallHouse
-    4300000: Key
-    4300002: Doorknob
-    4300004: DoorknobBack
+    400020: Key
+    400022: Button
+    400024: Wall
+    2300000: BaseLeft
+    2300002: Cube
+    2300004: Door
+    2300006: Doorknob
+    2300008: DoorknobBack
+    2300010: DoorknobFront
+    2300012: ElevatorBase
+    2300014: ElevatorDoorLeft
+    2300016: ElevatorDoorRight
+    2300018: Key
+    2300020: Button
+    2300022: Wall
+    3300000: BaseLeft
+    3300002: Cube
+    3300004: Door
+    3300006: Doorknob
+    3300008: DoorknobBack
+    3300010: DoorknobFront
+    3300012: ElevatorBase
+    3300014: ElevatorDoorLeft
+    3300016: ElevatorDoorRight
+    3300018: Key
+    3300020: Button
+    3300022: Wall
+    4300000: Cube
+    4300002: BaseLeft
+    4300004: Door
     4300006: DoorknobFront
-    4300008: Door
-    4300010: Base
-    4300012: Wall
-    4300014: DoorViewer1
-    4300016: DoorViewer2
-    4300018: DoorViewer3
-    4300020: WallHouse
-    4300022: WallExt
+    4300008: DoorknobBack
+    4300010: Doorknob
+    4300012: Key
+    4300014: ElevatorDoorRight
+    4300016: ElevatorBase
+    4300018: ElevatorDoorLeft
+    4300020: Wall
+    4300022: Button
   materials:
     importMaterials: 0
     materialName: 0
