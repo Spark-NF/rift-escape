@@ -27,6 +27,7 @@ public class DoorOpen : MonoBehaviour {
 	{
 		if (!animating && other.transform.parent && other.transform.parent.parent && other.transform.parent.parent.GetComponent<HandModel>())
 		{
+            Debug.Log(other.name + " door");
 			opened = !opened;
 			animating = true;
 			if(source != null && opened && opensound != null)

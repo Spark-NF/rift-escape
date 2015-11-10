@@ -13,8 +13,10 @@ public class BathDoor : DoorOpen {
     {
         if (Locked)
         {
-            if (other.gameObject == key && key.IsEnabled())
+            Debug.Log(other.name + " " + key.IsEnabled());
+            if (other == key.GetComponent<Collider>() && key.IsEnabled())
             {
+                Debug.Log("bath door unlocked");
                 Locked = false;
                 Destroy(key);
             }

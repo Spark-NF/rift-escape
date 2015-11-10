@@ -5,7 +5,7 @@ public class MicrowaveScript : MonoBehaviour {
 
     public Light microwaveLight;
     bool on;
-    public GameObject iceToMelt;
+    public IceKeyScript iceToMelt;
     public GameObject door;
 
     bool activated;
@@ -29,21 +29,30 @@ public class MicrowaveScript : MonoBehaviour {
             activated = true;
             door.GetComponent<DoorOpen>().Disable();
             microwaveLight.gameObject.SetActive(true);
-            if (iceIsInside)
-                StartCoroutine(MeltIce());
+            StopAllCoroutines();
+            StartCoroutine(MeltIce());
         }
     }
 
     public void OnTriggerEnter(Collider collider)
     {
-        if (collider = iceToMelt.GetComponent<Collider>())
+        if (!iceToMelt.IsEnabled() && collider == iceToMelt.GetComponent<Collider>())
+        {
+            Debug.Log(collider.name + " enter");
             iceIsInside = true;
+            iceToMelt.GetComponent<FollowingObject>().stopLevitating();
+            iceToMelt.transform.position = transform.position;
+            iceToMelt.transform.localEulerAngles = new Vector3(0, 14, 0);
+        }
     }
 
     public void OnTriggerExit(Collider collider)
     {
-        if (collider = iceToMelt.GetComponent<Collider>())
+        if (!iceToMelt.IsEnabled() && collider == iceToMelt.GetComponent<Collider>())
+        {
+            Debug.Log(collider.name + " exit");
             iceIsInside = false;
+        }
     }
 
     IEnumerator MeltIce()
@@ -58,7 +67,9 @@ public class MicrowaveScript : MonoBehaviour {
         activated = false;
         microwaveLight.gameObject.SetActive(false);
         iceToMelt.GetComponent<IceKeyScript>().EnableKey();
-        door.GetComponent<DoorOpen>().Disable();
+        door.GetComponent<DoorOpen>().Enable();
+        if (iceIsInside)
+            iceIsInside = false;
     }
 
 }

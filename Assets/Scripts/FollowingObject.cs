@@ -17,6 +17,12 @@ public class FollowingObject : MonoBehaviour {
 		_rigidbody = GetComponent<Rigidbody>();
 	}
 
+    public void stopLevitating()
+    {
+        _isLevitating = false;
+        _rigidbody.useGravity = true;
+    }
+
 	void OnTriggerEnter(Collider other)
 	{
 		if (Time.time > nextFire && other.transform.parent && other.transform.parent.parent && other.transform.parent.parent.GetComponent<HandModel> ()) {
