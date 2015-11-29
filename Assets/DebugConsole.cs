@@ -47,7 +47,9 @@ public class DebugConsole : MonoBehaviour
 			case "exit":
 				Application.Quit();
 				break;
-
+            case "open room":
+		        LockedRoomDoor.Locked = false;
+		        break;
 			default:
 				Debug.Log("Debug command: '" + command + "'");
 				break;

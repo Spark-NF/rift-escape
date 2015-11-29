@@ -12433,31 +12433,56 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 07247004718c82746899f247e37a2a05, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .25
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 10
+  MaxDistance: 40
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - time: .0250000004
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -40.015934
+      outSlope: -40.015934
+      tangentMode: 0
+    - time: .0500000007
+      value: .58684212
+      inSlope: -10.0039835
+      outSlope: -10.0039835
+      tangentMode: 0
+    - time: .100000001
+      value: .33684212
+      inSlope: -2.50099587
+      outSlope: -2.50099587
+      tangentMode: 0
+    - time: .200000003
+      value: .21184212
+      inSlope: -.625248969
+      outSlope: -.625248969
+      tangentMode: 0
+    - time: .400000006
+      value: .14934212
+      inSlope: -.156312242
+      outSlope: -.156312242
+      tangentMode: 0
+    - time: .800000012
+      value: .118092112
+      inSlope: -.0452873856
+      outSlope: -.0452873856
       tangentMode: 0
     - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: .107017554
+      inSlope: -.0250099692
+      outSlope: -.0250099692
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
