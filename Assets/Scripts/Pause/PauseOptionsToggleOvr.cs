@@ -5,7 +5,7 @@ public class PauseOptionsToggleOvr : MenuToggle
 {
 	void Start()
 	{
-		value = PlayerPrefs.GetInt("ovrMovement") == 1;
+		value = PlayerPrefs.GetInt("ovrMovement", 1) == 1;
 		checkmark.SetActive(value);
 	}
 

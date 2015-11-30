@@ -60,6 +60,8 @@ public abstract class MenuValue : MonoBehaviour
 	public void updateLabel()
 	{
 		Text t = label.GetComponent<Text>();
+	    if (format == null && t != null)
+	        format = t.text;
 		t.text = format.Replace("#", System.Convert.ToString(val));
 	}
 }

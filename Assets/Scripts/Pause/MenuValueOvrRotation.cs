@@ -5,7 +5,7 @@ public class MenuValueOvrRotation : MenuValue
 {
 	void Start()
 	{
-		val = PlayerPrefs.GetInt("ovrRotationMinimum.y");
+        val = PlayerPrefs.GetInt("ovrRotationMinimum.y", (int)OVRPlayerController.ovrRotationMinimum.y);
 		updateLabel();
 	}
 

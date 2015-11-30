@@ -5,7 +5,7 @@ public class PauseOptionsToggleCrouch : MenuToggle
 {
 	void Start()
 	{
-		value = PlayerPrefs.GetInt("softCrounching") == 1;
+		value = PlayerPrefs.GetInt("softCrounching", 1) == 1;
 		checkmark.SetActive(value);
 	}
 

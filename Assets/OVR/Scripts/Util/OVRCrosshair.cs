@@ -36,7 +36,7 @@ public class OVRCrosshair
 	public float   FadeScale      	  = 0.6f;
 	public float   CrosshairDistance  = 1.0f;
 
-	public KeyCode CrosshairKey       = KeyCode.C;
+	public KeyCode CrosshairKey       = KeyCode.None;
 		
 	private float  DeadZoneX          =  400.0f;
 	private float  DeadZoneY          =   75.0f;

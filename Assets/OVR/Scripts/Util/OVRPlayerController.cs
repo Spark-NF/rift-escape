@@ -34,7 +34,7 @@ public class OVRPlayerController : MonoBehaviour
 	public static bool LeapMovement = false;
 	public static Vector3 ovrRotationMinimum = new Vector3 (60, 60, 0); // Sensitivity to trigger rotation movement
 	public static Vector3 ovrControlSensitivity = new Vector3(2f, 0.05f, 2f);  // Multiplier of positiona tracking move/jump actions
-	public static Vector3 ovrControlMinimum = new Vector3(0.15f, 0.05f, 0.05f);      // Min distance of head from centre to move/jump
+	public static Vector3 ovrControlMinimum = new Vector3(0.15f, 0.1f, 0.05f);      // Min distance of head from centre to move/jump
 	public enum OvrXAxisAction { Strafe = 0, Rotate = 1 }
 	public static OvrXAxisAction ovrXAxisAction = OvrXAxisAction.Strafe; // Whether x axis positional tracking performs strafing or rotation
 	public static bool softCrounching = true;

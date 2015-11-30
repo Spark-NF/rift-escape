@@ -7,6 +7,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using Leap;
+using UnityEditorInternal;
 
 // Overall Controller object that will instantiate hands and tools when they appear.
 public class HandController : MonoBehaviour {
@@ -241,7 +242,7 @@ public class HandController : MonoBehaviour {
 
     if (Input.GetKeyDown(KeyCode.H))
     {
-      show_hands_ = !show_hands_;
+        show_hands_ = true; //!show_hands_; // dubois_d don't disable hands !
     }
 
     if (show_hands_)

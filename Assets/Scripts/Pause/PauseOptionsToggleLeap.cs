@@ -5,7 +5,7 @@ public class PauseOptionsToggleLeap : MenuToggle
 {
 	void Start()
 	{
-		value = PlayerPrefs.GetInt("LeapMovement") == 1;
+		value = PlayerPrefs.GetInt("LeapMovement", 1) == 1;
 		checkmark.SetActive(value);
 	}
 

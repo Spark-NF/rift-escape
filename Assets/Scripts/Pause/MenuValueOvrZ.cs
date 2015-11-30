@@ -5,13 +5,13 @@ public class MenuValueOvrZ : MenuValue
 {
 	void Start()
 	{
-		val = (int)(PlayerPrefs.GetFloat("ovrControlSensitivity.z") * 100);
+        val = (int)(PlayerPrefs.GetFloat("ovrControlMinimum.z", OVRPlayerController.ovrControlMinimum.z) * 100);
 		updateLabel();
 	}
 
 	public override void change(int oldValue, int newValue)
 	{
-		OVRPlayerController.ovrControlSensitivity.z = (float)newValue / 100;
-		PlayerPrefs.SetFloat("ovrControlSensitivity.z", (float)newValue / 100);
+        OVRPlayerController.ovrControlMinimum.z = (float)newValue / 100;
+        PlayerPrefs.SetFloat("ovrControlMinimum.z", (float)newValue / 100);
 	}
 }
