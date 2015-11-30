@@ -8,8 +8,8 @@ public class DoorOpen : MonoBehaviour {
 	public Vector3 closedrotation;
 	public Vector3 openedrotation;
 	public float rotationspeed;
-	private bool opened = false;
-	private bool animating = false;
+	protected bool opened = false;
+	protected bool animating = false;
     private bool disabled = false;
 
 	// Use this for initialization
@@ -27,7 +27,6 @@ public class DoorOpen : MonoBehaviour {
 	{
 		if (!animating && other.transform.parent && other.transform.parent.parent && other.transform.parent.parent.GetComponent<HandModel>())
 		{
-            Debug.Log(other.name + " door");
 			opened = !opened;
 			animating = true;
 			if(source != null && opened && opensound != null)

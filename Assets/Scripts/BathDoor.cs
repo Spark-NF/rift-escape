@@ -8,17 +8,17 @@ public class BathDoor : DoorOpen {
     bool wasLocked = true;
 
     public IceKeyScript key;
+    public GameObject KeyModel;
 
     void OnTriggerEnter(Collider other)
     {
         if (Locked)
         {
-            Debug.Log(other.name + " " + key.IsEnabled());
             if (other == key.GetComponent<Collider>() && key.IsEnabled())
             {
                 Debug.Log("bath door unlocked");
                 Locked = false;
-                Destroy(key);
+                Destroy(KeyModel);
             }
             else if (lockedsound != null && !source.isPlaying)
             {
