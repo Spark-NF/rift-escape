@@ -8193,10 +8193,18 @@ Transform:
   - {fileID: 1271866133}
   m_Father: {fileID: 1058537863}
   m_RootOrder: 4
---- !u!4 &408867238 stripped
+--- !u!4 &408867238
 Transform:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400002, guid: 98767943e2fa30f40bec9714f1848eae, type: 3}
   m_PrefabInternal: {fileID: 213168684}
+  m_GameObject: {fileID: 1469241623}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1590130256}
+  m_RootOrder: 0
 --- !u!1 &413922468
 GameObject:
   m_ObjectHideFlags: 0
@@ -20848,7 +20856,7 @@ Transform:
   m_Children:
   - {fileID: 237425653}
   - {fileID: 778379392}
-  - {fileID: 408867238}
+  - {fileID: 1590130256}
   - {fileID: 1185002304}
   - {fileID: 1749620035}
   - {fileID: 339138742}
@@ -33065,10 +33073,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .280000001, y: .0227499995, z: .280000001}
   m_Center: {x: 0, y: .0113749998, z: 0}
---- !u!1 &1451328712 stripped
+--- !u!1 &1451328712
 GameObject:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 98767943e2fa30f40bec9714f1848eae, type: 3}
   m_PrefabInternal: {fileID: 213168684}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1451328715}
+  - 54: {fileID: 1451328713}
+  - 65: {fileID: 1451328714}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!54 &1451328713
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -33096,6 +33117,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .433778971, y: .305561304, z: .499102086}
   m_Center: {x: .0035685075, y: .152780652, z: 4.470348e-08}
+--- !u!4 &1451328715
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 213168684}
+  m_GameObject: {fileID: 1451328712}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1590130256}
+  m_RootOrder: 1
 --- !u!1 &1451892506
 GameObject:
   m_ObjectHideFlags: 0
@@ -33854,6 +33887,21 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!1 &1469241623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 213168684}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 408867238}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &1470829462
 Prefab:
   m_ObjectHideFlags: 0
@@ -37442,6 +37490,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1589024297}
+--- !u!1 &1590130255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 213168684}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1590130256}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1590130256
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 213168684}
+  m_GameObject: {fileID: 1590130255}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 408867238}
+  - {fileID: 1451328715}
+  m_Father: {fileID: 990805615}
+  m_RootOrder: 2
 --- !u!1 &1591959786
 GameObject:
   m_ObjectHideFlags: 0
@@ -40386,7 +40463,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1704449403}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -.0500000007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1196974982}
@@ -42154,7 +42231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 1235748006}
   opensound: {fileID: 8300000, guid: 05f32ce659968184c8423706fe2996be, type: 3}
-  closesound: {fileID: 8300000, guid: 05f32ce659968184c8423706fe2996be, type: 3}
+  closesound: {fileID: 8300000, guid: fffa8470e9730b94f9d8faa62d05024d, type: 3}
   closedrotation: {x: 270, y: 180, z: 0}
   openedrotation: {x: 270, y: 270, z: 0}
   rotationspeed: 1
