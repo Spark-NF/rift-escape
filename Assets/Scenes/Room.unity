@@ -29085,7 +29085,7 @@ GameObject:
   - 65: {fileID: 1352211993}
   - 65: {fileID: 1352211997}
   m_Layer: 0
-  m_Name: Door
+  m_Name: BathDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37110,7 +37110,7 @@ GameObject:
   - 65: {fileID: 1640100810}
   - 114: {fileID: 1640100809}
   m_Layer: 0
-  m_Name: Door
+  m_Name: RoomDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40520,7 +40520,7 @@ GameObject:
   - 114: {fileID: 1775265406}
   - 65: {fileID: 1775265407}
   m_Layer: 0
-  m_Name: Door
+  m_Name: MainDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

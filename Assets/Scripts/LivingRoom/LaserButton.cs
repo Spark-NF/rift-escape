@@ -24,7 +24,8 @@ public class LaserButton : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (!LaserDisabled) {
+		if (other.transform.parent && other.transform.parent.parent && other.transform.parent.parent.GetComponent<HandModel>()
+            && !LaserDisabled) {
 			lasers.SetActive(false);
 			LaserDisabled = true;
 			if (ActivateSound != null)

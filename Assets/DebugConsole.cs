@@ -51,6 +51,7 @@ public class DebugConsole : MonoBehaviour
 		        LockedRoomDoor.Locked = false;
 		        break;
 			default:
+                AdvancedCommand(command);
 				Debug.Log("Debug command: '" + command + "'");
 				break;
 		}
@@ -58,4 +59,17 @@ public class DebugConsole : MonoBehaviour
 		inputField.text = "";
 		toggleConsole();
 	}
+
+    private void AdvancedCommand(string command)
+    {
+        if (command.StartsWith("disable"))
+        {
+            var args = command.Split(' ');
+            if (args.Length < 2)
+                return;
+            GameObject obj = GameObject.Find(args[1]);
+            if (obj != null)
+                obj.SetActive(false);
+        }
+    }
 }
