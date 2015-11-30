@@ -15,6 +15,8 @@ public class PauseMenu : MonoBehaviour
 	public HandController hand;
 	public Controller leap;
 
+    public static bool CanUsePKey = true;
+
 	void Start()
 	{
 		/*leap = hand.GetLeapController();
@@ -61,7 +63,7 @@ public class PauseMenu : MonoBehaviour
 			}
 		}*/
 
-		if (Input.GetKeyDown(KeyCode.P))
+		if (CanUsePKey && Input.GetKeyDown(KeyCode.P))
 		{
 			paused = togglePause();
 		}

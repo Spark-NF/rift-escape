@@ -29,6 +29,8 @@ public class DebugConsole : MonoBehaviour
 	{
 		visible = !visible;
 		canvas.SetActive(visible);
+        OVRPlayerController.paused = visible;
+	    PauseMenu.CanUsePKey = !visible;
 
 		if (visible)
 		{
