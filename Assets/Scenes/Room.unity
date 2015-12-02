@@ -3354,7 +3354,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1541779637}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!82 &170017126
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4282,6 +4282,102 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2038375001}
   m_RootOrder: 3
+--- !u!1 &227824025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100002, guid: 96394fcd0cc244045acb99d518ef6c93, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 227824026}
+  - 33: {fileID: 227824031}
+  - 23: {fileID: 227824029}
+  - 114: {fileID: 227824028}
+  - 114: {fileID: 227824027}
+  m_Layer: 0
+  m_Name: USB Side Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &227824026
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400002, guid: 96394fcd0cc244045acb99d518ef6c93, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 227824025}
+  m_LocalRotation: {x: -8.94069672e-08, y: .707106709, z: .707106829, w: -1.49011612e-07}
+  m_LocalPosition: {x: -0, y: -.0769999996, z: -0}
+  m_LocalScale: {x: 1.20000005, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1541779637}
+  m_RootOrder: 0
+--- !u!114 &227824027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 96394fcd0cc244045acb99d518ef6c93,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 227824025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b288114cecb140179322b3c29a9d3a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &227824028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 96394fcd0cc244045acb99d518ef6c93,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 227824025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd815635398474cbbba564563a209f82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doUpdate: 1
+  rescaleController: 0
+  imageIndex: 0
+  imageColor: {r: 1, g: 1, b: 1, a: 1}
+  gammaCorrection: 1
+  overlayImage: 1
+  undistortImage: 0
+  blackIsTransparent: 1
+--- !u!23 &227824029
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 96394fcd0cc244045acb99d518ef6c93,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 227824025}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 05f94f2c3868b4469b61a71f45b3e1a7, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &227824031
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 96394fcd0cc244045acb99d518ef6c93,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 227824025}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &228412054
 GameObject:
   m_ObjectHideFlags: 0
@@ -36267,13 +36363,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1545565251}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5622175f562e8c44a860cef3fa62a99f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fe309f5504cdb3478e71c360725d0f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   on: 0
-  source: {fileID: 1545565251}
-  on_texture: {fileID: 2100000, guid: 5c1c0a4643d3f8d48b34ecc735a894b3, type: 2}
-  off_texture: {fileID: 2100000, guid: b061f377975aa5345b9627ab346ea1a9, type: 2}
+  ToDisable: {fileID: 227824025}
   audioSource: {fileID: 170017126}
   sound: {fileID: 0}
 --- !u!65 &1545565253
@@ -38638,7 +38732,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
       propertyPath: m_IsActive
