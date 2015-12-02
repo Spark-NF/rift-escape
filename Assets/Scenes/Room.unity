@@ -4344,7 +4344,7 @@ MonoBehaviour:
   gammaCorrection: 1
   overlayImage: 1
   undistortImage: 0
-  blackIsTransparent: 1
+  blackIsTransparent: 0
 --- !u!23 &227824029
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36369,6 +36369,8 @@ MonoBehaviour:
   on: 0
   ToDisable: {fileID: 227824025}
   audioSource: {fileID: 170017126}
+  on_texture: {fileID: 2100000, guid: 5c1c0a4643d3f8d48b34ecc735a894b3, type: 2}
+  off_texture: {fileID: 2100000, guid: b061f377975aa5345b9627ab346ea1a9, type: 2}
   sound: {fileID: 0}
 --- !u!65 &1545565253
 BoxCollider:

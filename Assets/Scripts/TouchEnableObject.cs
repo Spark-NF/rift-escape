@@ -5,23 +5,28 @@ public class TouchEnableObject : MonoBehaviour {
     public bool on = false;
     public GameObject ToDisable;
     public AudioSource audioSource = null;
+    public Material on_texture;
+    public Material off_texture;
     public AudioClip sound = null;
 
-    bool canChange = true;
+    private float fireRate = 1.0f;
+    private float nextFire = 0.0f;
 
-    IEnumerator OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if (canChange)
+        if (Time.time > nextFire)
         {
-            canChange = false;
+            nextFire = Time.time + fireRate;
             if (on)
             {
+                GetComponent<Renderer>().material = off_texture;
                 if (sound == null)
                     audioSource.Stop();
                 on = false;
             }
             else
             {
+                GetComponent<Renderer>().material = on_texture;
                 if (sound == null)
                     audioSource.Play();
                 else
@@ -29,8 +34,6 @@ public class TouchEnableObject : MonoBehaviour {
                 on = true;
             }
             ToDisable.SetActive(on);
-            yield return new WaitForSeconds(2);
-            canChange = true;
         }
     }
 	// Use this for initialization
