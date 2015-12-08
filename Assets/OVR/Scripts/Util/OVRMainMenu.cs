@@ -747,6 +747,7 @@ public class OVRMainMenu : MonoBehaviour
 			return ScenesVisible;
 		}
 		
+        /* dubois_d: disabling scene change
 		bool curStartDown = OVRGamepadController.GPC_GetButton(OVRGamepadController.Button.Start);
 		bool startPressed = (curStartDown && !PrevStartDown) || Input.GetKeyDown(KeyCode.RightShift);
 		PrevStartDown = curStartDown;
@@ -755,7 +756,7 @@ public class OVRMainMenu : MonoBehaviour
 		{
 			ScenesVisible = !ScenesVisible;
 		}
-		
+		*/
 		return ScenesVisible;
 	}
 	
