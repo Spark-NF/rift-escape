@@ -7,7 +7,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 using Leap;
-using UnityEditorInternal;
 
 // Overall Controller object that will instantiate hands and tools when they appear.
 public class HandController : MonoBehaviour {
