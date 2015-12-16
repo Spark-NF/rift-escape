@@ -9,4 +9,10 @@ public class PlayButtonCollider : MonoBehaviour {
 	{
 		events.MenuPlay();
 	}
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+            events.MenuPlay();
+    }
 }

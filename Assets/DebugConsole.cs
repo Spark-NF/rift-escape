@@ -9,8 +9,10 @@ public class DebugConsole : MonoBehaviour
 	public GameObject input = null;
 	public KeyCode toggleKey = KeyCode.O;
 
-	protected bool visible = false;
+	protected static bool visible = false;
 	protected InputField inputField = null;
+
+    public static bool Visible { get { return visible; } }
 
 	void Start()
 	{

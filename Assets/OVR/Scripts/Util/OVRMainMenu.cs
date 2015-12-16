@@ -420,10 +420,10 @@ public class OVRMainMenu : MonoBehaviour
         // Toggle Fullscreen
 		if(Input.GetKeyDown(KeyCode.F11))
 			Screen.fullScreen = !Screen.fullScreen;
-
+        /* dubois_d : disabling this shortcut
         if (Input.GetKeyDown(KeyCode.M))
 			OVRManager.display.mirrorMode = !OVRManager.display.mirrorMode;
-        
+        */
 		// Escape Application
 		if (Input.GetKeyDown(QuitKey))
 			Application.Quit();
@@ -837,7 +837,7 @@ public class OVRMainMenu : MonoBehaviour
     void GUIShowVRVariables()
     {
         bool SpaceHit = Input.GetKey(MenuKey);
-        if ((OldSpaceHit == false) && (SpaceHit == true))
+        if ((OldSpaceHit == false) && (SpaceHit == true) /*dubois_d avoiding space shortcut when using console*/ && !DebugConsole.Visible)
         {
             if (ShowVRVars == true)
             {
